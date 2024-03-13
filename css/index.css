@@ -263,6 +263,9 @@ section {
   width: 100%;
   height: 250px;
   background-color: gold;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .ridiToday .todayWrap .todayBook .todayTxt {
   width: 100%;
@@ -270,32 +273,358 @@ section {
   background-color: #666;
 }
 
+.ridiMany {
+  max-width: 1170px;
+}
 .ridiMany .manyWrap {
   margin-top: 20px;
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: 700px;
+  height: 450px;
   align-content: space-between;
   justify-content: center;
 }
 .ridiMany .manyWrap .manyBook {
-  width: 30%;
-  height: 200px;
+  width: 390px;
+  height: 150px;
   background-color: antiquewhite;
-  margin: 10px 10px;
   display: flex;
   align-items: center;
 }
 .ridiMany .manyWrap .manyBook .manyCover {
-  width: 40%;
+  width: 30%;
   height: 100%;
   background-color: gold;
 }
 .ridiMany .manyWrap .manyBook .manyIdx {
-  width: 10%;
-  height: 50%;
+  width: 20%;
+  height: 70%;
   background-color: #999;
+}
+.ridiMany .manyWrap .manyBook .manyInfo {
+  width: 50%;
+  height: 70%;
+  background-color: aliceblue;
+}
+
+.ridiMD {
+  width: 1170px;
+}
+.ridiMD .MDWrap {
+  margin-top: 20px;
+  width: 100%;
+  height: 226px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.ridiMD .MDWrap .MDBox {
+  width: 366px;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.ridiMD .MDWrap .MDBox .MDBg {
+  width: 100%;
+}
+.ridiMD .MDWrap .MDBox .MDBg .MDCover {
+  width: 100%;
+  height: 100px;
+  background-color: aquamarine;
+}
+.ridiMD .MDWrap .MDBox .MDBg .MDBook {
+  width: 30%;
+  height: 120px;
+  background-color: gold;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ridiMD .MDWrap .MDBox .MDTxt {
+  width: 100%;
+  height: 70px;
+  background-color: antiquewhite;
+}
+
+.ridiBest {
+  max-width: 1170px;
+}
+.ridiBest .bestWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 450px;
+  align-content: space-between;
+  justify-content: center;
+}
+.ridiBest .bestWrap .bestBook {
+  width: 390px;
+  height: 150px;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+}
+.ridiBest .bestWrap .bestBook .bestCover {
+  width: 30%;
+  height: 100%;
+  background-color: gold;
+}
+.ridiBest .bestWrap .bestBook .bestIdx {
+  width: 20%;
+  height: 70%;
+  background-color: #999;
+}
+.ridiBest .bestWrap .bestBook .bestInfo {
+  width: 50%;
+  height: 70%;
+  background-color: aliceblue;
+}
+
+.ridiNew {
+  max-width: 1170px;
+}
+.ridiNew .newWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiNew .newWrap .newBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiNew .newWrap .newBook .newCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiNew .newWrap .newBook .newInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiAwards {
+  max-width: 1170px;
+}
+.ridiAwards .awardsWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiAwards .awardsWrap .awardsBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiTop10 {
+  max-width: 1170px;
+}
+.ridiTop10 .top10Wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiTop10 .top10Wrap .top10Book {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Cover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Info {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiEvent {
+  width: 1170px;
+  height: 168px;
+}
+.ridiEvent .eventWrap {
+  margin-top: 20px;
+  width: 100%;
+  height: 90px;
+  display: flex;
+}
+.ridiEvent .eventWrap .eventBook {
+  width: 33%;
+  height: 100%;
+  flex-shrink: 0;
+  background-color: aquamarine;
+  display: flex;
+}
+.ridiEvent .eventWrap .eventBook .eventTxt {
+  width: 60%;
+  height: 100%;
+  align-self: center;
+  background-color: #666;
+}
+.ridiEvent .eventWrap .eventBook .eventImage {
+  width: 40%;
+  height: 100%;
+  background-color: #eee;
+}
+.ridiEvent .eventWrap .eventBook .eventImage .eventCover {
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: gold;
+}
+
+.ridiNovel {
+  max-width: 1170px;
+}
+.ridiNovel .novelWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiNovel .novelWrap .novelBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiNovel .novelWrap .novelBook .novelCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiNovel .novelWrap .novelBook .novelInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiPsychology {
+  max-width: 1170px;
+}
+.ridiPsychology .psyWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiPsychology .psyWrap .psyBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiPsychology .psyWrap .psyBook .psyCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiPsychology .psyWrap .psyBook .psyInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiScience {
+  max-width: 1170px;
+}
+.ridiScience .scienceWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiScience .scienceWrap .scienceBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiScience .scienceWrap .scienceBook .scienceCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiScience .scienceWrap .scienceBook .scienceInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
+}
+
+.ridiMystery {
+  max-width: 1170px;
+}
+.ridiMystery .mysteryWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiMystery .mysteryWrap .mysteryBook {
+  width: 16%;
+  background-color: antiquewhite;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryCover {
+  width: 100%;
+  height: 250px;
+  background-color: gold;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo {
+  width: 100%;
+  height: 50px;
+  background-color: #666;
 }
 
 footer {
