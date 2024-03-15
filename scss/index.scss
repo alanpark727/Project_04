@@ -243,26 +243,27 @@ section {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: auto;
+        height: 311px;
+        margin-right: 6px;
         .todayBook {
             width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             .todayCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: contain;
+                background-size: cover;
+                border-radius: 4px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .todayTxt {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                font-weight: 600;
+                letter-spacing: -0.01em;
             }
         }
     }
@@ -274,30 +275,69 @@ section {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 100%;
-        height: 450px;
+        width: 370px;
+        height: 366px;
         align-content: space-between;
         justify-content: center;
         .manyBook {
-            width: 390px;
-            height: 150px;
+            width: 370px;
+            height: 116px;
             background-color: antiquewhite;
             display: flex;
             align-items: center;
+            margin-bottom: 6px;
             .manyCover {
-                width: 30%;
-                height: 100%;
-                background-color: gold;
+                width: 80px;
+                height: 116px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 4px;
             }
             .manyIdx {
-                width: 20%;
-                height: 70%;
-                background-color: #999;
+                width: 80px;
+                height: 116px;
+                font-size: 18px;
+                color: $black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .manyInfo {
-                width: 50%;
-                height: 70%;
+                width: 184px;
+                height: 116px;
                 background-color: aliceblue;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                margin-right: 26px;
+                letter-spacing: -0.01em;
+                .manyTitle {
+                    font-weight: 500;
+                    color: $black;
+                    line-height: 19px;
+                }
+                .manyAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                    line-height: 17px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    line-height: 16px;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
+                .review_0 {
+                    font-size: 13px;
+                    color: $grey;
+                    font-family: "Noto Sans KR";
+                }
             }
         }
     }
@@ -312,31 +352,22 @@ section {
         display: flex;
         flex-wrap: nowrap;
         .MDBox {
-            width: 366px;
+            width: calc((1170px - 54px) / 3);
             height: 100%;
             position: relative;
             flex-shrink: 0;
-            .MDBg {
-                width: 100%;
-                .MDCover {
-                    width: 100%;
-                    height: 100px;
-                    background-color: aquamarine;
-                }
-                .MDBook {
-                    width: 30%;
-                    height: 120px;
-                    background-color: gold;
-                    position: absolute;
-                    top: 18%;
-                    left: 50%;
-                    transform: translate(-50%,-50%);
-                }
-            }
             .MDTxt {
                 width: 100%;
                 height: 70px;
                 background-color: antiquewhite;
+                h4 {
+                    color: $black;
+                    font-weight: 600;
+                }
+                p {
+                    color: $grey;
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -348,30 +379,69 @@ section {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 100%;
-        height: 450px;
+        width: 370px;
+        height: 366px;
         align-content: space-between;
         justify-content: center;
         .bestBook {
-            width: 390px;
-            height: 150px;
+            width: 370px;
+            height: 116px;
             background-color: antiquewhite;
             display: flex;
             align-items: center;
+            margin-bottom: 6px;
             .bestCover {
-                width: 30%;
-                height: 100%;
-                background-color: gold;
+                width: 80px;
+                height: 116px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 4px;
             }
             .bestIdx {
-                width: 20%;
-                height: 70%;
-                background-color: #999;
+                width: 80px;
+                height: 116px;
+                font-size: 18px;
+                color: $black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .bestInfo {
-                width: 50%;
-                height: 70%;
+                width: 184px;
+                height: 116px;
                 background-color: aliceblue;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                margin-right: 26px;
+                letter-spacing: -0.01em;
+                .bestTitle {
+                    font-weight: 500;
+                    color: $black;
+                    line-height: 19px;
+                }
+                .bestAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                    line-height: 17px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    line-height: 16px;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
+                .review_0 {
+                    font-size: 13px;
+                    color: $grey;
+                    font-family: "Noto Sans KR";
+                }
             }
         }
     }
@@ -386,22 +456,51 @@ section {
         width: 100%;
         height: auto;
         .newBook {
-            width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            width: 180px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .newCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .newInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .newTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .newAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
+                .review_0 {
+                    font-size: 13px;
+                    margin-top: 7px;
+                    color: $grey;
+                    font-family: "Noto Sans KR";
+                }
             }
         }
     }
@@ -415,23 +514,52 @@ section {
         justify-content: space-between;
         width: 100%;
         height: auto;
+        margin-right: 6px;
         .awardsBook {
             width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
             .awardsCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .awardsInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .awardsTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .awardsAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
+                .review_0 {
+                    font-size: 13px;
+                    color: $grey;
+                    margin-top: 7px;
+                    font-family: "Noto Sans KR";
+                }
             }
         }
     }
@@ -445,23 +573,47 @@ section {
         justify-content: space-between;
         width: 100%;
         height: auto;
+        margin-right: 6px;
         .top10Book {
             width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .top10Cover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .top10Info {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .top10Title {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .top10Author {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
             }
         }
     }
@@ -476,26 +628,69 @@ section {
         height: 90px;
         display: flex;
         .eventBook {
-            width: 33%;
+            width: calc((1170px - 54px) / 3);
             height: 100%;
             flex-shrink: 0;
-            background-color: aquamarine;
             display: flex;
+            padding-left: 3px;
+            padding-right: 3px;
+            border-radius: 4px;
+            margin-right: 6px;
+            &:nth-child(1){
+                background-color: #DC6119;
+            }
+            &:nth-child(2){
+                background-color: #8149DE;
+            }
+            &:nth-child(3){
+                background-color: #232E4D;
+            }
+            &:nth-child(4){
+                background-color: #530316;
+            }
+            &:nth-child(5){
+                background-color: #0F9294;
+            }
+            &:nth-child(6){
+                background-color: #DC5F18;
+            }
+            &:nth-child(7){
+                background-color: #6E39AC;
+            }
+            &:nth-child(8){
+                background-color: #5C6AD0;
+            }
+            &:nth-child(9){
+                background-color: #0A6377;
+            }
             .eventTxt {
                 width: 60%;
-                height: 100%;
+                height: calc(20px*2);
                 align-self: center;
-                background-color: #666;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                h4 {
+                    max-width: 200px;
+                    letter-spacing: -0.01em;
+                    line-height: 20px;
+                    font-size: 15px;
+                    color: #fff;
+                    font-weight: 600;
+                }
             }
             .eventImage {
                 width: 40%;
                 height: 100%;
-                background-color: #eee;
                 .eventCover {
                     width: 40%;
                     height: 100%;
                     margin: 0 auto;
                     background-color: gold;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 4px;
                 }
             }
         }
@@ -511,22 +706,45 @@ section {
         width: 100%;
         height: auto;
         .novelBook {
-            width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            width: 180px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .novelCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .novelInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .novelTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .novelAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
             }
         }
     }
@@ -541,22 +759,45 @@ section {
         width: 100%;
         height: auto;
         .psyBook {
-            width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            width: 180px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .psyCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .psyInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .psyTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .psyAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
             }
         }
     }
@@ -571,22 +812,45 @@ section {
         width: 100%;
         height: auto;
         .scienceBook {
-            width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            width: 180px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .scienceCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .scienceInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .scienceTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .scienceAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 6px;
+                    span {
+                        color: $grey;
+                    }
+                }
             }
         }
     }
@@ -601,22 +865,98 @@ section {
         width: 100%;
         height: auto;
         .mysteryBook {
-            width: 16%;
-            background-color: antiquewhite;
-            height: 320px;
+            width: 180px;
+            height: 355px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             flex-shrink: 0;
+            margin-right: 6px;
             .mysteryCover {
-                width: 100%;
-                height: 250px;
-                background-color: gold;
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
             }
             .mysteryInfo {
                 width: 100%;
-                height: 50px;
-                background-color: #666;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .mysteryTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .mysteryAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ridiHumanity {
+    max-width: 1170px;
+    .humanWrap {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        .humanBook {
+            width: 180px;
+            height: 355px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-right: 6px;
+            .humanCover {
+                width: 180px;
+                height: 261px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 6px;
+                cursor: pointer;
+                border: 1px solid rgba(20, 20, 20, 0.06);
+            }
+            .humanInfo {
+                width: 100%;
+                height: 84px;
+                margin-top: 10px;
+                padding-right: 10px;
+                .humanTitle {
+                    color: $black;
+                    font-weight: 500;
+                }
+                .humanAuthor {
+                    color: $grey;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+                .review {
+                    font-family: "Noto Sans KR";
+                    font-size: 13px;
+                    color: $red;
+                    margin-top: 7px;
+                    span {
+                        color: $grey;
+                    }
+                }
             }
         }
     }

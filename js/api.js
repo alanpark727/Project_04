@@ -30,13 +30,13 @@ $(document).ready(function(){
     // 지금 많이 읽고 있는 작품
 
     let search2;
-    search2 = ["해리포터", "듄 1권", "세이노의 가르침", "프로젝트 헤일메리", "아주 작은 습관의 힘", "데일 카네기 인간관계론", "부의 추월차선", "타이탄의 도구들", "피를 마시는 1", "살인자의 쇼핑몰", "트렌드 코리아 2024", "더 마인드", "레버리지", "나다움으로 시작하는", "애거서 크리스티 전집", "나는 메트로폴리탄", "바다가 들리는 편의점", "역행자"];
+    search2 = ["해리포터", "듄 1권", "세이노의 가르침", "프로젝트 헤일메리", "아주 작은 습관의 힘", "데일 카네기 인간관계론", "부의 추월차선", "타이탄의 도구들", "눈물을 마시는 1", "살인자의 쇼핑몰", "트렌드 코리아 2024", "더 마인드", "레버리지", "나다움으로 시작하는", "애거서 크리스티", "나는 메트로폴리탄", "바다가 들리는 편의점", "역행자"];
 
     for (let j = 0; j < search2.length; j++) {
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search2[j], size: 5 },
+            data: { query: search2[j], size: 5,  },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -45,6 +45,7 @@ $(document).ready(function(){
                 $(".manyBook").eq(j).find(".manyCover").css("background-image","url(" + many.documents[0].thumbnail + ")");
                 $(".manyBook").eq(j).find(".manyTitle").append(many.documents[0].title);
                 $(".manyBook").eq(j).find(".manyAuthor").append(many.documents[0].authors);
+                $(".manyBook").eq(j).find(".manyIdx").append(j+1);
             });
             
     };
@@ -64,7 +65,8 @@ $(document).ready(function(){
         })
             .done(function(MD) {
                 console.log(MD);
-                $(".MDBox").eq(j).find(".MDBook").css("background-image","url(" + MD.documents[0].thumbnail + ")");
+                $(".MDBook").eq(j).find(".MDCover").css("background-image","url(" + MD.documents[0].thumbnail + ")");
+                $(".MDBook").eq(j).find(".MDTxt>p").append(MD.documents[0].title);
             });
             
     };
@@ -87,6 +89,7 @@ $(document).ready(function(){
                 $(".bestBook").eq(j).find(".bestCover").css("background-image","url(" + best.documents[0].thumbnail + ")");
                 $(".bestBook").eq(j).find(".bestTitle").append(best.documents[0].title);
                 $(".bestBook").eq(j).find(".bestAuthor").append(best.documents[0].authors);
+                $(".bestBook").eq(j).find(".bestIdx").append(j+1);
             });
             
     };
@@ -138,7 +141,7 @@ $(document).ready(function(){
     // 이주의 셀렉트 인기도서 TOP 10
     
     let search7;
-    search7 = ["부의 추월차선", "메리골드 마음 세탁소", "과학이 필요한 시간", "세상의 마지막 기차역", "언스크립티드", "내가 행복한 이유", "그 문장을 읽고 또 읽었다", "나는 메트로폴리탄 미술관", "부의 추월차선 위대한 탈출", "파우스트" ];
+    search7 = ["부의 추월차선", "메리골드 세탁소", "과학이 필요한 시간", "세상의 마지막 기차역", "언스크립티드", "내가 행복한 이유", "그 문장을 읽고 또 읽었다", "나는 메트로폴리탄 미술관", "부의 추월차선 위대한 탈출", "파우스트" ];
 
     for (let j = 0; j < search7.length; j++) {
         $.ajax({
@@ -160,7 +163,7 @@ $(document).ready(function(){
     // 이벤트
 
     let search8;
-    search8 = ["샤이닝", "블랙 쇼맨과 운명의 바퀴", "총균쇠", "해리포터", "가여운 것들", "문신", "직장 상사 악령 퇴치부", "구름에 달 가리운 방금 전까지 인간이었다", "마트료시카의 밤"];
+    search8 = ["샤이닝", "블랙 쇼맨과 운명의 바퀴", "총균쇠", "해리포터", "가여운 것들", "커넥팅", "직장 상사 악령 퇴치부", "구름에 달 가리운 방금 전까지 인간이었다", "마트료시카의 밤"];
 
     for (let j = 0; j < search8.length; j++) {
         $.ajax({
@@ -224,7 +227,7 @@ $(document).ready(function(){
     // 과학 책 추천
 
     let search11;
-    search11 = ["물고기는 존재하지 않는다", "코스모스", "사이코패스 뇌과학자", "전쟁에서 살아남기", "만화로 배우는 멸종과 진화", "양자컴퓨터의 미래", "우울할 땐 뇌 과학", "이기적 유전자", "과학을 보다", "판타 레이", "운동의 뇌과학", "천문학자는 별을 보지 않는다"];
+    search11 = ["물고기는 존재하지 않는다", "코스모스", "사이코패스 뇌과학자", "전쟁에서 살아남기", "떨림과 울림", "양자컴퓨터의 미래", "우울할 땐 뇌 과학", "이기적 유전자", "우리는 왜 잠을 자야할까", "판타 레이", "운동의 뇌과학", "천문학자는 별을 보지 않는다"];
 
     for (let j = 0; j < search11.length; j++) {
         $.ajax({
@@ -268,7 +271,7 @@ $(document).ready(function(){
     // 인문학 책 추천
 
     let search13;
-    search13 = ["도둑맞은 집중력", "세상은 이야기로 만들어졌다", "마흔에 읽는 쇼펜하우어", "도파미네이션", "사피엔스", "빅터 프랭클의 죽음의 수용소에서", "사랑의 기술", "지적 대화를 위한 넓고 얕은 지식", "정의란 무엇인가", "제정신이라는 착각"];
+    search13 = ["도둑맞은 집중력", "세상은 이야기로 만들어졌다", "마흔에 읽는 쇼펜하우어", "도파민네이션", "사피엔스", "빅터 프랭클의 죽음의 수용소에서", "사랑의 기술", "지적 대화를 위한 넓고 얕은 지식1", "정의란 무엇인가", "제정신이라는 착각", "가짜 노동", "공정하다는 착각"];
 
     for (let j = 0; j < search13.length; j++) {
         $.ajax({

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Ubuntu&display=swap");
 @font-face {
   font-family: "RIDIBatang";
   src: url(../fonts/RIDIBatang.otf) format("opentype");
@@ -249,28 +250,29 @@ section {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: auto;
+  height: 311px;
+  margin-right: 6px;
 }
 .ridiToday .todayWrap .todayBook {
   width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .ridiToday .todayWrap .todayBook .todayCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiToday .todayWrap .todayBook .todayTxt {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .ridiMany {
@@ -280,32 +282,71 @@ section {
   margin-top: 20px;
   display: flex;
   flex-flow: column wrap;
-  width: 100%;
-  height: 450px;
+  width: 370px;
+  height: 366px;
   align-content: space-between;
   justify-content: center;
 }
 .ridiMany .manyWrap .manyBook {
-  width: 390px;
-  height: 150px;
+  width: 370px;
+  height: 116px;
   background-color: antiquewhite;
   display: flex;
   align-items: center;
+  margin-bottom: 6px;
 }
 .ridiMany .manyWrap .manyBook .manyCover {
-  width: 30%;
-  height: 100%;
-  background-color: gold;
+  width: 80px;
+  height: 116px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
 }
 .ridiMany .manyWrap .manyBook .manyIdx {
-  width: 20%;
-  height: 70%;
-  background-color: #999;
+  width: 80px;
+  height: 116px;
+  font-size: 18px;
+  color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ridiMany .manyWrap .manyBook .manyInfo {
-  width: 50%;
-  height: 70%;
+  width: 184px;
+  height: 116px;
   background-color: aliceblue;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-right: 26px;
+  letter-spacing: -0.01em;
+}
+.ridiMany .manyWrap .manyBook .manyInfo .manyTitle {
+  font-weight: 500;
+  color: #141414;
+  line-height: 19px;
+}
+.ridiMany .manyWrap .manyBook .manyInfo .manyAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+  line-height: 17px;
+}
+.ridiMany .manyWrap .manyBook .manyInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  line-height: 16px;
+  margin-top: 7px;
+}
+.ridiMany .manyWrap .manyBook .manyInfo .review span {
+  color: #787878;
+}
+.ridiMany .manyWrap .manyBook .manyInfo .review_0 {
+  font-size: 13px;
+  color: #787878;
+  font-family: "Noto Sans KR";
 }
 
 .ridiMD {
@@ -319,32 +360,23 @@ section {
   flex-wrap: nowrap;
 }
 .ridiMD .MDWrap .MDBox {
-  width: 366px;
+  width: 372px;
   height: 100%;
   position: relative;
   flex-shrink: 0;
-}
-.ridiMD .MDWrap .MDBox .MDBg {
-  width: 100%;
-}
-.ridiMD .MDWrap .MDBox .MDBg .MDCover {
-  width: 100%;
-  height: 100px;
-  background-color: aquamarine;
-}
-.ridiMD .MDWrap .MDBox .MDBg .MDBook {
-  width: 30%;
-  height: 120px;
-  background-color: gold;
-  position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .ridiMD .MDWrap .MDBox .MDTxt {
   width: 100%;
   height: 70px;
   background-color: antiquewhite;
+}
+.ridiMD .MDWrap .MDBox .MDTxt h4 {
+  color: #141414;
+  font-weight: 600;
+}
+.ridiMD .MDWrap .MDBox .MDTxt p {
+  color: #787878;
+  font-size: 14px;
 }
 
 .ridiBest {
@@ -354,32 +386,71 @@ section {
   margin-top: 20px;
   display: flex;
   flex-flow: column wrap;
-  width: 100%;
-  height: 450px;
+  width: 370px;
+  height: 366px;
   align-content: space-between;
   justify-content: center;
 }
 .ridiBest .bestWrap .bestBook {
-  width: 390px;
-  height: 150px;
+  width: 370px;
+  height: 116px;
   background-color: antiquewhite;
   display: flex;
   align-items: center;
+  margin-bottom: 6px;
 }
 .ridiBest .bestWrap .bestBook .bestCover {
-  width: 30%;
-  height: 100%;
-  background-color: gold;
+  width: 80px;
+  height: 116px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
 }
 .ridiBest .bestWrap .bestBook .bestIdx {
-  width: 20%;
-  height: 70%;
-  background-color: #999;
+  width: 80px;
+  height: 116px;
+  font-size: 18px;
+  color: #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ridiBest .bestWrap .bestBook .bestInfo {
-  width: 50%;
-  height: 70%;
+  width: 184px;
+  height: 116px;
   background-color: aliceblue;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  margin-right: 26px;
+  letter-spacing: -0.01em;
+}
+.ridiBest .bestWrap .bestBook .bestInfo .bestTitle {
+  font-weight: 500;
+  color: #141414;
+  line-height: 19px;
+}
+.ridiBest .bestWrap .bestBook .bestInfo .bestAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+  line-height: 17px;
+}
+.ridiBest .bestWrap .bestBook .bestInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  line-height: 16px;
+  margin-top: 7px;
+}
+.ridiBest .bestWrap .bestBook .bestInfo .review span {
+  color: #787878;
+}
+.ridiBest .bestWrap .bestBook .bestInfo .review_0 {
+  font-size: 13px;
+  color: #787878;
+  font-family: "Noto Sans KR";
 }
 
 .ridiNew {
@@ -393,23 +464,52 @@ section {
   height: auto;
 }
 .ridiNew .newWrap .newBook {
-  width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  width: 180px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiNew .newWrap .newBook .newCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiNew .newWrap .newBook .newInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiNew .newWrap .newBook .newInfo .newTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiNew .newWrap .newBook .newInfo .newAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiNew .newWrap .newBook .newInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiNew .newWrap .newBook .newInfo .review span {
+  color: #787878;
+}
+.ridiNew .newWrap .newBook .newInfo .review_0 {
+  font-size: 13px;
+  margin-top: 7px;
+  color: #787878;
+  font-family: "Noto Sans KR";
 }
 
 .ridiAwards {
@@ -421,25 +521,54 @@ section {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  margin-right: 6px;
 }
 .ridiAwards .awardsWrap .awardsBook {
   width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
 }
 .ridiAwards .awardsWrap .awardsBook .awardsCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiAwards .awardsWrap .awardsBook .awardsInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo .awardsTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo .awardsAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo .review span {
+  color: #787878;
+}
+.ridiAwards .awardsWrap .awardsBook .awardsInfo .review_0 {
+  font-size: 13px;
+  color: #787878;
+  margin-top: 7px;
+  font-family: "Noto Sans KR";
 }
 
 .ridiTop10 {
@@ -451,25 +580,49 @@ section {
   justify-content: space-between;
   width: 100%;
   height: auto;
+  margin-right: 6px;
 }
 .ridiTop10 .top10Wrap .top10Book {
   width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiTop10 .top10Wrap .top10Book .top10Cover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiTop10 .top10Wrap .top10Book .top10Info {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Info .top10Title {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Info .top10Author {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Info .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiTop10 .top10Wrap .top10Book .top10Info .review span {
+  color: #787878;
 }
 
 .ridiEvent {
@@ -483,28 +636,71 @@ section {
   display: flex;
 }
 .ridiEvent .eventWrap .eventBook {
-  width: 33%;
+  width: 372px;
   height: 100%;
   flex-shrink: 0;
-  background-color: aquamarine;
   display: flex;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(1) {
+  background-color: #DC6119;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(2) {
+  background-color: #8149DE;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(3) {
+  background-color: #232E4D;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(4) {
+  background-color: #530316;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(5) {
+  background-color: #0F9294;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(6) {
+  background-color: #DC5F18;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(7) {
+  background-color: #6E39AC;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(8) {
+  background-color: #5C6AD0;
+}
+.ridiEvent .eventWrap .eventBook:nth-child(9) {
+  background-color: #0A6377;
 }
 .ridiEvent .eventWrap .eventBook .eventTxt {
   width: 60%;
-  height: 100%;
+  height: 40px;
   align-self: center;
-  background-color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.ridiEvent .eventWrap .eventBook .eventTxt h4 {
+  max-width: 200px;
+  letter-spacing: -0.01em;
+  line-height: 20px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
 }
 .ridiEvent .eventWrap .eventBook .eventImage {
   width: 40%;
   height: 100%;
-  background-color: #eee;
 }
 .ridiEvent .eventWrap .eventBook .eventImage .eventCover {
   width: 40%;
   height: 100%;
   margin: 0 auto;
   background-color: gold;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 4px;
 }
 
 .ridiNovel {
@@ -518,23 +714,46 @@ section {
   height: auto;
 }
 .ridiNovel .novelWrap .novelBook {
-  width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  width: 180px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiNovel .novelWrap .novelBook .novelCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiNovel .novelWrap .novelBook .novelInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiNovel .novelWrap .novelBook .novelInfo .novelTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiNovel .novelWrap .novelBook .novelInfo .novelAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiNovel .novelWrap .novelBook .novelInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiNovel .novelWrap .novelBook .novelInfo .review span {
+  color: #787878;
 }
 
 .ridiPsychology {
@@ -548,23 +767,46 @@ section {
   height: auto;
 }
 .ridiPsychology .psyWrap .psyBook {
-  width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  width: 180px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiPsychology .psyWrap .psyBook .psyCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiPsychology .psyWrap .psyBook .psyInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiPsychology .psyWrap .psyBook .psyInfo .psyTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiPsychology .psyWrap .psyBook .psyInfo .psyAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiPsychology .psyWrap .psyBook .psyInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiPsychology .psyWrap .psyBook .psyInfo .review span {
+  color: #787878;
 }
 
 .ridiScience {
@@ -578,23 +820,46 @@ section {
   height: auto;
 }
 .ridiScience .scienceWrap .scienceBook {
-  width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  width: 180px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiScience .scienceWrap .scienceBook .scienceCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiScience .scienceWrap .scienceBook .scienceInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiScience .scienceWrap .scienceBook .scienceInfo .scienceTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiScience .scienceWrap .scienceBook .scienceInfo .scienceAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiScience .scienceWrap .scienceBook .scienceInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 6px;
+}
+.ridiScience .scienceWrap .scienceBook .scienceInfo .review span {
+  color: #787878;
 }
 
 .ridiMystery {
@@ -608,23 +873,99 @@ section {
   height: auto;
 }
 .ridiMystery .mysteryWrap .mysteryBook {
-  width: 16%;
-  background-color: antiquewhite;
-  height: 320px;
+  width: 180px;
+  height: 355px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-shrink: 0;
+  margin-right: 6px;
 }
 .ridiMystery .mysteryWrap .mysteryBook .mysteryCover {
-  width: 100%;
-  height: 250px;
-  background-color: gold;
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
 }
 .ridiMystery .mysteryWrap .mysteryBook .mysteryInfo {
   width: 100%;
-  height: 50px;
-  background-color: #666;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .mysteryTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .mysteryAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .review span {
+  color: #787878;
+}
+
+.ridiHumanity {
+  max-width: 1170px;
+}
+.ridiHumanity .humanWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+.ridiHumanity .humanWrap .humanBook {
+  width: 180px;
+  height: 355px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+.ridiHumanity .humanWrap .humanBook .humanCover {
+  width: 180px;
+  height: 261px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid rgba(20, 20, 20, 0.06);
+}
+.ridiHumanity .humanWrap .humanBook .humanInfo {
+  width: 100%;
+  height: 84px;
+  margin-top: 10px;
+  padding-right: 10px;
+}
+.ridiHumanity .humanWrap .humanBook .humanInfo .humanTitle {
+  color: #141414;
+  font-weight: 500;
+}
+.ridiHumanity .humanWrap .humanBook .humanInfo .humanAuthor {
+  color: #787878;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.ridiHumanity .humanWrap .humanBook .humanInfo .review {
+  font-family: "Noto Sans KR";
+  font-size: 13px;
+  color: #DC3232;
+  margin-top: 7px;
+}
+.ridiHumanity .humanWrap .humanBook .humanInfo .review span {
+  color: #787878;
 }
 
 footer {
