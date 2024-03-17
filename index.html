@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,9 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/54be9efe2e.js" crossorigin="anonymous"></script>
     <script src="js/api.js"></script>
+    <script src="js/index.js"></script>
 </head>
+
 <body>
 
     <!-- 헤더 상단 메뉴 -->
@@ -78,105 +81,107 @@
     <!-- 슬라이드배너(flex-grow) -->
     <div id="mainWrap">
         <div class="mainBanner">
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="content">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="slideWrap">
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
         </div>
 
@@ -408,13 +413,17 @@
                     </div>
                 </div>
             </div>
+            <ul>
+                <li id="prev_2" class="hide"><i class="fa-solid fa-angle-left arrow"></i></li>
+                <li id="next_2"><i class="fa-solid fa-angle-right arrow"></i></li>
+            </ul>
         </section>
 
         <section class="ridiMD">
             <h2>MD's Pick</h2>
             <div class="MDWrap">
                 <div class="MDBook">
-                    <div class="MDBg">
+                    <div class="MDBg bg_1">
                         <div class="MDCover"></div>
                     </div>
                     <div class="MDTxt">
@@ -423,7 +432,7 @@
                     </div>
                 </div>
                 <div class="MDBook">
-                    <div class="MDBg">
+                    <div class="MDBg bg_2">
                         <div class="MDCover"></div>
                     </div>
                     <div class="MDTxt">
@@ -432,7 +441,7 @@
                     </div>
                 </div>
                 <div class="MDBook">
-                    <div class="MDBg">
+                    <div class="MDBg bg_3">
                         <div class="MDCover"></div>
                     </div>
                     <div class="MDTxt">
@@ -441,7 +450,7 @@
                     </div>
                 </div>
                 <div class="MDBook">
-                    <div class="MDBg">
+                    <div class="MDBg bg_4">
                         <div class="MDCover"></div>
                     </div>
                     <div class="MDTxt">
@@ -867,7 +876,8 @@
             <div class="eventWrap">
                 <div class="eventBook">
                     <div class="eventTxt">
-                        <h4>삶과 죽음의 문턱에 놓인<br>작은 경이와 미스터리<샤이닝></h4>
+                        <h4>삶과 죽음의 문턱에 놓인<br>작은 경이와 미스터리<샤이닝>
+                        </h4>
                     </div>
                     <div class="eventImage">
                         <div class="eventCover"></div>
@@ -875,7 +885,9 @@
                 </div>
                 <div class="eventBook">
                     <div class="eventTxt">
-                        <h4>히가시노 게이고 최신작<br><블랙 쇼맨과 운명의 바퀴></h4>
+                        <h4>히가시노 게이고 최신작<br>
+                            <블랙 쇼맨과 운명의 바퀴>
+                        </h4>
                     </div>
                     <div class="eventImage">
                         <div class="eventCover"></div>
@@ -883,7 +895,8 @@
                 </div>
                 <div class="eventBook">
                     <div class="eventTxt">
-                        <h4>문명의 생성과 번영의<br>수수께끼를 밝히다<총균쇠></h4>
+                        <h4>문명의 생성과 번영의<br>수수께끼를 밝히다<총균쇠>
+                        </h4>
                     </div>
                     <div class="eventImage">
                         <div class="eventCover"></div>
@@ -891,7 +904,9 @@
                 </div>
                 <div class="eventBook">
                     <div class="eventTxt">
-                        <h4>역사적인 해리포터의 시작<br><해리포터와 마법사의 돌></h4>
+                        <h4>역사적인 해리포터의 시작<br>
+                            <해리포터와 마법사의 돌>
+                        </h4>
                     </div>
                     <div class="eventImage">
                         <div class="eventCover"></div>
@@ -931,7 +946,9 @@
                 </div>
                 <div class="eventBook">
                     <div class="eventTxt">
-                        <h4><투명인간은 밀실에 숨는다><br>아쓰카와 다쓰미 신작 출간</h4>
+                        <h4>
+                            <투명인간은 밀실에 숨는다><br>아쓰카와 다쓰미 신작 출간
+                        </h4>
                     </div>
                     <div class="eventImage">
                         <div class="eventCover"></div>
@@ -1510,7 +1527,7 @@
                         제 2009-서울강남 35-02139호</li>
                     <li>이메일
                         help@ridi.com
-                        </li>
+                    </li>
                     <li>대표전화
                         1644-0331</li>
                     <li>주소
@@ -1532,4 +1549,5 @@
         </div>
     </footer>
 </body>
+
 </html>

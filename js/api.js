@@ -9,7 +9,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search1[i], size: 5 },
+            data: { query: search1[i], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -36,7 +36,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search2[j], size: 5,  },
+            data: { query: search2[j], size: 1},
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -59,7 +59,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search3[j], size: 5 },
+            data: { query: search3[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -80,7 +80,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search4[j], size: 5 },
+            data: { query: search4[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -103,7 +103,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search5[j], size: 5 },
+            data: { query: search5[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -125,7 +125,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search6[j], size: 5 },
+            data: { query: search6[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -147,7 +147,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search7[j], size: 5 },
+            data: { query: search7[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -169,7 +169,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search8[j], size: 5 },
+            data: { query: search8[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -211,7 +211,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search10[j], size: 5 },
+            data: { query: search10[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -233,7 +233,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search11[j], size: 5 },
+            data: { query: search11[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -255,7 +255,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search12[j], size: 5 },
+            data: { query: search12[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
@@ -277,7 +277,7 @@ $(document).ready(function(){
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: search13[j], size: 5 },
+            data: { query: search13[j], size: 1 },
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
