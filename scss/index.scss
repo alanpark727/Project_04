@@ -10,14 +10,13 @@
 }
 
 .upperMenu {
-    width: 1170px;
+    width: 1140px;
     height: 40px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 18px;
 }
 
 .upperLeft {
@@ -53,7 +52,7 @@
 }
 
 header {
-    max-width: 1170px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
@@ -126,11 +125,9 @@ header {
 
 
 .underBar {
-    width: 1170px;
+    width: 1140px;
     height: 120px;
     margin: 0 auto;
-    padding: 0 18px;
-    padding-right: 30px;
     .underMenu {
         display: flex;
         align-items: center;
@@ -192,8 +189,104 @@ header {
     height: 400px;
     margin: 0 auto;
     background-color: skyblue;
-    padding: 0px 30px;
+    .slideWrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        a {
+            flex-grow: 1;
+            flex-basis: 0px;
+            .content {
+                position: relative;
+                height: 100%;
+            }
+        }
+    }
 }
+
+.titleHead {
+    display: inline-flex;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    img {
+        height: 20px;
+        width: auto;
+        border-right: 1px solid #fff;
+        &:last-of-type {
+            border-right: none;
+        }
+    }
+}
+
+
+.slideImg {
+    width: 1000px;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.slide_1 {
+    background-image: url(../img/slide/01.webp);
+}
+.slide_2 {
+    background-image: url(../img/slide/02.webp);
+}
+.slide_3 {
+    background-image: url(../img/slide/03.webp);
+}
+.slide_4 {
+    background-image: url(../img/slide/04.webp);
+}
+.slide_5 {
+    background-image: url(../img/slide/05.webp);
+}
+.slide_6 {
+    background-image: url(../img/slide/06.webp);
+}
+.slide_7 {
+    background-image: url(../img/slide/07.webp);
+}
+.slide_8 {
+    background-image: url(../img/slide/08.webp);
+}
+.slide_9 {
+    background-image: url(../img/slide/09.webp);
+}
+.slide_10 {
+    background-image: url(../img/slide/10.webp);
+}
+.slide_11 {
+    background-image: url(../img/slide/11.webp);
+}
+.slide_12 {
+    background-image: url(../img/slide/12.webp);
+}
+.slide_13 {
+    background-image: url(../img/slide/13.webp);
+}
+.slide_14 {
+    background-image: url(../img/slide/14.webp);
+}
+.slide_15 {
+    background-image: url(../img/slide/15.webp);
+}
+.slide_16 {
+    background-image: url(../img/slide/16.webp);
+}
+.slide_17 {
+    background-image: url(../img/slide/17.webp);
+}
+.slide_18 {
+    background-image: url(../img/slide/18.webp);
+}
+.slide_19 {
+    background-image: url(../img/slide/19.webp);
+}
+.slide_20 {
+    background-image: url(../img/slide/20.webp);
+}
+
 
 
 // 버튼
@@ -229,15 +322,14 @@ header {
 // 본문
 
 section {
-    max-width: 1170px;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 1200px;
     margin: 0 auto;
     margin-top: 40px;
     padding-bottom: 30px;
 }
 
 .ridiToday {
+    width: 1170px;
     .todayWrap {
         margin-top: 20px;
         display: flex;
@@ -270,23 +362,24 @@ section {
 }
 
 .ridiMany {
-    width: 1170px;
+    max-width: 1170px;
     overflow: hidden;
+    position: relative;
     .manyWrap {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 370px;
+        width: 1140px;
         height: 366px;
         align-content: space-between;
         justify-content: center;
         .manyBook {
-            width: 370px;
+            width: 380px;
             height: 116px;
-            background-color: antiquewhite;
             display: flex;
             align-items: center;
             margin-bottom: 6px;
+            margin-right: 10px;
             .manyCover {
                 width: 80px;
                 height: 116px;
@@ -305,14 +398,13 @@ section {
                 align-items: center;
             }
             .manyInfo {
-                width: 184px;
+                width: 220px;
                 height: 116px;
-                background-color: aliceblue;
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: center;
-                margin-right: 26px;
                 letter-spacing: -0.01em;
+                padding-right: 20px;
                 .manyTitle {
                     font-weight: 500;
                     color: $black;
@@ -342,27 +434,63 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #f0f0f0;
+        background-color: #fff;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_2 {
+        left: 0px;
+    }
+    ul>#next_2 {
+        right: 0px;
+    }
 }
 
 .ridiMD {
     width: 1170px;
+    position: relative;
+    overflow: hidden;
     .MDWrap {
         margin-top: 20px;
-        width: 100%;
+        width: 1140px;
         height: 226px;
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
         .MDBook {
-            width: calc((1170px - 54px) / 3);
+            width: calc((1170px - 48px) / 3);
             height: 226px;
             position: relative;
             top: 58px;
             flex-shrink: 0;
+            margin-right: 16px;
             .MDBg {
                 width: 100%;
                 height: 100px;
                 position: relative;
+                border-radius: 5px;
                 .MDCover {
                     width: 30%;
                     margin: 0 auto;
@@ -394,6 +522,7 @@ section {
                 height: 70px;
                 margin: 0 auto;
                 position: relative;
+                top: 20px;
                 h4 {
                     color: $black;
                     font-weight: 600;
@@ -407,25 +536,55 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-30%);
+        border: 1px solid #f0f0f0;
+        background-color: #fff;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_3 {
+        left: 0px;
+    }
+    ul>#next_3 {
+        right: 0px;
+    }
 }
 
 .ridiBest {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .bestWrap {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 370px;
+        width: 1140px;
         height: 366px;
         align-content: space-between;
         justify-content: center;
         .bestBook {
-            width: 370px;
+            width: 380px;
             height: 116px;
-            background-color: antiquewhite;
             display: flex;
             align-items: center;
             margin-bottom: 6px;
+            margin-right: 10px;
             .bestCover {
                 width: 80px;
                 height: 116px;
@@ -444,14 +603,13 @@ section {
                 align-items: center;
             }
             .bestInfo {
-                width: 184px;
+                width: 220px;
                 height: 116px;
-                background-color: aliceblue;
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: center;
-                margin-right: 26px;
                 letter-spacing: -0.01em;
+                padding-right: 30px;
                 .bestTitle {
                     font-weight: 500;
                     color: $black;
@@ -481,23 +639,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-30%);
+        border: 1px solid #f0f0f0;
+        background-color: #fff;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_4 {
+        left: 0px;
+    }
+    ul>#next_4 {
+        right: 0px;
+    }
 }
 
 .ridiNew {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .newWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1170px;
         height: auto;
         .newBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .newCover {
                 width: 180px;
                 height: 261px;
@@ -540,6 +728,34 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-120%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_5 {
+        left: 0px;
+    }
+    ul>#next_5 {
+        right: 0px;
+    }
 }
 
 .ridiAwards {
@@ -548,15 +764,15 @@ section {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
-        margin-right: 6px;
         .awardsBook {
-            width: 16%;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
+            margin-right: 10px;
             .awardsCover {
                 width: 180px;
                 height: 261px;
@@ -603,20 +819,21 @@ section {
 
 .ridiTop10 {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .top10Wrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
-        margin-right: 6px;
         .top10Book {
-            width: 16%;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .top10Cover {
                 width: 180px;
                 height: 261px;
@@ -653,25 +870,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-120%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_6 {
+        left: 0px;
+    }
+    ul>#next_6 {
+        right: 0px;
+    }
 }
 
 .ridiEvent {
     width: 1170px;
     height: 168px;
+    position: relative;
+    overflow: hidden;
     .eventWrap {
         margin-top: 20px;
-        width: 100%;
+        width: 3480px;
         height: 90px;
         display: flex;
         .eventBook {
-            width: calc((1170px - 54px) / 3);
+            width: 370px;
             height: 100%;
-            flex-shrink: 0;
+            flex-shrink: 1;
             display: flex;
-            padding-left: 3px;
-            padding-right: 3px;
             border-radius: 4px;
-            margin-right: 6px;
+            margin: 0px 10px;
             &:nth-child(1){
                 background-color: #DC6119;
             }
@@ -722,7 +967,6 @@ section {
                     width: 40%;
                     height: 100%;
                     margin: 0 auto;
-                    background-color: gold;
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -731,23 +975,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-10%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_7 {
+        left: 0px;
+    }
+    ul>#next_7 {
+        right: 0px;
+    }
 }
 
 .ridiNovel {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .novelWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1170px;
         height: auto;
         .novelBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .novelCover {
                 width: 180px;
                 height: 261px;
@@ -784,23 +1058,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-130%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_8 {
+        left: 0px;
+    }
+    ul>#next_8 {
+        right: 0px;
+    }
 }
 
 .ridiPsychology {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .psyWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
         .psyBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .psyCover {
                 width: 180px;
                 height: 261px;
@@ -837,23 +1141,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-130%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_9 {
+        left: 0px;
+    }
+    ul>#next_9 {
+        right: 0px;
+    }
 }
 
 .ridiScience {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .scienceWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
         .scienceBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .scienceCover {
                 width: 180px;
                 height: 261px;
@@ -890,23 +1224,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-130%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_10 {
+        left: 0px;
+    }
+    ul>#next_10 {
+        right: 0px;
+    }
 }
 
 .ridiMystery {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .mysteryWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
         .mysteryBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .mysteryCover {
                 width: 180px;
                 height: 261px;
@@ -943,23 +1307,53 @@ section {
             }
         }
     }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-130%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_11 {
+        left: 0px;
+    }
+    ul>#next_11 {
+        right: 0px;
+    }
 }
 
 .ridiHumanity {
     max-width: 1170px;
+    overflow: hidden;
+    position: relative;
     .humanWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
+        width: 1140px;
         height: auto;
         .humanBook {
-            width: 180px;
+            width: 185px;
             height: 355px;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
-            margin-right: 6px;
+            margin-right: 10px;
             .humanCover {
                 width: 180px;
                 height: 261px;
@@ -995,6 +1389,34 @@ section {
                 }
             }
         }
+    }
+    .hide {
+        display: none;
+    }
+    ul>li {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-130%);
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transition: all 0.2s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    ul>#prev_12 {
+        left: 0px;
+    }
+    ul>#next_12 {
+        right: 0px;
     }
 }
 
