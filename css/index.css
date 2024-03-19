@@ -31,7 +31,8 @@ a {
 }
 
 .upperMenu {
-  width: 1140px;
+  width: 1170px;
+  padding: 0px 18px;
   height: 40px;
   margin: 0 auto;
   display: flex;
@@ -63,6 +64,7 @@ a {
 }
 .upperRight li {
   width: 80px;
+  text-align: center;
 }
 .upperRight li a {
   font-size: 14px;
@@ -73,7 +75,7 @@ a {
 }
 
 header {
-  max-width: 1140px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -82,6 +84,7 @@ header {
   height: 72px;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 18px 16px 22px;
 }
 
 .headLeft {
@@ -128,6 +131,7 @@ header {
 .headRight ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 200px;
   padding: 0 10px;
 }
@@ -144,8 +148,10 @@ header {
 }
 
 .underBar {
-  width: 1140px;
+  width: 1170px;
   height: 120px;
+  padding: 0 18px;
+  padding-right: 30px;
   margin: 0 auto;
 }
 .underBar .underMenu {
@@ -200,23 +206,39 @@ header {
 }
 
 .mainBanner {
-  width: 1170px;
+  max-width: 1170px;
   height: 400px;
   margin: 0 auto;
-  background-color: skyblue;
+  padding: 0px 15px;
 }
-.mainBanner .slideWrap {
+.mainBanner .mainSlide {
+  width: 1116px;
+  position: relative;
+  margin: 0 -3px;
+  height: 400px;
+  overflow: hidden;
+}
+.mainBanner .mainSlide .slideWrap {
   display: flex;
   width: 100%;
   height: 100%;
 }
-.mainBanner .slideWrap a {
-  flex-grow: 1;
-  flex-basis: 0px;
+.mainBanner .mainSlide .slideWrap a {
+  width: 0;
+  height: 400px;
 }
-.mainBanner .slideWrap a .content {
+.mainBanner .mainSlide .slideWrap a .content {
   position: relative;
   height: 100%;
+  border-radius: 6px;
+  margin: 0 3px;
+  overflow: hidden;
+}
+.mainBanner .mainSlide .slideWrap a .content .slideImg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #f0f0f0;
 }
 
 .titleHead {
@@ -234,90 +256,274 @@ header {
   border-right: none;
 }
 
+.slideWrap a .active .slideTxt {
+  opacity: 1;
+}
+
+.content .slideTxt {
+  width: 1024px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 0;
+  padding-right: 46px;
+  opacity: 0;
+}
+.content .slideTxt .slideTitle {
+  color: #fff;
+}
+.content .slideTxt .slideTitle h2 {
+  font-size: 32px;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  line-height: 40px;
+  max-height: 80px;
+  font-weight: 700;
+}
+.content .slideTxt .titleUnder {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+}
+.content .slideTxt .titleUnder .underTxt {
+  color: #fff;
+  display: flex;
+  max-width: calc(85% + 40px);
+  flex-basis: calc(85% + 40px);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.content .slideTxt .titleUnder .underTxt p {
+  font-size: 16px;
+  opacity: 0.8;
+  line-height: 19px;
+  max-height: 38px;
+  letter-spacing: -0.01em;
+  width: 100%;
+}
+.content .slideTxt .titleUnder .underTxt p:nth-child(2) {
+  font-size: 8px;
+  margin-top: 8px;
+}
+.content .slideTxt .titleUnder .slidePage {
+  display: flex;
+  font-size: 14px;
+  line-height: 17px;
+  flex: 0 0 auto;
+  padding: 3px 8px;
+  border-radius: 100px;
+  padding-top: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+  font-weight: 600;
+}
+.content .slideTxt .titleUnder .slidePage span {
+  color: #fff;
+  opacity: 0.4;
+}
+.content .slideTxt .titleUnder .slidePage .pageIndex {
+  opacity: 1;
+}
+
 .slideImg {
-  width: 1000px;
+  width: 1018px;
   height: 400px;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.slideImg .gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: 100% calc(100% + 2px);
+  background-position: center;
+  height: 200px;
 }
 
 .slide_1 {
   background-image: url(../img/slide/01.webp);
 }
+.slide_1 .gradient {
+  background: linear-gradient(rgba(129, 73, 222, 0), rgb(129, 73, 222)), linear-gradient(rgba(129, 73, 222, 0), rgb(129, 73, 222));
+}
 
 .slide_2 {
   background-image: url(../img/slide/02.webp);
+}
+.slide_2 .gradient {
+  background: linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148)), linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148));
 }
 
 .slide_3 {
   background-image: url(../img/slide/03.webp);
 }
+.slide_3 .gradient {
+  background: linear-gradient(rgba(38, 38, 96, 0), rgb(38, 38, 96)), linear-gradient(rgba(38, 38, 96, 0), rgb(38, 38, 96));
+}
 
 .slide_4 {
   background-image: url(../img/slide/04.webp);
+}
+.slide_4 .gradient {
+  background: linear-gradient(to bottom, rgba(238, 78, 131, 0), rgb(238, 78, 131)), linear-gradient(to bottom, rgba(238, 78, 131, 0), rgb(238, 78, 131));
 }
 
 .slide_5 {
   background-image: url(../img/slide/05.webp);
 }
+.slide_5 .gradient {
+  background: linear-gradient(rgba(182, 72, 11, 0), rgb(182, 72, 11)), linear-gradient(rgba(182, 72, 11, 0), rgb(182, 72, 11));
+}
 
 .slide_6 {
   background-image: url(../img/slide/06.webp);
+}
+.slide_6 .gradient {
+  background: linear-gradient(rgba(43, 116, 192, 0), rgb(43, 116, 192)), linear-gradient(rgba(43, 116, 192, 0), rgb(43, 116, 192));
 }
 
 .slide_7 {
   background-image: url(../img/slide/07.webp);
 }
+.slide_7 .gradient {
+  background: linear-gradient(rgba(5, 69, 148, 0), rgb(5, 69, 148)), linear-gradient(rgba(5, 69, 148, 0), rgb(5, 69, 148));
+}
 
 .slide_8 {
   background-image: url(../img/slide/08.webp);
+}
+.slide_8 .gradient {
+  background: linear-gradient(rgba(15, 44, 27, 0), rgb(15, 44, 27)), linear-gradient(rgba(15, 44, 27, 0), rgb(15, 44, 27));
 }
 
 .slide_9 {
   background-image: url(../img/slide/09.webp);
 }
+.slide_9 .gradient {
+  background: linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57)), linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57));
+}
 
 .slide_10 {
   background-image: url(../img/slide/10.webp);
+}
+.slide_10 .gradient {
+  background: linear-gradient(rgba(196, 12, 25, 0), rgb(196, 12, 25)), linear-gradient(rgba(196, 12, 25, 0), rgb(196, 12, 25));
 }
 
 .slide_11 {
   background-image: url(../img/slide/11.webp);
 }
+.slide_11 .gradient {
+  background: linear-gradient(rgba(0, 142, 206, 0), rgb(0, 142, 206)), linear-gradient(rgba(0, 142, 206, 0), rgb(0, 142, 206));
+}
 
 .slide_12 {
   background-image: url(../img/slide/12.webp);
+}
+.slide_12 .gradient {
+  background: linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25)), linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25));
 }
 
 .slide_13 {
   background-image: url(../img/slide/13.webp);
 }
+.slide_13 .gradient {
+  background-image: linear-gradient(to bottom, rgba(110, 57, 172, 0), rgb(110, 57, 172)), linear-gradient(to bottom, rgba(110, 57, 172, 0), rgb(110, 57, 172));
+}
 
 .slide_14 {
   background-image: url(../img/slide/14.webp);
+}
+.slide_14 .gradient {
+  background: linear-gradient(rgba(10, 99, 119, 0), rgb(10, 99, 119)), linear-gradient(rgba(10, 99, 119, 0), rgb(10, 99, 119));
 }
 
 .slide_15 {
   background-image: url(../img/slide/15.webp);
 }
+.slide_15 .gradient {
+  background: linear-gradient(rgba(92, 191, 175, 0), rgb(92, 191, 175)), linear-gradient(rgba(92, 191, 175, 0), rgb(92, 191, 175));
+}
 
 .slide_16 {
   background-image: url(../img/slide/16.webp);
+}
+.slide_16 .gradient {
+  background: linear-gradient(rgba(92, 106, 208, 0), rgb(92, 106, 208)), linear-gradient(rgba(92, 106, 208, 0), rgb(92, 106, 208));
 }
 
 .slide_17 {
   background-image: url(../img/slide/17.webp);
 }
+.slide_17 .gradient {
+  background: linear-gradient(rgba(88, 162, 171, 0), rgb(88, 162, 171)), linear-gradient(rgba(88, 162, 171, 0), rgb(88, 162, 171));
+}
 
 .slide_18 {
   background-image: url(../img/slide/18.webp);
+}
+.slide_18 .gradient {
+  background: linear-gradient(rgba(31, 116, 181, 0), rgb(31, 116, 181)), linear-gradient(rgba(31, 116, 181, 0), rgb(31, 116, 181));
 }
 
 .slide_19 {
   background-image: url(../img/slide/19.webp);
 }
+.slide_19 .gradient {
+  background: linear-gradient(rgba(35, 46, 77, 0), rgb(35, 46, 77)), linear-gradient(rgba(35, 46, 77, 0), rgb(35, 46, 77));
+}
 
 .slide_20 {
   background-image: url(../img/slide/20.webp);
+}
+.slide_20 .gradient {
+  background: linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25)), linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25));
+}
+
+.slideBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 3px;
+  pointer-events: none;
+}
+.slideBtn button {
+  color: rgba(20, 20, 20, 0.4);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 50%;
+  transition: opacity 0.2s ease, color 0.2s ease, pointer-events 0.2s ease;
+  position: absolute;
+  top: 50%;
+  pointer-events: auto;
+  font-size: 16px;
+  color: #141414;
+}
+.slideBtn #prev_1 {
+  left: 0;
+  transform: translate(50%, -50%);
+}
+.slideBtn #next_1 {
+  right: 0;
+  transform: translate(-50%, -50%);
 }
 
 .topBtn {
@@ -341,9 +547,14 @@ header {
   max-width: 100%;
 }
 .topBtn ul li p {
-  font-size: 11.5px;
+  font-size: 13px;
   text-align: center;
-  width: 70px;
+  line-height: 16px;
+  margin-top: 4px;
+  letter-spacing: -0.03em;
+  color: #141414;
+  word-break: keep-all;
+  font-weight: 500;
 }
 
 section {
@@ -355,6 +566,8 @@ section {
 
 .ridiToday {
   width: 1170px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .ridiToday .todayWrap {
   margin-top: 20px;
@@ -390,12 +603,15 @@ section {
   max-width: 1170px;
   overflow: hidden;
   position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
 }
 .ridiMany .manyWrap {
   margin-top: 20px;
   display: flex;
   flex-flow: column wrap;
-  width: 1140px;
+  width: 100%;
   height: 366px;
   align-content: space-between;
   justify-content: center;
@@ -426,13 +642,13 @@ section {
   align-items: center;
 }
 .ridiMany .manyWrap .manyBook .manyInfo {
-  width: 220px;
+  width: 184px;
   height: 116px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   letter-spacing: -0.01em;
-  padding-right: 20px;
+  padding-right: 26px;
 }
 .ridiMany .manyWrap .manyBook .manyInfo .manyTitle {
   font-weight: 500;
@@ -495,8 +711,11 @@ section {
 
 .ridiMD {
   width: 1170px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .ridiMD .MDWrap {
   margin-top: 20px;
@@ -507,12 +726,13 @@ section {
   align-items: center;
 }
 .ridiMD .MDWrap .MDBook {
-  width: 374px;
+  width: 372px;
   height: 226px;
   position: relative;
   top: 58px;
   flex-shrink: 0;
-  margin-right: 16px;
+  margin-right: 8px;
+  padding-right: 2px;
 }
 .ridiMD .MDWrap .MDBook .MDBg {
   width: 100%;
@@ -595,12 +815,15 @@ section {
   max-width: 1170px;
   overflow: hidden;
   position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
 }
 .ridiBest .bestWrap {
   margin-top: 20px;
   display: flex;
   flex-flow: column wrap;
-  width: 1140px;
+  width: 100%;
   height: 366px;
   align-content: space-between;
   justify-content: center;
@@ -631,13 +854,13 @@ section {
   align-items: center;
 }
 .ridiBest .bestWrap .bestBook .bestInfo {
-  width: 220px;
+  width: 184px;
   height: 116px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   letter-spacing: -0.01em;
-  padding-right: 30px;
+  padding-right: 26px;
 }
 .ridiBest .bestWrap .bestBook .bestInfo .bestTitle {
   font-weight: 500;
@@ -698,16 +921,18 @@ section {
   max-width: 1170px;
   overflow: hidden;
   position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .ridiNew .newWrap {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  width: 1170px;
+  width: 100%;
   height: auto;
 }
 .ridiNew .newWrap .newBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -784,7 +1009,7 @@ section {
 }
 
 .ridiAwards {
-  max-width: 1170px;
+  max-width: 1140px;
 }
 .ridiAwards .awardsWrap {
   margin-top: 20px;
@@ -794,7 +1019,7 @@ section {
   height: auto;
 }
 .ridiAwards .awardsWrap .awardsBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -843,7 +1068,7 @@ section {
 }
 
 .ridiTop10 {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -855,7 +1080,7 @@ section {
   height: auto;
 }
 .ridiTop10 .top10Wrap .top10Book {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -926,14 +1151,14 @@ section {
 }
 
 .ridiEvent {
-  width: 1170px;
+  width: 1140px;
   height: 168px;
   position: relative;
   overflow: hidden;
 }
 .ridiEvent .eventWrap {
   margin-top: 20px;
-  width: 3480px;
+  width: 3420px;
   height: 90px;
   display: flex;
 }
@@ -1031,7 +1256,7 @@ section {
 }
 
 .ridiNovel {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -1039,11 +1264,11 @@ section {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  width: 1170px;
+  width: 1140px;
   height: auto;
 }
 .ridiNovel .novelWrap .novelBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -1114,7 +1339,7 @@ section {
 }
 
 .ridiPsychology {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -1126,7 +1351,7 @@ section {
   height: auto;
 }
 .ridiPsychology .psyWrap .psyBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -1197,7 +1422,7 @@ section {
 }
 
 .ridiScience {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -1209,7 +1434,7 @@ section {
   height: auto;
 }
 .ridiScience .scienceWrap .scienceBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -1280,7 +1505,7 @@ section {
 }
 
 .ridiMystery {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -1292,7 +1517,7 @@ section {
   height: auto;
 }
 .ridiMystery .mysteryWrap .mysteryBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;
@@ -1363,7 +1588,7 @@ section {
 }
 
 .ridiHumanity {
-  max-width: 1170px;
+  max-width: 1140px;
   overflow: hidden;
   position: relative;
 }
@@ -1375,7 +1600,7 @@ section {
   height: auto;
 }
 .ridiHumanity .humanWrap .humanBook {
-  width: 185px;
+  width: 180px;
   height: 355px;
   display: flex;
   flex-direction: column;

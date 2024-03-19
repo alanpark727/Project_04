@@ -10,7 +10,8 @@
 }
 
 .upperMenu {
-    width: 1140px;
+    width: 1170px;
+    padding: 0px 18px;
     height: 40px;
     margin: 0 auto;
     display: flex;
@@ -41,6 +42,7 @@
     justify-content: end;
     li {
         width: 80px;
+        text-align: center;
         a {
             font-size: 14px;
             transition: all 0.3s ease;
@@ -52,7 +54,7 @@
 }
 
 header {
-    max-width: 1140px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
@@ -61,6 +63,7 @@ header {
     height: 72px;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 18px 16px 22px;
 }
 
 .headLeft {
@@ -107,6 +110,7 @@ header {
     ul {
         display: flex; 
         align-items: center;
+        justify-content: space-between;
         width: 200px;
         padding: 0 10px;
         li {
@@ -125,8 +129,10 @@ header {
 
 
 .underBar {
-    width: 1140px;
+    width: 1170px;
     height: 120px;
+    padding: 0 18px;
+    padding-right: 30px;
     margin: 0 auto;
     .underMenu {
         display: flex;
@@ -185,20 +191,36 @@ header {
 // 슬라이더
 
 .mainBanner {
-    width: 1170px;
+    max-width: 1170px;
     height: 400px;
     margin: 0 auto;
-    background-color: skyblue;
-    .slideWrap {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        a {
-            flex-grow: 1;
-            flex-basis: 0px;
-            .content {
-                position: relative;
-                height: 100%;
+    padding: 0px 15px;
+    .mainSlide {
+        width: 1116px;
+        position: relative;
+        margin: 0 -3px;
+        height: 400px;
+        overflow: hidden;
+        .slideWrap {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            a {
+                width: 0;
+                height: 400px;
+                .content {
+                    position: relative;
+                    height: 100%;
+                    border-radius: 6px;
+                    margin: 0 3px;
+                    overflow: hidden;
+                    .slideImg {
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%,0);
+                        background-color: #f0f0f0;
+                    }
+                }
             }
         }
     }
@@ -218,75 +240,262 @@ header {
         }
     }
 }
+.slideWrap a .active {
+    .slideTxt {
+        opacity: 1;
+    }
+}
+.content {
+    .slideTxt {
+        width: 1024px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 40px;
+        padding-top: 0;
+        padding-right: 46px;
+        opacity: 0;
+        .slideTitle {
+            color: #fff;
+            h2 {
+                font-size: 32px;
+                margin-bottom: 4px;
+                letter-spacing: -0.01em;
+                line-height: 40px;
+                max-height: calc(40*2px);
+                font-weight: 700;
+            }
+        }
+        .titleUnder {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            align-self: stretch;
+            .underTxt {
+                color: #fff;
+                display: flex;
+                max-width: calc(85% + 40px);
+                flex-basis: calc(85% + 40px);
+                flex-direction: column;
+                align-items: flex-start;
+                align-self: stretch;
+                p {
+                    font-size: 16px;
+                    opacity: 0.8;
+                    line-height: 19px;
+                    max-height: calc(19*2px);
+                    letter-spacing: -0.01em;
+                    width: 100%;
+                    &:nth-child(2) {
+                        font-size: 8px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+            .slidePage {
+                display: flex;
+                font-size: 14px;
+                line-height: 17px;
+                flex: 0 0 auto;
+                padding: 3px 8px;
+                border-radius: 100px;
+                padding-top: 2px;
+                background-color: rgba($color: #000000, $alpha: 0.1);
+                align-items: center;
+                font-weight: 600;
+                span {
+                    color: #fff;
+                    opacity: 0.4;
+                }
+                .pageIndex {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
 
 
 .slideImg {
-    width: 1000px;
+    width: 1018px;
     height: 400px;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .gradient {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-size: 100% calc(100% + 2px);
+        background-position: center;
+        height: 200px;
+    }
 }
 
 .slide_1 {
     background-image: url(../img/slide/01.webp);
+    .gradient {
+        background: linear-gradient(rgba(129, 73, 222, 0), rgb(129, 73, 222)), linear-gradient(rgba(129, 73, 222, 0), rgb(129, 73, 222));
+    }
 }
 .slide_2 {
     background-image: url(../img/slide/02.webp);
+    .gradient {
+        background: linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148)), linear-gradient(rgba(15, 146, 148, 0), rgb(15, 146, 148));
+    }
 }
 .slide_3 {
     background-image: url(../img/slide/03.webp);
+    .gradient {
+        background: linear-gradient(rgba(38, 38, 96, 0), rgb(38, 38, 96)), linear-gradient(rgba(38, 38, 96, 0), rgb(38, 38, 96));
+    }
 }
 .slide_4 {
     background-image: url(../img/slide/04.webp);
+    .gradient {
+        background: linear-gradient(to bottom, rgba(238, 78, 131, 0), rgba(238, 78, 131, 1)), linear-gradient(to bottom, rgba(238, 78, 131, 0), rgba(238, 78, 131, 1));
+    }
 }
 .slide_5 {
     background-image: url(../img/slide/05.webp);
+    .gradient {
+        background: linear-gradient(rgba(182, 72, 11, 0), rgb(182, 72, 11)), linear-gradient(rgba(182, 72, 11, 0), rgb(182, 72, 11));
+    }
 }
 .slide_6 {
     background-image: url(../img/slide/06.webp);
+    .gradient {
+        background: linear-gradient(rgba(43, 116, 192, 0), rgb(43, 116, 192)), linear-gradient(rgba(43, 116, 192, 0), rgb(43, 116, 192));
+    }
 }
 .slide_7 {
     background-image: url(../img/slide/07.webp);
+    .gradient {
+        background: linear-gradient(rgba(5, 69, 148, 0), rgb(5, 69, 148)), linear-gradient(rgba(5, 69, 148, 0), rgb(5, 69, 148));
+    }
 }
 .slide_8 {
     background-image: url(../img/slide/08.webp);
+    .gradient {
+        background: linear-gradient(rgba(15, 44, 27, 0), rgb(15, 44, 27)), linear-gradient(rgba(15, 44, 27, 0), rgb(15, 44, 27));
+    }
 }
 .slide_9 {
     background-image: url(../img/slide/09.webp);
+    .gradient {
+        background: linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57)), linear-gradient(rgba(141, 103, 57, 0), rgb(141, 103, 57));
+    }
 }
 .slide_10 {
     background-image: url(../img/slide/10.webp);
+    .gradient {
+        background: linear-gradient(rgba(196, 12, 25, 0), rgb(196, 12, 25)), linear-gradient(rgba(196, 12, 25, 0), rgb(196, 12, 25));
+    }
 }
 .slide_11 {
     background-image: url(../img/slide/11.webp);
+    .gradient {
+        background: linear-gradient(rgba(0, 142, 206, 0), rgb(0, 142, 206)), linear-gradient(rgba(0, 142, 206, 0), rgb(0, 142, 206));
+    }
 }
 .slide_12 {
     background-image: url(../img/slide/12.webp);
+    .gradient {
+        background: linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25)), linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25));
+    }
 }
 .slide_13 {
     background-image: url(../img/slide/13.webp);
+    .gradient {
+        background-image: linear-gradient(to bottom, rgba(110, 57, 172, 0), rgba(110, 57, 172, 1)), linear-gradient(to bottom, rgba(110, 57, 172, 0), rgba(110, 57, 172, 1));
+    }
 }
 .slide_14 {
     background-image: url(../img/slide/14.webp);
+    .gradient {
+        background: linear-gradient(rgba(10, 99, 119, 0), rgb(10, 99, 119)), linear-gradient(rgba(10, 99, 119, 0), rgb(10, 99, 119));
+    }
 }
 .slide_15 {
     background-image: url(../img/slide/15.webp);
+    .gradient {
+        background: linear-gradient(rgba(92, 191, 175, 0), rgb(92, 191, 175)), linear-gradient(rgba(92, 191, 175, 0), rgb(92, 191, 175));
+    }
 }
 .slide_16 {
     background-image: url(../img/slide/16.webp);
+    .gradient {
+        background: linear-gradient(rgba(92, 106, 208, 0), rgb(92, 106, 208)), linear-gradient(rgba(92, 106, 208, 0), rgb(92, 106, 208));
+    }
 }
 .slide_17 {
     background-image: url(../img/slide/17.webp);
+    .gradient {
+        background: linear-gradient(rgba(88, 162, 171, 0), rgb(88, 162, 171)), linear-gradient(rgba(88, 162, 171, 0), rgb(88, 162, 171));
+    }
 }
 .slide_18 {
     background-image: url(../img/slide/18.webp);
+    .gradient {
+        background: linear-gradient(rgba(31, 116, 181, 0), rgb(31, 116, 181)), linear-gradient(rgba(31, 116, 181, 0), rgb(31, 116, 181));
+    }
 }
 .slide_19 {
     background-image: url(../img/slide/19.webp);
+    .gradient {
+        background: linear-gradient(rgba(35, 46, 77, 0), rgb(35, 46, 77)), linear-gradient(rgba(35, 46, 77, 0), rgb(35, 46, 77));
+    }
 }
 .slide_20 {
     background-image: url(../img/slide/20.webp);
+    .gradient {
+        background: linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25)), linear-gradient(rgba(220, 97, 25, 0), rgb(220, 97, 25));
+    }
 }
 
+.slideBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 3px;
+    pointer-events: none;
+    button {
+        color: rgba(20,20,20,0.4);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border: 1px solid #f0f0f0;
+        background-color: #fff;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.06);
+        border-radius: 50%;
+        transition: opacity 0.2s ease, color 0.2s ease, pointer-events 0.2s ease;
+        position: absolute;
+        top: 50%;
+        pointer-events: auto;
+        font-size: 16px;
+        color: $black;
+    }
+    #prev_1 {
+        left: 0;
+        transform: translate(50%,-50%);
+    }
+    #next_1 {
+        right: 0;
+        transform: translate(-50%,-50%);
+    }
+}
 
 
 // 버튼
@@ -310,9 +519,15 @@ header {
                 max-width: 100%;
             }
             p {
-                font-size: 11.5px;
+                font-size: 13px;
                 text-align: center;
-                width: 70px;
+                line-height: 16px;
+                margin-top: 4px;
+                letter-spacing: -0.03em;
+                color: #141414;
+                word-break: keep-all;
+                font-weight: 500;
+
             }
         }
     }
@@ -330,6 +545,8 @@ section {
 
 .ridiToday {
     width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
     .todayWrap {
         margin-top: 20px;
         display: flex;
@@ -365,11 +582,14 @@ section {
     max-width: 1170px;
     overflow: hidden;
     position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     .manyWrap {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 1140px;
+        width: 100%;
         height: 366px;
         align-content: space-between;
         justify-content: center;
@@ -398,13 +618,13 @@ section {
                 align-items: center;
             }
             .manyInfo {
-                width: 220px;
+                width: 184px;
                 height: 116px;
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: center;
                 letter-spacing: -0.01em;
-                padding-right: 20px;
+                padding-right: 26px;
                 .manyTitle {
                     font-weight: 500;
                     color: $black;
@@ -470,8 +690,11 @@ section {
 
 .ridiMD {
     width: 1170px;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
+    padding-left: 30px;
+    padding-right: 30px;
     .MDWrap {
         margin-top: 20px;
         width: 1140px;
@@ -480,12 +703,13 @@ section {
         flex-wrap: nowrap;
         align-items: center;
         .MDBook {
-            width: calc((1170px - 48px) / 3);
+            width: calc((1170px - 54px) / 3);
             height: 226px;
             position: relative;
             top: 58px;
             flex-shrink: 0;
-            margin-right: 16px;
+            margin-right: 8px;
+            padding-right: 2px;
             .MDBg {
                 width: 100%;
                 height: 100px;
@@ -570,11 +794,14 @@ section {
     max-width: 1170px;
     overflow: hidden;
     position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
     .bestWrap {
         margin-top: 20px;
         display: flex;
         flex-flow: column wrap;
-        width: 1140px;
+        width: 100%;
         height: 366px;
         align-content: space-between;
         justify-content: center;
@@ -603,13 +830,13 @@ section {
                 align-items: center;
             }
             .bestInfo {
-                width: 220px;
+                width: 184px;
                 height: 116px;
                 display: flex;
                 flex-flow: column wrap;
                 justify-content: center;
                 letter-spacing: -0.01em;
-                padding-right: 30px;
+                padding-right: 26px;
                 .bestTitle {
                     font-weight: 500;
                     color: $black;
@@ -673,14 +900,16 @@ section {
     max-width: 1170px;
     overflow: hidden;
     position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
     .newWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 1170px;
+        width: 100%;
         height: auto;
         .newBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -759,7 +988,7 @@ section {
 }
 
 .ridiAwards {
-    max-width: 1170px;
+    max-width: 1140px;
     .awardsWrap {
         margin-top: 20px;
         display: flex;
@@ -767,7 +996,7 @@ section {
         width: 1140px;
         height: auto;
         .awardsBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -818,7 +1047,7 @@ section {
 }
 
 .ridiTop10 {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .top10Wrap {
@@ -828,7 +1057,7 @@ section {
         width: 1140px;
         height: auto;
         .top10Book {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -901,13 +1130,13 @@ section {
 }
 
 .ridiEvent {
-    width: 1170px;
+    width: 1140px;
     height: 168px;
     position: relative;
     overflow: hidden;
     .eventWrap {
         margin-top: 20px;
-        width: 3480px;
+        width: 3420px;
         height: 90px;
         display: flex;
         .eventBook {
@@ -1006,17 +1235,17 @@ section {
 }
 
 .ridiNovel {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .novelWrap {
         margin-top: 20px;
         display: flex;
         justify-content: space-between;
-        width: 1170px;
+        width: 1140px;
         height: auto;
         .novelBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -1089,7 +1318,7 @@ section {
 }
 
 .ridiPsychology {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .psyWrap {
@@ -1099,7 +1328,7 @@ section {
         width: 1140px;
         height: auto;
         .psyBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -1172,7 +1401,7 @@ section {
 }
 
 .ridiScience {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .scienceWrap {
@@ -1182,7 +1411,7 @@ section {
         width: 1140px;
         height: auto;
         .scienceBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -1255,7 +1484,7 @@ section {
 }
 
 .ridiMystery {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .mysteryWrap {
@@ -1265,7 +1494,7 @@ section {
         width: 1140px;
         height: auto;
         .mysteryBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
@@ -1338,7 +1567,7 @@ section {
 }
 
 .ridiHumanity {
-    max-width: 1170px;
+    max-width: 1140px;
     overflow: hidden;
     position: relative;
     .humanWrap {
@@ -1348,7 +1577,7 @@ section {
         width: 1140px;
         height: auto;
         .humanBook {
-            width: 185px;
+            width: 180px;
             height: 355px;
             display: flex;
             flex-direction: column;
