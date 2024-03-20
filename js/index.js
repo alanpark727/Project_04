@@ -2,9 +2,6 @@ $(document).ready(function(){
 
   // 메인 슬라이드
 
-  let idxSlide = 0;
-
-
 
   // 지금 많이 읽고 있는 작품
 
@@ -38,7 +35,7 @@ $(document).ready(function(){
   let idxMD =0;
 
   function slideMD(idxMD){
-    $(".MDWrap").stop().animate({"marginLeft": - 401 * (idxMD) + "px"},"slow","linear");
+    $(".MDWrap").stop().animate({"marginLeft": - 370 * (idxMD) + "px"},"slow","linear");
   };
 
   $("#next_3").click(function () {
@@ -62,7 +59,7 @@ $(document).ready(function(){
   let idxBest =0;
 
   function slideBest(idxBest){
-    $(".bestWrap").stop().animate({"marginLeft": - 1140 * (idxBest) + "px"},"slow","linear");
+    $(".bestWrap").stop().animate({"marginLeft": - 1170 * (idxBest) + "px"},"slow","linear");
   };
 
   $("#next_4").click(function () {
@@ -89,7 +86,7 @@ $(document).ready(function(){
   let idxNew =0;
 
   function slideNew(idxNew){
-    $(".newWrap").stop().animate({"marginLeft": - 1140 * (idxNew) + "px"},"slow","linear");
+    $(".newWrap").stop().animate({"marginLeft": - 1116 * (idxNew) + "px"},"slow","linear");
   };
 
   $("#next_5").click(function () {
@@ -116,7 +113,7 @@ $(document).ready(function(){
   let idxTop10 =0;
 
   function slideTop10(idxTop10){
-    $(".top10Wrap").stop().animate({"marginLeft": - 760 * (idxTop10) + "px"},"slow","linear");
+    $(".top10Wrap").stop().animate({"marginLeft": - 744 * (idxTop10) + "px"},"slow","linear");
   };
 
   $("#next_6").click(function () {
@@ -143,7 +140,7 @@ $(document).ready(function(){
   let idxEvent =0;
 
   function slideEvent(idxEvent){
-    $(".eventWrap").stop().animate({"marginLeft": - 1140 * (idxEvent) + "px"},"linear");
+    $(".eventWrap").stop().animate({"marginLeft": - 1113 * (idxEvent) + "px"},"slow","linear");
   };
 
   $("#next_7").click(function () {
@@ -172,7 +169,7 @@ $(document).ready(function(){
   let idxNovel =0;
 
   function slideNovel(idxNovel){
-    $(".novelWrap").stop().animate({"marginLeft": - 1140 * (idxNovel) + "px"},"slow","linear");
+    $(".novelWrap").stop().animate({"marginLeft": - 1116 * (idxNovel) + "px"},"slow","linear");
   };
 
   $("#next_8").click(function () {
@@ -199,7 +196,7 @@ $(document).ready(function(){
   let idxPsy =0;
 
   function slidePsy(idxPsy){
-    $(".psyWrap").stop().animate({"marginLeft": - 1140 * (idxPsy) + "px"},"slow","linear");
+    $(".psyWrap").stop().animate({"marginLeft": - 1116 * (idxPsy) + "px"},"slow","linear");
   };
 
   $("#next_9").click(function () {
@@ -226,7 +223,7 @@ $(document).ready(function(){
   let idxSci =0;
 
   function slideSci(idxSci){
-    $(".scienceWrap").stop().animate({"marginLeft": - 1140 * (idxSci) + "px"},"slow","linear");
+    $(".scienceWrap").stop().animate({"marginLeft": - 1116 * (idxSci) + "px"},"slow","linear");
   };
 
   $("#next_10").click(function () {
@@ -253,7 +250,7 @@ $(document).ready(function(){
   let idxMystery =0;
 
   function slideMystery(idxMystery){
-    $(".mysteryWrap").stop().animate({"marginLeft": - 1140 * (idxMystery) + "px"},"slow","linear");
+    $(".mysteryWrap").stop().animate({"marginLeft": - 1116 * (idxMystery) + "px"},"slow","linear");
   };
 
   $("#next_11").click(function () {
@@ -281,7 +278,7 @@ $(document).ready(function(){
   let idxHuman =0;
 
   function slideHuman(idxHuman){
-    $(".humanWrap").stop().animate({"marginLeft": - 1140 * (idxHuman) + "px"},"slow","linear");
+    $(".humanWrap").stop().animate({"marginLeft": - 1116 * (idxHuman) + "px"},"slow","linear");
   };
 
   $("#next_12").click(function () {

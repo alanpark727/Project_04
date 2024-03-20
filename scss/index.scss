@@ -63,7 +63,7 @@ header {
     height: 72px;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 18px 16px 22px;
+    padding: 16px 18px 16px 30px;
 }
 
 .headLeft {
@@ -131,7 +131,7 @@ header {
 .underBar {
     width: 1170px;
     height: 120px;
-    padding: 0 18px;
+    padding-left: 30px;
     padding-right: 30px;
     margin: 0 auto;
     .underMenu {
@@ -194,7 +194,8 @@ header {
     max-width: 1170px;
     height: 400px;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0px 30px;
+    position: relative;
     .mainSlide {
         width: 1116px;
         position: relative;
@@ -488,12 +489,12 @@ header {
         color: $black;
     }
     #prev_1 {
-        left: 0;
-        transform: translate(50%,-50%);
+        left: 5px;
+        transform: translateY(-50%);
     }
     #next_1 {
-        right: 0;
-        transform: translate(-50%,-50%);
+        right: 5px;
+        transform: translateY(-50%);
     }
 }
 
@@ -537,42 +538,69 @@ header {
 // 본문
 
 section {
-    width: 1200px;
+    width: 1170px;
     margin: 0 auto;
     margin-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 30px;
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: -0.01em;
+        color: #141414;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: -0.01em;
+        color: #a5a5a5;
+        cursor: pointer;
+    }
 }
 
 .ridiToday {
-    width: 1170px;
-    padding-left: 30px;
-    padding-right: 30px;
-    .todayWrap {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 311px;
-        margin-right: 6px;
-        .todayBook {
-            width: 16%;
+    position: relative;
+    #today_wrap {
+        position: relative;
+        overflow: hidden;
+        .todayWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .todayCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .todayBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 4px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .todayTxt {
-                width: 100%;
-                font-weight: 600;
-                letter-spacing: -0.01em;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .todayCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
+                }
+                .todayTxt {
+                    width: 100%;
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: -0.01em;
+                    line-height: 20px;
+                    max-height: calc(40px);
+                    margin-top: 10px;
+                }
             }
         }
     }
@@ -681,85 +709,89 @@ section {
         }
     }
     ul>#prev_2 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_2 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiMD {
-    width: 1170px;
-    margin: 0 auto;
     position: relative;
-    overflow: hidden;
-    padding-left: 30px;
-    padding-right: 30px;
-    .MDWrap {
-        margin-top: 20px;
-        width: 1140px;
-        height: 226px;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        .MDBook {
-            width: calc((1170px - 54px) / 3);
-            height: 226px;
-            position: relative;
-            top: 58px;
-            flex-shrink: 0;
-            margin-right: 8px;
-            padding-right: 2px;
-            .MDBg {
-                width: 100%;
-                height: 100px;
+    #MD_wrap {
+        position: relative;
+        overflow: hidden;
+        .MDWrap {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .MDBook {
+                width: calc((1140px - 48px) / 3);
+                height: 226px;
                 position: relative;
-                border-radius: 5px;
-                .MDCover {
-                    width: 30%;
-                    margin: 0 auto;
-                    height: 150px;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    z-index: 3;
-                    position: absolute;
-                    top: -50px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }   
-            }
-            .bg_1 {
-                background-color: #7A372B;
-            }
-            .bg_2 {
-                background-color: #355B29;
-            }
-            .bg_3 {
-                background-color: #441C84;
-            }
-            .bg_4 {
-                background-color: #5C6AD0;
-            }
-            .MDTxt {
-                width: 100%;
-                height: 70px;
-                margin: 0 auto;
-                position: relative;
-                top: 20px;
-                h4 {
-                    color: $black;
-                    font-weight: 600;
-                    text-align: center;
+                top: 58px;
+                flex-shrink: 0;
+                margin-right: 8px;
+                margin-bottom: 20px;
+                .MDBg {
+                    width: 100%;
+                    height: 100px;
+                    position: relative;
+                    border-radius: 5px;
+                    .MDCover {
+                        width: 30%;
+                        margin: 0 auto;
+                        height: 150px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        z-index: 3;
+                        position: absolute;
+                        top: -50px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }   
                 }
-                p {
-                    color: $grey;
-                    font-size: 14px;
-                    text-align: center;
+                .bg_1 {
+                    background-color: #7A372B;
+                }
+                .bg_2 {
+                    background-color: #355B29;
+                }
+                .bg_3 {
+                    background-color: #441C84;
+                }
+                .bg_4 {
+                    background-color: #5C6AD0;
+                }
+                .MDTxt {
+                    width: 100%;
+                    height: 70px;
+                    margin: 0 auto;
+                    position: relative;
+                    top: 10px;
+                    h4 {
+                        color: $black;
+                        font-weight: 600;
+                        text-align: center;
+                        line-height: 1.2rem;
+                        max-height: calc(3rem);
+                    }
+                    p {
+                        color: $grey;
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 16px;
+                        max-height: 16px;
+                    }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -769,7 +801,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-30%);
+        transform: translateY(-65%);
         border: 1px solid #f0f0f0;
         background-color: #fff;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -783,10 +815,10 @@ section {
         }
     }
     ul>#prev_3 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_3 {
-        right: 0px;
+        right: 10px;
     }
 }
 
@@ -797,6 +829,10 @@ section {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+    .bestHeader {
+        display: flex;
+        justify-content: space-between;
+    }
     .bestWrap {
         margin-top: 20px;
         display: flex;
@@ -889,74 +925,177 @@ section {
         }
     }
     ul>#prev_4 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_4 {
-        right: 0px;
+        right: 10px;
+    }
+}
+
+.tag {
+    display: flex;
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    .discount_10 {
+        font-size: 11px;
+        min-width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        flex-wrap: nowrap;
+        background-color: rgb(220,50,50);
+        img {
+            width: auto;
+            height: 100%;
+            border-style: none;
+        }
+    }
+    .discount_50 {
+        font-size: 11px;
+        min-width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        flex-wrap: nowrap;
+        background-color: rgb(220,50,50);
+        img {
+            width: auto;
+            height: 100%;
+            border-style: none;
+        }
+    }
+    .rent {
+        font-size: 11px;
+        min-width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        flex-wrap: nowrap;
+        background-color: rgb(120,120,120);
+        img {
+            width: auto;
+            height: 100%;
+            border-style: none;
+        }
+    }
+    .select {
+        font-size: 11px;
+        min-width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        flex-wrap: nowrap;
+        background-color: rgb(196,182,118);
+        img {
+            width: auto;
+            height: 100%;
+            border-style: none;
+        }
     }
 }
 
 .ridiNew {
-    max-width: 1170px;
-    overflow: hidden;
     position: relative;
-    padding-left: 30px;
-    padding-right: 30px;
-    .newWrap {
-        margin-top: 20px;
+    .newHeader {
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        height: auto;
-        .newBook {
-            width: 180px;
-            height: 355px;
+    }
+    #new_wrap {
+        position: relative;
+        overflow: hidden;
+        .newWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .newCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .newBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .newInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .newTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .newCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .newAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
-                        color: $grey;
+                .newInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .newTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
                     }
-                }
-                .review_0 {
-                    font-size: 13px;
-                    margin-top: 7px;
-                    color: $grey;
-                    font-family: "Noto Sans KR";
+                    .newAuthor {
+                        color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
+                    }
+                    .review_0 {
+                        font-size: 13px;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        color: $grey;
+                        font-family: "Noto Sans KR";
+                    }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -966,7 +1105,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-120%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -980,66 +1119,82 @@ section {
         }
     }
     ul>#prev_5 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_5 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiAwards {
-    max-width: 1140px;
-    .awardsWrap {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .awardsBook {
-            width: 180px;
-            height: 355px;
+    position: relative;
+    #awards_wrap {
+        position: relative;
+        overflow: hidden;
+        .awardsWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .awardsCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .awardsBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .awardsInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .awardsTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .awardsCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .awardsAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
-                        color: $grey;
+                .awardsInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .awardsTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
                     }
-                }
-                .review_0 {
-                    font-size: 13px;
-                    color: $grey;
-                    margin-top: 7px;
-                    font-family: "Noto Sans KR";
+                    .awardsAuthor {
+                        color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
+                    }
+                    .review_0 {
+                        font-size: 13px;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        color: $grey;
+                        font-family: "Noto Sans KR";
+                    }
                 }
             }
         }
@@ -1047,53 +1202,65 @@ section {
 }
 
 .ridiTop10 {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .top10Wrap {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .top10Book {
-            width: 180px;
-            height: 355px;
+    #top10_wrap {
+        position: relative;
+        overflow: hidden;
+        .top10Wrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .top10Cover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .top10Book {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .top10Info {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .top10Title {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .top10Cover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .top10Author {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
+                .top10Info {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .top10Title {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .top10Author {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
@@ -1108,7 +1275,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-120%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1122,84 +1289,95 @@ section {
         }
     }
     ul>#prev_6 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_6 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiEvent {
-    width: 1140px;
-    height: 168px;
     position: relative;
-    overflow: hidden;
-    .eventWrap {
-        margin-top: 20px;
-        width: 3420px;
-        height: 90px;
+    .eventHeader {
         display: flex;
-        .eventBook {
-            width: 370px;
-            height: 100%;
-            flex-shrink: 1;
+        justify-content: space-between;
+    }
+    #event_wrap {
+        position: relative;
+        overflow: hidden;
+        .eventWrap {
+            margin-top: 20px;
+            width: 100%;
+            height: 90px;
             display: flex;
-            border-radius: 4px;
-            margin: 0px 10px;
-            &:nth-child(1){
-                background-color: #DC6119;
-            }
-            &:nth-child(2){
-                background-color: #8149DE;
-            }
-            &:nth-child(3){
-                background-color: #232E4D;
-            }
-            &:nth-child(4){
-                background-color: #530316;
-            }
-            &:nth-child(5){
-                background-color: #0F9294;
-            }
-            &:nth-child(6){
-                background-color: #DC5F18;
-            }
-            &:nth-child(7){
-                background-color: #6E39AC;
-            }
-            &:nth-child(8){
-                background-color: #5C6AD0;
-            }
-            &:nth-child(9){
-                background-color: #0A6377;
-            }
-            .eventTxt {
-                width: 60%;
-                height: calc(20px*2);
-                align-self: center;
-                display: flex;
-                align-items: center;
-                justify-content: end;
-                h4 {
-                    max-width: 200px;
-                    letter-spacing: -0.01em;
-                    line-height: 20px;
-                    font-size: 15px;
-                    color: #fff;
-                    font-weight: 600;
-                }
-            }
-            .eventImage {
-                width: 40%;
+            .eventBook {
+                width: 33.1%;
                 height: 100%;
-                .eventCover {
+                flex-shrink: 0;
+                display: flex;
+                border-radius: 4px;
+                padding-right: 5px;
+                margin-right: 0.333%;
+                &:nth-child(1){
+                    background-color: #DC6119;
+                }
+                &:nth-child(2){
+                    background-color: #8149DE;
+                }
+                &:nth-child(3){
+                    background-color: #232E4D;
+                }
+                &:nth-child(4){
+                    background-color: #530316;
+                }
+                &:nth-child(5){
+                    background-color: #0F9294;
+                }
+                &:nth-child(6){
+                    background-color: #DC5F18;
+                }
+                &:nth-child(7){
+                    background-color: #6E39AC;
+                }
+                &:nth-child(8){
+                    background-color: #5C6AD0;
+                }
+                &:nth-child(9){
+                    background-color: #0A6377;
+                }
+                .eventTxt {
+                    width: 60%;
+                    height: calc(20px*2);
+                    align-self: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    h4 {
+                        max-width: 200px;
+                        letter-spacing: -0.01em;
+                        line-height: 20px;
+                        font-size: 15px;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+                .eventImage {
                     width: 40%;
                     height: 100%;
-                    margin: 0 auto;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    border-radius: 4px;
+                    position: relative;
+                    .eventCover {
+                        width: 40%;
+                        height: 100%;
+                        margin: 0 auto;
+                        position: absolute;
+                        top: 15%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 4px;
+                    }
                 }
             }
         }
@@ -1213,7 +1391,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-10%);
+        transform: translateY(-25%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1227,61 +1405,77 @@ section {
         }
     }
     ul>#prev_7 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_7 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiNovel {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .novelWrap {
-        margin-top: 20px;
+    .novelHeader {
         display: flex;
         justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .novelBook {
-            width: 180px;
-            height: 355px;
+    }
+    #novel_wrap {
+        position: relative;
+        overflow: hidden;
+        .novelWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .novelCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .novelBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .novelInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .novelTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .novelCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .novelAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
+                .novelInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .novelTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .novelAuthor {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
@@ -1296,7 +1490,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-130%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1310,66 +1504,83 @@ section {
         }
     }
     ul>#prev_8 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_8 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiPsychology {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .psyWrap {
-        margin-top: 20px;
+    .psyHeader {
         display: flex;
         justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .psyBook {
-            width: 180px;
-            height: 355px;
+    }
+    #psy_wrap {
+        position: relative;
+        overflow: hidden;
+        .psyWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .psyCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .psyBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .psyInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .psyTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .psyCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .psyAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
+                .psyInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .psyTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .psyAuthor {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -1379,7 +1590,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-130%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1393,66 +1604,83 @@ section {
         }
     }
     ul>#prev_9 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_9 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiScience {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .scienceWrap {
-        margin-top: 20px;
+    .scienceHeader {
         display: flex;
         justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .scienceBook {
-            width: 180px;
-            height: 355px;
+    }
+    #science_wrap {
+        position: relative;
+        overflow: hidden;
+        .scienceWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .scienceCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .scienceBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .scienceInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .scienceTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .scienceCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .scienceAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 6px;
-                    span {
+                .scienceInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .scienceTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .scienceAuthor {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -1476,66 +1704,83 @@ section {
         }
     }
     ul>#prev_10 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_10 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiMystery {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .mysteryWrap {
-        margin-top: 20px;
+    .mysteryHeader {
         display: flex;
         justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .mysteryBook {
-            width: 180px;
-            height: 355px;
+    }
+    #mystery_wrap {
+        overflow: hidden;
+        position: relative;
+        .mysteryWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .mysteryCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .mysteryBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .mysteryInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .mysteryTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .mysteryCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .mysteryAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
+                .mysteryInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .mysteryTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .mysteryAuthor {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -1545,7 +1790,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-130%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1559,66 +1804,83 @@ section {
         }
     }
     ul>#prev_11 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_11 {
-        right: 0px;
+        right: 10px;
     }
 }
 
 .ridiHumanity {
-    max-width: 1140px;
-    overflow: hidden;
     position: relative;
-    .humanWrap {
-        margin-top: 20px;
+    .humanHeader {
         display: flex;
         justify-content: space-between;
-        width: 1140px;
-        height: auto;
-        .humanBook {
-            width: 180px;
-            height: 355px;
+    }
+    #human_wrap {
+        overflow: hidden;
+        position: relative;
+        .humanWrap {
+            margin-top: 20px;
             display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            margin-right: 10px;
-            .humanCover {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            .humanBook {
                 width: 180px;
-                height: 261px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid rgba(20, 20, 20, 0.06);
-            }
-            .humanInfo {
-                width: 100%;
-                height: 84px;
-                margin-top: 10px;
-                padding-right: 10px;
-                .humanTitle {
-                    color: $black;
-                    font-weight: 500;
+                height: 355px;
+                display: flex;
+                flex: 1 0 auto;
+                flex-direction: column;
+                margin-right: 6px;
+                .humanCover {
+                    width: 100%;
+                    height: 261px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 6px;
+                    padding-right: 10px;
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid rgba(20, 20, 20, 0.06);
                 }
-                .humanAuthor {
-                    color: $grey;
-                    font-size: 14px;
-                    margin-top: 6px;
-                }
-                .review {
-                    font-family: "Noto Sans KR";
-                    font-size: 13px;
-                    color: $red;
-                    margin-top: 7px;
-                    span {
+                .humanInfo {
+                    width: 100%;
+                    height: 84px;
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    .humanTitle {
+                        color: $black;
+                        font-weight: 500;
+                        letter-spacing: -0.03em;
+                        max-height: calc(19px*2);
+                        line-height: 19px;
+                    }
+                    .humanAuthor {
                         color: $grey;
+                        font-size: 14px;
+                        margin-top: 6px;
+                        letter-spacing: -0.01em;
+                        line-height: 17px;
+                    }
+                    .review {
+                        font-family: "Noto Sans KR";
+                        font-size: 13px;
+                        color: $red;
+                        margin-top: 7px;
+                        line-height: 16px;
+                        letter-spacing: -0.01em;
+                        span {
+                            color: $grey;
+                        }
                     }
                 }
             }
         }
     }
+
     .hide {
         display: none;
     }
@@ -1628,7 +1890,7 @@ section {
         justify-content: center;
         align-items: center;
         top: 50%;
-        transform: translateY(-130%);
+        transform: translateY(-150%);
         background-color: #fff;
         border: 1px solid #f0f0f0;
         box-shadow: 2px 4px 8px rgba($color: #000, $alpha: 0.06);
@@ -1642,10 +1904,10 @@ section {
         }
     }
     ul>#prev_12 {
-        left: 0px;
+        left: 10px;
     }
     ul>#next_12 {
-        right: 0px;
+        right: 10px;
     }
 }
 
@@ -1655,6 +1917,8 @@ section {
 
 footer {
     width: 1170px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;

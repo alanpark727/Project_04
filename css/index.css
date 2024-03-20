@@ -84,7 +84,7 @@ header {
   height: 72px;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 18px 16px 22px;
+  padding: 16px 18px 16px 30px;
 }
 
 .headLeft {
@@ -150,7 +150,7 @@ header {
 .underBar {
   width: 1170px;
   height: 120px;
-  padding: 0 18px;
+  padding-left: 30px;
   padding-right: 30px;
   margin: 0 auto;
 }
@@ -209,7 +209,8 @@ header {
   max-width: 1170px;
   height: 400px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 30px;
+  position: relative;
 }
 .mainBanner .mainSlide {
   width: 1116px;
@@ -518,12 +519,12 @@ header {
   color: #141414;
 }
 .slideBtn #prev_1 {
-  left: 0;
-  transform: translate(50%, -50%);
+  left: 5px;
+  transform: translateY(-50%);
 }
 .slideBtn #next_1 {
-  right: 0;
-  transform: translate(-50%, -50%);
+  right: 5px;
+  transform: translateY(-50%);
 }
 
 .topBtn {
@@ -558,45 +559,72 @@ header {
 }
 
 section {
-  width: 1200px;
+  width: 1170px;
   margin: 0 auto;
   margin-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-bottom: 30px;
+}
+section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  color: #141414;
+}
+section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #a5a5a5;
+  cursor: pointer;
 }
 
 .ridiToday {
-  width: 1170px;
-  padding-left: 30px;
-  padding-right: 30px;
+  position: relative;
 }
-.ridiToday .todayWrap {
+.ridiToday #today_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiToday #today_wrap .todayWrap {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 311px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ridiToday #today_wrap .todayWrap .todayBook {
+  width: 180px;
+  height: 355px;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
   margin-right: 6px;
 }
-.ridiToday .todayWrap .todayBook {
-  width: 16%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.ridiToday .todayWrap .todayBook .todayCover {
-  width: 180px;
+.ridiToday #today_wrap .todayWrap .todayBook .todayCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 4px;
+  border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiToday .todayWrap .todayBook .todayTxt {
+.ridiToday #today_wrap .todayWrap .todayBook .todayTxt {
   width: 100%;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   letter-spacing: -0.01em;
+  line-height: 20px;
+  max-height: 40px;
+  margin-top: 10px;
 }
 
 .ridiMany {
@@ -703,44 +731,43 @@ section {
   opacity: 0.65;
 }
 .ridiMany ul > #prev_2 {
-  left: 0px;
+  left: 10px;
 }
 .ridiMany ul > #next_2 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiMD {
-  width: 1170px;
-  margin: 0 auto;
+  position: relative;
+}
+.ridiMD #MD_wrap {
   position: relative;
   overflow: hidden;
-  padding-left: 30px;
-  padding-right: 30px;
 }
-.ridiMD .MDWrap {
+.ridiMD #MD_wrap .MDWrap {
   margin-top: 20px;
-  width: 1140px;
-  height: 226px;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
-.ridiMD .MDWrap .MDBook {
-  width: 372px;
+.ridiMD #MD_wrap .MDWrap .MDBook {
+  width: 364px;
   height: 226px;
   position: relative;
   top: 58px;
   flex-shrink: 0;
   margin-right: 8px;
-  padding-right: 2px;
+  margin-bottom: 20px;
 }
-.ridiMD .MDWrap .MDBook .MDBg {
+.ridiMD #MD_wrap .MDWrap .MDBook .MDBg {
   width: 100%;
   height: 100px;
   position: relative;
   border-radius: 5px;
 }
-.ridiMD .MDWrap .MDBook .MDBg .MDCover {
+.ridiMD #MD_wrap .MDWrap .MDBook .MDBg .MDCover {
   width: 30%;
   margin: 0 auto;
   height: 150px;
@@ -753,34 +780,38 @@ section {
   left: 50%;
   transform: translateX(-50%);
 }
-.ridiMD .MDWrap .MDBook .bg_1 {
+.ridiMD #MD_wrap .MDWrap .MDBook .bg_1 {
   background-color: #7A372B;
 }
-.ridiMD .MDWrap .MDBook .bg_2 {
+.ridiMD #MD_wrap .MDWrap .MDBook .bg_2 {
   background-color: #355B29;
 }
-.ridiMD .MDWrap .MDBook .bg_3 {
+.ridiMD #MD_wrap .MDWrap .MDBook .bg_3 {
   background-color: #441C84;
 }
-.ridiMD .MDWrap .MDBook .bg_4 {
+.ridiMD #MD_wrap .MDWrap .MDBook .bg_4 {
   background-color: #5C6AD0;
 }
-.ridiMD .MDWrap .MDBook .MDTxt {
+.ridiMD #MD_wrap .MDWrap .MDBook .MDTxt {
   width: 100%;
   height: 70px;
   margin: 0 auto;
   position: relative;
-  top: 20px;
+  top: 10px;
 }
-.ridiMD .MDWrap .MDBook .MDTxt h4 {
+.ridiMD #MD_wrap .MDWrap .MDBook .MDTxt h4 {
   color: #141414;
   font-weight: 600;
   text-align: center;
+  line-height: 1.2rem;
+  max-height: 3rem;
 }
-.ridiMD .MDWrap .MDBook .MDTxt p {
+.ridiMD #MD_wrap .MDWrap .MDBook .MDTxt p {
   color: #787878;
   font-size: 14px;
   text-align: center;
+  line-height: 16px;
+  max-height: 16px;
 }
 .ridiMD .hide {
   display: none;
@@ -791,7 +822,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-30%);
+  transform: translateY(-65%);
   border: 1px solid #f0f0f0;
   background-color: #fff;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -805,10 +836,10 @@ section {
   opacity: 0.65;
 }
 .ridiMD ul > #prev_3 {
-  left: 0px;
+  left: 10px;
 }
 .ridiMD ul > #next_3 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiBest {
@@ -818,6 +849,10 @@ section {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
+}
+.ridiBest .bestHeader {
+  display: flex;
+  justify-content: space-between;
 }
 .ridiBest .bestWrap {
   margin-top: 20px;
@@ -911,71 +946,173 @@ section {
   opacity: 0.65;
 }
 .ridiBest ul > #prev_4 {
-  left: 0px;
+  left: 10px;
 }
 .ridiBest ul > #next_4 {
-  right: 0px;
+  right: 10px;
+}
+
+.tag {
+  display: flex;
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  overflow: hidden;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.tag .discount_10 {
+  font-size: 11px;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-wrap: nowrap;
+  background-color: rgb(220, 50, 50);
+}
+.tag .discount_10 img {
+  width: auto;
+  height: 100%;
+  border-style: none;
+}
+.tag .discount_50 {
+  font-size: 11px;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-wrap: nowrap;
+  background-color: rgb(220, 50, 50);
+}
+.tag .discount_50 img {
+  width: auto;
+  height: 100%;
+  border-style: none;
+}
+.tag .rent {
+  font-size: 11px;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-wrap: nowrap;
+  background-color: rgb(120, 120, 120);
+}
+.tag .rent img {
+  width: auto;
+  height: 100%;
+  border-style: none;
+}
+.tag .select {
+  font-size: 11px;
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-wrap: nowrap;
+  background-color: rgb(196, 182, 118);
+}
+.tag .select img {
+  width: auto;
+  height: 100%;
+  border-style: none;
 }
 
 .ridiNew {
-  max-width: 1170px;
-  overflow: hidden;
   position: relative;
-  padding-left: 30px;
-  padding-right: 30px;
 }
-.ridiNew .newWrap {
-  margin-top: 20px;
+.ridiNew .newHeader {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: auto;
 }
-.ridiNew .newWrap .newBook {
+.ridiNew #new_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiNew #new_wrap .newWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ridiNew #new_wrap .newWrap .newBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiNew .newWrap .newBook .newCover {
-  width: 180px;
+.ridiNew #new_wrap .newWrap .newBook .newCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiNew .newWrap .newBook .newInfo {
+.ridiNew #new_wrap .newWrap .newBook .newInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiNew .newWrap .newBook .newInfo .newTitle {
+.ridiNew #new_wrap .newWrap .newBook .newInfo .newTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiNew .newWrap .newBook .newInfo .newAuthor {
+.ridiNew #new_wrap .newWrap .newBook .newInfo .newAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiNew .newWrap .newBook .newInfo .review {
+.ridiNew #new_wrap .newWrap .newBook .newInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiNew .newWrap .newBook .newInfo .review span {
+.ridiNew #new_wrap .newWrap .newBook .newInfo .review span {
   color: #787878;
 }
-.ridiNew .newWrap .newBook .newInfo .review_0 {
+.ridiNew #new_wrap .newWrap .newBook .newInfo .review_0 {
   font-size: 13px;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
   color: #787878;
   font-family: "Noto Sans KR";
 }
@@ -988,7 +1125,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-120%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1002,123 +1139,151 @@ section {
   opacity: 0.65;
 }
 .ridiNew ul > #prev_5 {
-  left: 0px;
+  left: 10px;
 }
 .ridiNew ul > #next_5 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiAwards {
-  max-width: 1140px;
+  position: relative;
 }
-.ridiAwards .awardsWrap {
+.ridiAwards #awards_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiAwards #awards_wrap .awardsWrap {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 1140px;
-  height: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
-.ridiAwards .awardsWrap .awardsBook {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsCover {
-  width: 180px;
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo .awardsTitle {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .awardsTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo .awardsAuthor {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .awardsAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo .review {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo .review span {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .review span {
   color: #787878;
 }
-.ridiAwards .awardsWrap .awardsBook .awardsInfo .review_0 {
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .review_0 {
   font-size: 13px;
-  color: #787878;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  color: #787878;
   font-family: "Noto Sans KR";
 }
 
 .ridiTop10 {
-  max-width: 1140px;
-  overflow: hidden;
   position: relative;
 }
-.ridiTop10 .top10Wrap {
+.ridiTop10 #top10_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiTop10 #top10_wrap .top10Wrap {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 1140px;
-  height: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
-.ridiTop10 .top10Wrap .top10Book {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiTop10 .top10Wrap .top10Book .top10Cover {
-  width: 180px;
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Cover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiTop10 .top10Wrap .top10Book .top10Info {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiTop10 .top10Wrap .top10Book .top10Info .top10Title {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .top10Title {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiTop10 .top10Wrap .top10Book .top10Info .top10Author {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .top10Author {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiTop10 .top10Wrap .top10Book .top10Info .review {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiTop10 .top10Wrap .top10Book .top10Info .review span {
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .review span {
   color: #787878;
 }
 .ridiTop10 .hide {
@@ -1130,7 +1295,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-120%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1144,60 +1309,66 @@ section {
   opacity: 0.65;
 }
 .ridiTop10 ul > #prev_6 {
-  left: 0px;
+  left: 10px;
 }
 .ridiTop10 ul > #next_6 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiEvent {
-  width: 1140px;
-  height: 168px;
+  position: relative;
+}
+.ridiEvent .eventHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.ridiEvent #event_wrap {
   position: relative;
   overflow: hidden;
 }
-.ridiEvent .eventWrap {
+.ridiEvent #event_wrap .eventWrap {
   margin-top: 20px;
-  width: 3420px;
+  width: 100%;
   height: 90px;
   display: flex;
 }
-.ridiEvent .eventWrap .eventBook {
-  width: 370px;
+.ridiEvent #event_wrap .eventWrap .eventBook {
+  width: 33.1%;
   height: 100%;
-  flex-shrink: 1;
+  flex-shrink: 0;
   display: flex;
   border-radius: 4px;
-  margin: 0px 10px;
+  padding-right: 5px;
+  margin-right: 0.333%;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(1) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(1) {
   background-color: #DC6119;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(2) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(2) {
   background-color: #8149DE;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(3) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(3) {
   background-color: #232E4D;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(4) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(4) {
   background-color: #530316;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(5) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(5) {
   background-color: #0F9294;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(6) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(6) {
   background-color: #DC5F18;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(7) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(7) {
   background-color: #6E39AC;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(8) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(8) {
   background-color: #5C6AD0;
 }
-.ridiEvent .eventWrap .eventBook:nth-child(9) {
+.ridiEvent #event_wrap .eventWrap .eventBook:nth-child(9) {
   background-color: #0A6377;
 }
-.ridiEvent .eventWrap .eventBook .eventTxt {
+.ridiEvent #event_wrap .eventWrap .eventBook .eventTxt {
   width: 60%;
   height: 40px;
   align-self: center;
@@ -1205,7 +1376,7 @@ section {
   align-items: center;
   justify-content: end;
 }
-.ridiEvent .eventWrap .eventBook .eventTxt h4 {
+.ridiEvent #event_wrap .eventWrap .eventBook .eventTxt h4 {
   max-width: 200px;
   letter-spacing: -0.01em;
   line-height: 20px;
@@ -1213,14 +1384,19 @@ section {
   color: #fff;
   font-weight: 600;
 }
-.ridiEvent .eventWrap .eventBook .eventImage {
+.ridiEvent #event_wrap .eventWrap .eventBook .eventImage {
   width: 40%;
   height: 100%;
+  position: relative;
 }
-.ridiEvent .eventWrap .eventBook .eventImage .eventCover {
+.ridiEvent #event_wrap .eventWrap .eventBook .eventImage .eventCover {
   width: 40%;
   height: 100%;
   margin: 0 auto;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1235,7 +1411,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-10%);
+  transform: translateY(-25%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1249,64 +1425,80 @@ section {
   opacity: 0.65;
 }
 .ridiEvent ul > #prev_7 {
-  left: 0px;
+  left: 10px;
 }
 .ridiEvent ul > #next_7 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiNovel {
-  max-width: 1140px;
-  overflow: hidden;
   position: relative;
 }
-.ridiNovel .novelWrap {
-  margin-top: 20px;
+.ridiNovel .novelHeader {
   display: flex;
   justify-content: space-between;
-  width: 1140px;
-  height: auto;
 }
-.ridiNovel .novelWrap .novelBook {
+.ridiNovel #novel_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiNovel #novel_wrap .novelWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ridiNovel #novel_wrap .novelWrap .novelBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiNovel .novelWrap .novelBook .novelCover {
-  width: 180px;
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiNovel .novelWrap .novelBook .novelInfo {
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiNovel .novelWrap .novelBook .novelInfo .novelTitle {
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .novelTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiNovel .novelWrap .novelBook .novelInfo .novelAuthor {
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .novelAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiNovel .novelWrap .novelBook .novelInfo .review {
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiNovel .novelWrap .novelBook .novelInfo .review span {
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .review span {
   color: #787878;
 }
 .ridiNovel .hide {
@@ -1318,7 +1510,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-130%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1332,64 +1524,80 @@ section {
   opacity: 0.65;
 }
 .ridiNovel ul > #prev_8 {
-  left: 0px;
+  left: 10px;
 }
 .ridiNovel ul > #next_8 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiPsychology {
-  max-width: 1140px;
-  overflow: hidden;
   position: relative;
 }
-.ridiPsychology .psyWrap {
-  margin-top: 20px;
+.ridiPsychology .psyHeader {
   display: flex;
   justify-content: space-between;
-  width: 1140px;
-  height: auto;
 }
-.ridiPsychology .psyWrap .psyBook {
+.ridiPsychology #psy_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiPsychology #psy_wrap .psyWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ridiPsychology #psy_wrap .psyWrap .psyBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiPsychology .psyWrap .psyBook .psyCover {
-  width: 180px;
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiPsychology .psyWrap .psyBook .psyInfo {
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiPsychology .psyWrap .psyBook .psyInfo .psyTitle {
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .psyTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiPsychology .psyWrap .psyBook .psyInfo .psyAuthor {
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .psyAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiPsychology .psyWrap .psyBook .psyInfo .review {
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiPsychology .psyWrap .psyBook .psyInfo .review span {
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .review span {
   color: #787878;
 }
 .ridiPsychology .hide {
@@ -1401,7 +1609,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-130%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1415,64 +1623,80 @@ section {
   opacity: 0.65;
 }
 .ridiPsychology ul > #prev_9 {
-  left: 0px;
+  left: 10px;
 }
 .ridiPsychology ul > #next_9 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiScience {
-  max-width: 1140px;
-  overflow: hidden;
   position: relative;
 }
-.ridiScience .scienceWrap {
-  margin-top: 20px;
+.ridiScience .scienceHeader {
   display: flex;
   justify-content: space-between;
-  width: 1140px;
-  height: auto;
 }
-.ridiScience .scienceWrap .scienceBook {
+.ridiScience #science_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.ridiScience #science_wrap .scienceWrap {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.ridiScience #science_wrap .scienceWrap .scienceBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiScience .scienceWrap .scienceBook .scienceCover {
-  width: 180px;
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiScience .scienceWrap .scienceBook .scienceInfo {
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiScience .scienceWrap .scienceBook .scienceInfo .scienceTitle {
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .scienceTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiScience .scienceWrap .scienceBook .scienceInfo .scienceAuthor {
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .scienceAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiScience .scienceWrap .scienceBook .scienceInfo .review {
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
-  margin-top: 6px;
+  margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiScience .scienceWrap .scienceBook .scienceInfo .review span {
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .review span {
   color: #787878;
 }
 .ridiScience .hide {
@@ -1498,64 +1722,80 @@ section {
   opacity: 0.65;
 }
 .ridiScience ul > #prev_10 {
-  left: 0px;
+  left: 10px;
 }
 .ridiScience ul > #next_10 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiMystery {
-  max-width: 1140px;
+  position: relative;
+}
+.ridiMystery .mysteryHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.ridiMystery #mystery_wrap {
   overflow: hidden;
   position: relative;
 }
-.ridiMystery .mysteryWrap {
+.ridiMystery #mystery_wrap .mysteryWrap {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 1140px;
-  height: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
-.ridiMystery .mysteryWrap .mysteryBook {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryCover {
-  width: 180px;
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .mysteryTitle {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .mysteryTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .mysteryAuthor {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .mysteryAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .review {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiMystery .mysteryWrap .mysteryBook .mysteryInfo .review span {
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .review span {
   color: #787878;
 }
 .ridiMystery .hide {
@@ -1567,7 +1807,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-130%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1581,64 +1821,80 @@ section {
   opacity: 0.65;
 }
 .ridiMystery ul > #prev_11 {
-  left: 0px;
+  left: 10px;
 }
 .ridiMystery ul > #next_11 {
-  right: 0px;
+  right: 10px;
 }
 
 .ridiHumanity {
-  max-width: 1140px;
+  position: relative;
+}
+.ridiHumanity .humanHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.ridiHumanity #human_wrap {
   overflow: hidden;
   position: relative;
 }
-.ridiHumanity .humanWrap {
+.ridiHumanity #human_wrap .humanWrap {
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  width: 1140px;
-  height: auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
-.ridiHumanity .humanWrap .humanBook {
+.ridiHumanity #human_wrap .humanWrap .humanBook {
   width: 180px;
   height: 355px;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
-  flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 6px;
 }
-.ridiHumanity .humanWrap .humanBook .humanCover {
-  width: 180px;
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanCover {
+  width: 100%;
   height: 261px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
+  padding-right: 10px;
+  position: relative;
   cursor: pointer;
   border: 1px solid rgba(20, 20, 20, 0.06);
 }
-.ridiHumanity .humanWrap .humanBook .humanInfo {
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo {
   width: 100%;
   height: 84px;
   margin-top: 10px;
   padding-right: 10px;
 }
-.ridiHumanity .humanWrap .humanBook .humanInfo .humanTitle {
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .humanTitle {
   color: #141414;
   font-weight: 500;
+  letter-spacing: -0.03em;
+  max-height: 38px;
+  line-height: 19px;
 }
-.ridiHumanity .humanWrap .humanBook .humanInfo .humanAuthor {
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .humanAuthor {
   color: #787878;
   font-size: 14px;
   margin-top: 6px;
+  letter-spacing: -0.01em;
+  line-height: 17px;
 }
-.ridiHumanity .humanWrap .humanBook .humanInfo .review {
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
   color: #DC3232;
   margin-top: 7px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
 }
-.ridiHumanity .humanWrap .humanBook .humanInfo .review span {
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .review span {
   color: #787878;
 }
 .ridiHumanity .hide {
@@ -1650,7 +1906,7 @@ section {
   justify-content: center;
   align-items: center;
   top: 50%;
-  transform: translateY(-130%);
+  transform: translateY(-150%);
   background-color: #fff;
   border: 1px solid #f0f0f0;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.06);
@@ -1664,14 +1920,16 @@ section {
   opacity: 0.65;
 }
 .ridiHumanity ul > #prev_12 {
-  left: 0px;
+  left: 10px;
 }
 .ridiHumanity ul > #next_12 {
-  right: 0px;
+  right: 10px;
 }
 
 footer {
   width: 1170px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;

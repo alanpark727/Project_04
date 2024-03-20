@@ -14,7 +14,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(today) {
-                console.log(today);
+                // console.log(today);
                 $(".todayBook").eq(i).find(".todayCover").css("background-image","url(" + today.documents[0].thumbnail + ")");
             });
             
@@ -30,7 +30,7 @@ $(document).ready(function(){
     // 지금 많이 읽고 있는 작품
 
     let search2;
-    search2 = ["해리포터", "듄 1권", "세이노의 가르침", "프로젝트 헤일메리", "아주 작은 습관의 힘", "데일 카네기 인간관계론", "부의 추월차선", "타이탄의 도구들", "눈물을 마시는 1", "살인자의 쇼핑몰", "트렌드 코리아 2024", "더 마인드", "레버리지", "나다움으로 시작하는", "애거서 크리스티", "나는 메트로폴리탄", "바다가 들리는 편의점", "역행자"];
+    search2 = ["해리포터와 마법사의 돌", "듄 1권", "세이노의 가르침", "프로젝트 헤일메리", "아주 작은 습관의 힘", "데일 카네기 인간관계론", "부의 추월차선", "타이탄의 도구들", "눈물을 마시는 1", "살인자의 쇼핑몰", "트렌드 코리아 2024", "더 마인드", "레버리지", "나다움으로 시작하는", "애거서 크리스티", "나는 메트로폴리탄", "바다가 들리는 편의점", "역행자"];
 
     for (let j = 0; j < search2.length; j++) {
         $.ajax({
@@ -41,9 +41,11 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(many) {
-                console.log(many);
+                let str2 = many.documents[0].title;
+                // console.log(many);
+                
                 $(".manyBook").eq(j).find(".manyCover").css("background-image","url(" + many.documents[0].thumbnail + ")");
-                $(".manyBook").eq(j).find(".manyTitle").append(many.documents[0].title);
+                $(".manyBook").eq(j).find(".manyTitle").append(str2);
                 $(".manyBook").eq(j).find(".manyAuthor").append(many.documents[0].authors);
                 $(".manyBook").eq(j).find(".manyIdx").append(j+1);
             });
@@ -85,7 +87,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(best) {
-                console.log(best);
+                // console.log(best);
                 $(".bestBook").eq(j).find(".bestCover").css("background-image","url(" + best.documents[0].thumbnail + ")");
                 $(".bestBook").eq(j).find(".bestTitle").append(best.documents[0].title);
                 $(".bestBook").eq(j).find(".bestAuthor").append(best.documents[0].authors);
@@ -108,7 +110,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(newB) {
-                console.log(newB);
+                // console.log(newB);
                 $(".newBook").eq(j).find(".newCover").css("background-image","url(" + newB.documents[0].thumbnail + ")");
                 $(".newBook").eq(j).find(".newTitle").append(newB.documents[0].title);
                 $(".newBook").eq(j).find(".newAuthor").append(newB.documents[0].authors);
@@ -119,7 +121,7 @@ $(document).ready(function(){
     // 아카데미 수상작&후보작 원작
 
     let search6;
-    search6 = ["아메리칸 프로메테우스", "오펜하이머 각본집", "플라워 문", "가여운 것들", "해리포터", "파워 오브 도그"];
+    search6 = ["아메리칸 프로메테우스", "오펜하이머 각본집", "플라워 문", "가여운 것들", "호빗", "파워 오브 도그"];
 
     for (let j = 0; j < search6.length; j++) {
         $.ajax({
@@ -130,7 +132,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(awards) {
-                console.log(awards);
+                // console.log(awards);
                 $(".awardsBook").eq(j).find(".awardsCover").css("background-image","url(" + awards.documents[0].thumbnail + ")");
                 $(".awardsBook").eq(j).find(".awardsTitle").append(awards.documents[0].title);
                 $(".awardsBook").eq(j).find(".awardsAuthor").append(awards.documents[0].authors);
@@ -141,7 +143,7 @@ $(document).ready(function(){
     // 이주의 셀렉트 인기도서 TOP 10
     
     let search7;
-    search7 = ["부의 추월차선", "메리골드 세탁소", "과학이 필요한 시간", "세상의 마지막 기차역", "언스크립티드", "내가 행복한 이유", "그 문장을 읽고 또 읽었다", "나는 메트로폴리탄 미술관", "부의 추월차선 위대한 탈출", "파우스트" ];
+    search7 = ["부의 추월차선", "메리골드 마음", "과학이 필요한 시간", "세상의 마지막 기차역", "언스크립티드", "내가 행복한 이유", "그 문장을 읽고 또 읽었다", "나는 메트로폴리탄 미술관", "부의 추월차선 위대한 탈출", "파우스트" ];
 
     for (let j = 0; j < search7.length; j++) {
         $.ajax({
@@ -152,7 +154,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(top10) {
-                console.log(top10);
+                // console.log(top10);
                 $(".top10Book").eq(j).find(".top10Cover").css("background-image","url(" + top10.documents[0].thumbnail + ")");
                 $(".top10Book").eq(j).find(".top10Title").append(top10.documents[0].title);
                 $(".top10Book").eq(j).find(".top10Author").append(top10.documents[0].authors);
@@ -174,7 +176,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(event) {
-                console.log(event);
+                // console.log(event);
                 $(".eventBook").eq(j).find(".eventCover").css("background-image","url(" + event.documents[0].thumbnail + ")");
             });
             
@@ -183,7 +185,7 @@ $(document).ready(function(){
     // 소설책 추천
 
     let search9;
-    search9 = ["직장 상사 악령 퇴치부", "사라진 것들", "오류가 발생했습니다", "살인자의 쇼핑몰", "홍학의 자리", "프로젝트 헤일메리", "듄 1권", "구의 증명", "해리포터", "파과", "아주 희미한 빛으로도", "도시와 그 불확실한 벽"];
+    search9 = ["직장 상사 악령 퇴치부", "사라진 것들", "오류가 발생했습니다", "살인자의 쇼핑몰", "홍학의 자리", "프로젝트 헤일메리", "듄 1권", "구의 증명", "호빗", "파과", "아주 희미한 빛으로도", "도시와 그 불확실한 벽"];
 
     for (let j = 0; j < search9.length; j++) {
         $.ajax({
@@ -194,7 +196,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(novel) {
-                console.log(novel);
+                // console.log(novel);
                 $(".novelBook").eq(j).find(".novelCover").css("background-image","url(" + novel.documents[0].thumbnail + ")");
                 $(".novelBook").eq(j).find(".novelTitle").append(novel.documents[0].title);
                 $(".novelBook").eq(j).find(".novelAuthor").append(novel.documents[0].authors);
@@ -216,7 +218,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(psy) {
-                console.log(psy);
+                // console.log(psy);
                 $(".psyBook").eq(j).find(".psyCover").css("background-image","url(" + psy.documents[0].thumbnail + ")");
                 $(".psyBook").eq(j).find(".psyTitle").append(psy.documents[0].title);
                 $(".psyBook").eq(j).find(".psyAuthor").append(psy.documents[0].authors);
@@ -238,7 +240,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(science) {
-                console.log(science);
+                // console.log(science);
                 $(".scienceBook").eq(j).find(".scienceCover").css("background-image","url(" + science.documents[0].thumbnail + ")");
                 $(".scienceBook").eq(j).find(".scienceTitle").append(science.documents[0].title);
                 $(".scienceBook").eq(j).find(".scienceAuthor").append(science.documents[0].authors);
@@ -260,7 +262,7 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(mystery) {
-                console.log(mystery);
+                // console.log(mystery);
                 $(".mysteryBook").eq(j).find(".mysteryCover").css("background-image","url(" + mystery.documents[0].thumbnail + ")");
                 $(".mysteryBook").eq(j).find(".mysteryTitle").append(mystery.documents[0].title);
                 $(".mysteryBook").eq(j).find(".mysteryAuthor").append(mystery.documents[0].authors);
@@ -271,7 +273,7 @@ $(document).ready(function(){
     // 인문학 책 추천
 
     let search13;
-    search13 = ["도둑맞은 집중력", "세상은 이야기로 만들어졌다", "마흔에 읽는 쇼펜하우어", "도파민네이션", "사피엔스", "빅터 프랭클의 죽음의 수용소에서", "사랑의 기술", "지적 대화를 위한 넓고 얕은 지식1", "정의란 무엇인가", "제정신이라는 착각", "가짜 노동", "공정하다는 착각"];
+    search13 = ["도둑맞은 집중력", "지루하면 죽는다", "마흔에 읽는 쇼펜하우어", "도파민네이션", "사피엔스", "빅터 프랭클의 죽음의 수용소에서", "사랑의 기술", "지적 대화를 위한 넓고 얕은 지식1", "정의란 무엇인가", "제정신이라는 착각", "가짜 노동", "공정하다는 착각"];
 
     for (let j = 0; j < search13.length; j++) {
         $.ajax({
@@ -282,7 +284,8 @@ $(document).ready(function(){
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
             .done(function(human) {
-                console.log(human);
+                // console.log(human);
+
                 $(".humanBook").eq(j).find(".humanCover").css("background-image","url(" + human.documents[0].thumbnail + ")");
                 $(".humanBook").eq(j).find(".humanTitle").append(human.documents[0].title);
                 $(".humanBook").eq(j).find(".humanAuthor").append(human.documents[0].authors);

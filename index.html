@@ -600,10 +600,10 @@
                         </div>
                     </a>
                 </div>
-                <div class="slideBtn">
-                    <button type="button" id="prev_1" class="fa-solid fa-angle-left arrow"></button>
-                    <button type="button" id="next_1" class="fa-solid fa-angle-right arrow"></button>
-                </div>
+            </div>
+            <div class="slideBtn">
+                <button type="button" id="prev_1" class="fa-solid fa-angle-left arrow"></button>
+                <button type="button" id="next_1" class="fa-solid fa-angle-right arrow"></button>
             </div>
         </div>
 
@@ -641,30 +641,42 @@
         <!-- 본문 -->
         <section class="ridiToday">
             <h2>오늘, 리디의 발견</h2>
-            <div class="todayWrap">
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
-                </div>
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
-                </div>
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
-                </div>
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
-                </div>
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
-                </div>
-                <div class="todayBook">
-                    <div class="todayCover"></div>
-                    <p class="todayTxt"></p>
+            <div id="today_wrap">
+                <div class="todayWrap">
+                    <div class="todayBook">
+                        <div class="todayCover"></div>
+                        <p class="todayTxt"></p>
+                    </div>
+                    <div class="todayBook">
+                        <div class="todayCover"></div>
+                        <p class="todayTxt"></p>
+                    </div>
+                    <div class="todayBook">
+                        <div class="todayCover"></div>
+                        <p class="todayTxt"></p>
+                    </div>
+                    <div class="todayBook">
+                        <div class="todayCover"></div>
+                        <p class="todayTxt"></p>
+                    </div>
+                    <div class="todayBook">
+                        <div class="todayCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="todayTxt"></p>
+                    </div>
+                    <div class="todayBook">
+                        <div class="todayCover"></div>
+                        <p class="todayTxt"></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -843,6 +855,7 @@
 
         <section class="ridiMD">
             <h2>MD's Pick</h2>
+            <div id="MD_wrap">
             <div class="MDWrap">
                 <div class="MDBook">
                     <div class="MDBg bg_1">
@@ -881,6 +894,7 @@
                     </div>
                 </div>
             </div>
+        </div>
             <ul>
                 <li id="prev_3" class="hide"><i class="fa-solid fa-angle-left arrow"></i></li>
                 <li id="next_3"><i class="fa-solid fa-angle-right arrow"></i></li>
@@ -888,7 +902,10 @@
         </section>
 
         <section class="ridiBest">
-            <h2>베스트</h2>
+            <div class="bestHeader">
+                <h2>베스트</h2>
+                <h3>더보기</h3>
+            </div>
             <div class="bestWrap">
                 <div class="bestBook">
                     <div class="bestCover"></div>
@@ -1060,102 +1077,160 @@
         </section>
 
         <section class="ridiNew">
-            <h2>새로 나온 작품</h2>
-            <div class="newWrap">
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+            <div class="newHeader">
+                <h2>새로 나온 작품</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="new_wrap">
+                <div class="newWrap">
+                    <div class="newBook">
+                        <div class="newCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover">
+                            <div class="tag">
+                                <div class="discount_50">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_5.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                                <div class="rent">
+                                    <img src="img/tag/rent.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(2)</span></p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(2)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 3.5<span>(2)</span></p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 3.5<span>(2)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0
+                        </div>
                     </div>
-                </div>
-                <div class="newBook">
-                    <div class="newCover"></div>
-                    <div class="newInfo">
-                        <p class="newTitle"></p>
-                        <p class="newAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="newBook">
+                        <div class="newCover"></div>
+                        <div class="newInfo">
+                            <p class="newTitle"></p>
+                            <p class="newAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1167,53 +1242,55 @@
 
         <section class="ridiAwards">
             <h2>아카데미 수상작&후보작 원작</h2>
-            <div class="awardsWrap">
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(19)</span></p>
+            <div id="awards_wrap">
+                <div class="awardsWrap">
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(19)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review_0"><i class="fa-solid fa-star"></i> 0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(13)</span></p>
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(13)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(12)</span></p>
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(12)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(1,300)</span></p>
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(1,300)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="awardsBook">
-                    <div class="awardsCover"></div>
-                    <div class="awardsInfo">
-                        <p class="awardsTitle"></p>
-                        <p class="awardsAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(13)</span></p>
+                    <div class="awardsBook">
+                        <div class="awardsCover"></div>
+                        <div class="awardsInfo">
+                            <p class="awardsTitle"></p>
+                            <p class="awardsAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(13)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1221,85 +1298,117 @@
 
         <section class="ridiTop10">
             <h2>이주의 셀렉트 인기도서 TOP 10</h2>
-            <div class="top10Wrap">
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(222)</span></p>
+            <div id="top10_wrap">
+                <div class="top10Wrap">
+                    <div class="top10Book">
+                        <div class="top10Cover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(222)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(49)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(49)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(15)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(15)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(283)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover"></div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(283)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(215)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover"></div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(215)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(14)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover"></div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(14)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(84)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(84)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(69)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(69)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(7)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover"></div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(7)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="top10Book">
-                    <div class="top10Cover"></div>
-                    <div class="top10Info">
-                        <p class="top10Title"></p>
-                        <p class="top10Author"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 3.4<span>(9)</span></p>
+                    <div class="top10Book">
+                        <div class="top10Cover"></div>
+                        <div class="top10Info">
+                            <p class="top10Title"></p>
+                            <p class="top10Author"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 3.4<span>(9)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1310,86 +1419,91 @@
         </section>
 
         <section class="ridiEvent">
-            <h2>이벤트</h2>
-            <div class="eventWrap">
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>삶과 죽음의 문턱에 놓인<br>작은 경이와 미스터리<샤이닝>
-                        </h4>
+            <div class="eventHeader">
+                <h2>이벤트</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="event_wrap">
+                <div class="eventWrap">
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>삶과 죽음의 문턱에 놓인<br>작은 경이와 미스터리<샤이닝>
+                            </h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>히가시노 게이고 최신작<br>
+                                <블랙 쇼맨과 운명의 바퀴>
+                            </h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>히가시노 게이고 최신작<br>
-                            <블랙 쇼맨과 운명의 바퀴>
-                        </h4>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>문명의 생성과 번영의<br>수수께끼를 밝히다<총균쇠>
+                            </h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>역사적인 해리포터의 시작<br>
+                                <해리포터와 마법사의 돌>
+                            </h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>문명의 생성과 번영의<br>수수께끼를 밝히다<총균쇠>
-                        </h4>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>'프랑켄슈타인'의<br>포스트모던적 재해석</h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>일의 격 이후 당신 앞에<br>펼쳐지는 새로운 일의 길</h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>역사적인 해리포터의 시작<br>
-                            <해리포터와 마법사의 돌>
-                        </h4>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>갑자기 착해진 직장 상사!<br>알고 보니 악귀에 씌었다?</h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>미미여사 신작 출간 기념<br>대표도서 기획전</h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>'프랑켄슈타인'의<br>포스트모던적 재해석</h4>
-                    </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
-                    </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>일의 격 이후 당신 앞에<br>펼쳐지는 새로운 일의 길</h4>
-                    </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
-                    </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>갑자기 착해진 직장 상사!<br>알고 보니 악귀에 씌었다?</h4>
-                    </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
-                    </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>미미여사 신작 출간 기념<br>대표도서 기획전</h4>
-                    </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
-                    </div>
-                </div>
-                <div class="eventBook">
-                    <div class="eventTxt">
-                        <h4>
-                            <투명인간은 밀실에 숨는다><br>아쓰카와 다쓰미 신작 출간
-                        </h4>
-                    </div>
-                    <div class="eventImage">
-                        <div class="eventCover"></div>
+                    <div class="eventBook">
+                        <div class="eventTxt">
+                            <h4>
+                                <투명인간은 밀실에 숨는다><br>아쓰카와 다쓰미 신작 출간
+                            </h4>
+                        </div>
+                        <div class="eventImage">
+                            <div class="eventCover"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1400,102 +1514,149 @@
         </section>
 
         <section class="ridiNovel">
-            <h2>소설책 추천</h2>
-            <div class="novelWrap">
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(9)</span></p>
+            <div class="novelHeader">
+                <h2>소설책 추천</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="novel_wrap">
+                <div class="novelWrap">
+                    <div class="novelBook">
+                        <div class="novelCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                                <div class="rent">
+                                    <img src="img/tag/rent.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(9)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.0<span>(3)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.0<span>(3)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(1)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(1)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(397)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(397)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(575)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(575)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(2,527)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(2,527)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(198)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                                <div class="rent">
+                                    <img src="img/tag/rent.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(198)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(209)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(209)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(1,300)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(1,300)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(1,287)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(1,287)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(59)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(59)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="novelBook">
-                    <div class="novelCover"></div>
-                    <div class="novelInfo">
-                        <p class="novelTitle"></p>
-                        <p class="novelAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(204)</span></p>
+                    <div class="novelBook">
+                        <div class="novelCover"></div>
+                        <div class="novelInfo">
+                            <p class="novelTitle"></p>
+                            <p class="novelAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(204)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1506,102 +1667,126 @@
         </section>
 
         <section class="ridiPsychology">
-            <h2>심리학 책 추천</h2>
-            <div class="psyWrap">
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(441)</span></p>
+            <div class="psyHeader">
+                <h2>심리학 책 추천</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="psy_wrap">
+                <div class="psyWrap">
+                    <div class="psyBook">
+                        <div class="psyCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                                <div class="rent">
+                                    <img src="img/tag/rent.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(441)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(4)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(4)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(12)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(12)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(16)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(16)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(1,363)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(1,363)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(231)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.9<span>(231)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(2)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(2)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(253)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(253)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(76)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(76)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(201)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(201)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(1,584)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(1,584)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="psyBook">
-                    <div class="psyCover"></div>
-                    <div class="psyInfo">
-                        <p class="psyTitle"></p>
-                        <p class="psyAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(284)</span></p>
+                    <div class="psyBook">
+                        <div class="psyCover"></div>
+                        <div class="psyInfo">
+                            <p class="psyTitle"></p>
+                            <p class="psyAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(284)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1612,102 +1797,125 @@
         </section>
 
         <section class="ridiScience">
-            <h2>과학 책 추천</h2>
-            <div class="scienceWrap">
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(905)</span></p>
+            <div class="scienceHeader">
+                <h2>과학 책 추천</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="science_wrap">
+                <div class="scienceWrap">
+                    <div class="scienceBook">
+                        <div class="scienceCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(905)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(167)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(167)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(15)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(15)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(42)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(42)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(339)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(339)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(3)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 5.0<span>(3)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(584)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(584)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(200)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(200)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(264)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(264)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(15)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(15)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(10)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(10)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="scienceBook">
-                    <div class="scienceCover"></div>
-                    <div class="scienceInfo">
-                        <p class="scienceTitle"></p>
-                        <p class="scienceAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(106)</span></p>
+                    <div class="scienceBook">
+                        <div class="scienceCover"></div>
+                        <div class="scienceInfo">
+                            <p class="scienceTitle"></p>
+                            <p class="scienceAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(106)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1718,102 +1926,143 @@
         </section>
 
         <section class="ridiMystery">
-            <h2>추리 소설 추천</h2>
-            <div class="mysteryWrap">
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(404)</span></p>
+            <div class="mysteryHeader">
+                <h2>추리 소설 추천</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="mystery_wrap">
+                <div class="mysteryWrap">
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(404)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(7)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(7)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(57)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(57)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(31)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(31)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(1,722)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(1,722)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(370)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover">
+                            <div class="tag">
+                                <div class="rent">
+                                    <img src="img/tag/rent.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.8<span>(370)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(4,455)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(4,455)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(6)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(6)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(67)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(67)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(141)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(141)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(102)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover"></div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(102)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mysteryBook">
-                    <div class="mysteryCover"></div>
-                    <div class="mysteryInfo">
-                        <p class="mysteryTitle"></p>
-                        <p class="mysteryAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(70)</span></p>
+                    <div class="mysteryBook">
+                        <div class="mysteryCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mysteryInfo">
+                            <p class="mysteryTitle"></p>
+                            <p class="mysteryAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.7<span>(70)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1824,102 +2073,143 @@
         </section>
 
         <section class="ridiHumanity">
-            <h2>인문학 책 추천</h2>
-            <div class="humanWrap">
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(181)</span></p>
+            <div class="humanHeader">
+                <h2>인문학 책 추천</h2>
+                <h3>더보기</h3>
+            </div>
+            <div id="human_wrap">
+                <div class="humanWrap">
+                    <div class="humanBook">
+                        <div class="humanCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(181)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(4)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.3<span>(4)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(86)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.1<span>(86)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(210)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(210)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(26)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(26)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(307)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.6<span>(307)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(73)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(73)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(746)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover">
+                            <div class="tag">
+                                <div class="select">
+                                    <img src="img/tag/select.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(746)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(253)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.5<span>(253)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(5)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover">
+                            <div class="tag">
+                                <div class="discount_10">
+                                    <img src="img/tag/01.webp" alt="">
+                                    <img src="img/tag/02_1.webp" alt="">
+                                    <img src="img/tag/03.webp" alt="">
+                                    <img src="img/tag/04.webp" alt="">
+                                    <img src="img/tag/05.webp" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.2<span>(5)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(26)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(26)</span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="humanBook">
-                    <div class="humanCover"></div>
-                    <div class="humanInfo">
-                        <p class="humanTitle"></p>
-                        <p class="humanAuthor"></p>
-                        <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(258)</span></p>
+                    <div class="humanBook">
+                        <div class="humanCover"></div>
+                        <div class="humanInfo">
+                            <p class="humanTitle"></p>
+                            <p class="humanAuthor"></p>
+                            <p class="review"><i class="fa-solid fa-star"></i> 4.4<span>(258)</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
