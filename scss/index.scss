@@ -76,7 +76,7 @@ header {
         div {
             display: flex;
             align-items: center;
-            padding: 8px 8px 9px 0;
+            padding: 8px 6px 9px 0;
         }
     }
 }
@@ -206,9 +206,11 @@ header {
             display: flex;
             width: 100%;
             height: 100%;
+            flex: 1 0 100%;
             a {
                 width: 0;
                 height: 400px;
+                transition: flex-grow 0.5s ease-out;
                 .content {
                     position: relative;
                     height: 100%;
