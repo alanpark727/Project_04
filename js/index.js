@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-  // 메인 슬라이드
-
 
   // 지금 많이 읽고 있는 작품
 
@@ -297,6 +295,11 @@ $(document).ready(function(){
         $("#next_12").removeClass("hide");
         $("#prev_12").addClass("hide");
     }
+  });
+
+  $(".footUnderbar>button").click(function(){
+    $(".footUnderbar>button").toggleClass('arrow');
+    $('#foot_info').toggleClass('open');
   });
 
 });

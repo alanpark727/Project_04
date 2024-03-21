@@ -14,6 +14,7 @@
       function showSlide(index) {
         slides.css('flex-grow', '0').css('flex-basis','0');
         slides.eq(index).css('flex-grow', '1').css('flex-basis','46px');
+        slides.eq(index-2).appendTo('.slider')
         currentIndex = index;
       }
 
