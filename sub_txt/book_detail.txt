@@ -1,0 +1,41 @@
+<ul>
+    <li><span>출간 정보</span>
+        <ul>
+            <li class="detail_pub_info">2024.03.07.전자책 출간</li>
+            <li class="detail_pub_info">2024.03.02.종이책 출간</li>
+        </ul>
+    </li>
+    <li><span>파일 정보</span>
+        <ul>
+            <li class="detail_file_info">EPUB</li>
+            <li class="detail_file_info">21.6MB</li>
+            <li class="detail_file_info">약 9.4만 자</li>
+        </ul>
+    </li>
+    <li><span>ISBN</span>
+        <ul>
+            <li class="detail_isbn">9788925526744</li>
+        </ul>
+    </li>
+    <li><span>ECN</span>
+        <ul>
+            <li class="detail_ecn">-</li>
+        </ul>
+    </li>
+</ul>
+<ul>
+    <li><span>듣기 기능</span>
+        <ul>
+            <li><i class="fa-solid fa-headphones"></i> 듣기 가능</li>
+        </ul>
+    </li>
+    <li><span>지원 기기</span>
+        <ul>
+            <li class="detail_comp_device"><i class="fa-regular fa-square"></i> PAPER</li>
+            <li class="detail_comp_device"><i class="fa-brands fa-apple"></i> iOS</li>
+            <li class="detail_comp_device"><i class="fa-brands fa-android"></i> Android</li>
+            <li class="detail_comp_device"><i class="fa-brands fa-windows"></i> PC</li>
+            <li class="detail_comp_device"><i class="fa-solid fa-circle-xmark"></i> Mac</li>
+        </ul>
+    </li>
+</ul>

@@ -1,0 +1,49 @@
+<div class="author_name">
+    <h4>히가시노 게이고</h4>
+    <span>Higashino Keigo</span>
+</div>
+<a href="" class="fa-solid fa-plus"> 작가 신간알림·소식</a>
+<table>
+    <tbody>
+        <tr>
+            <th>국적</th>
+            <td>일본</td>
+        </tr>
+        <tr>
+            <th>출생</th>
+            <td>1958년 2월 4일</td>
+        </tr>
+        <tr>
+            <th>학력</th>
+            <td>오사카부립대학교 전기공학과 학사</td>
+        </tr>
+        <tr>
+            <th>데뷔</th>
+            <td>1985년 소설 방과 후</td>
+        </tr>
+        <tr>
+            <th>수상</th>
+            <td>2012년 중앙공론문예상</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>2006년 제6회 본격 미스테리대상 소설부문상</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>2006년 제134회 나오키 산주고상</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>1999년 제52회 일본추리작가협회상 장편부문상</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>1985년 제31회 에도가와 란포상</td>
+        </tr>
+    </tbody>
+</table>
+<div class="content_edit">
+    <span>2018.12.12.업데이트</span>
+    <a href="" class="fa-solid fa-pencil"> 작가 프로필 수정 요청</a>
+</div>

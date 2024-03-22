@@ -1,0 +1,24 @@
+<div class="translator_name">
+    <h4>최고은</h4>
+</div>
+    <a href="" class="fa-solid fa-plus"> 작가 신간알림·소식</a>
+<table>
+    <tbody>
+        <tr>
+            <th>국적</th>
+            <td>대한민국</td>
+        </tr>
+        <tr>
+            <th>학력</th>
+            <td>대학원 일본 대중문화</td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>대학교 일본사</td>
+        </tr>
+    </tbody>
+</table>
+<div class="content_edit">
+    <span>2018.10.05.업데이트</span>
+    <a href="" class="fa-solid fa-pencil"> 작가 프로필 수정 요청</a>
+</div>

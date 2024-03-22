@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+@import "reset";
+
+#subWrap {
+    color: #666;
+    font-size: 12px;
+    line-height: 1em;
+    letter-spacing: -0.03em;
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+}
+
+.contents_wrap {
+    width: 1170px;
+    padding: 0;
+    margin: 0 auto;
+    border-top: none;
+}
+
+.contents {
+    display: flex;
+    width: 100%;
+    #mainContents {
+        width: 100%;
+        display: table-cell;
+        vertical-align: top;
+        section {
+            width: 100%;
+            padding-bottom: 95px;
+        }
+    }
+    #sideBar {
+        .aside_contents {
+            width: 234px;
+            border-left: 1px solid #e6e6e6;
+            height: 100%;
+        }
+    }
+}
+
+h3 {
+    font-size: 20px;
+    color: #59667a;
+    letter-spacing: -.03em;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline-block;
+}
+article {
+    padding: 0 30px 70px 30px;
+}
+
+.book_info {
+    padding: 40px 30px;
+    .info_box {
+        width: 635px;
+        float: right;
+    }
+    .cover_box {
+        width: 220px;
+        float: left;
+    }
+    .clear_both {
+        display: block;
+        clear: both;
+        width: 0;
+        height: 0;
+        border: 0;
+        visibility: hidden;
+        line-height: 0;
+        font-size: 0;
+    }
+    .book_detail {
+        display: grid;
+        margin-top: 40px;
+        grid-template-columns: 360px auto;
+        padding: 20px 26px 13px;
+        border: 4px solid #f2f4f5;
+        cursor: default;
+        ul>li {
+            display: table;
+            padding-bottom: 7px;
+            font-size: 12px;
+            color: #666;
+            span {
+                display: table-cell;
+                width: 63px;
+                padding-right: 9px;
+                line-height: 16px;
+                font-weight: 700;
+                color: #525a61;
+            }
+            >ul {
+                display: table-cell;
+                li {
+                    position: relative;
+                    line-height: 16px;
+                    display: block;
+                }
+                .detail_pub_info {
+                    width: 100%;
+                    padding-bottom: 2px;
+                    &:last-child {
+                        padding-bottom: 0px;
+                    }
+                }
+                .detail_file_info {
+                    display: inline-block;
+                    padding-right: 9px;
+                    &:nth-child(1):after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 10px;
+                        right: 4px;
+                        top: 50%;
+                        margin-top: -8px;
+                        background: #d1d5d9;
+                    }
+                    &:nth-child(2):after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 10px;
+                        right: 4px;
+                        top: 50%;
+                        margin-top: -8px;
+                        background: #d1d5d9;
+                    }
+                    &:last-child {
+                        padding-right: 0px;
+                    }
+                }
+                .detail_isbn, .detail_ecn {
+                    width: 100%;
+                    padding-bottom: 0;
+                }
+                .detail_comp_device {
+                    display: inline-block;
+                    position: relative;
+                    margin-right: 9px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+
+.book_intro {
+    padding: 0 30px 70px 30px;
+    .intro_title{
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+        h3 {
+            letter-spacing: -0.03em;
+            .book_title {
+                display: block;
+                font-size: 17px;
+                color: #59667a;
+                font-weight: 400;
+                line-height: 20px;
+                margin-bottom: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .intro_book {
+                font-size: 20px;
+                letter-spacing: -.03em;
+            }
+        }
+    }
+    .intro_content {
+        .intro_para {
+            line-height: 1.8em;
+            font-size: 13px;
+            color: #333;
+            word-break: keep-all;
+            word-wrap: break-word;
+            .indent_hidden {
+                position: absolute;
+                display: inline-block;
+                height: 0;
+                width: 0;
+                text-indent: -9999px;
+                overflow: hidden;
+            }
+            img {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                border: 1px solid #b3b3b3;
+            }
+        }
+        div.foldable {
+            cursor: pointer;
+        }
+        div.folded {
+            width: 100%;
+            height: 186px;
+            overflow: hidden;
+        }
+    }
+}
+
+.spread_content.acitve {
+    display: block;
+}
+
+.spread_content {
+    float: right;
+    background: 0 0;
+    font-size: 13px;
+    color: #1e9eff;
+    border: none;
+    cursor: pointer;
+    .fa-solid {
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+
+.pub_write {
+    .write_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+.author_profile {
+    padding-bottom: 40px;
+    .profile_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+    .profile_nav {
+        font-size: 12px;
+        position: relative;
+        height: 33px;
+        overflow: hidden;
+        ul {
+            box-sizing: content-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-bottom: 1px solid #d1d5d9;
+            height: 12px;
+            padding: 10px 0;
+            min-width: 100%;
+            white-space: nowrap ;
+            cursor: default;
+            li {
+                display: inline-block;
+                height: 12px;
+                padding: 0px 17px 0px 20px;
+                border-left: 1px solid #d1d5d9;
+                span {
+                    color: #808991;
+                    margin-right: 7px;
+                }
+                &:first-child {
+                    border-left: none;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.author_intro {
+    padding-bottom: 40px;
+    .author_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+.book_chapter {
+    .chapter_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+.book_review {
+    .review_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+.together_buy {
+    padding-bottom: 70px;
+    max-height: 600px;
+    opacity: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: hidden;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    .buy_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+.together_search {
+    padding-bottom: 70px;
+    max-height: 600px;
+    opacity: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow: hidden;
+    transition: max-height .7s ease-in-out, opacity .7s ease-in-out;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    .search_title {
+        margin-bottom: 15px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #7d8e9e;
+    }
+}
+
+
+// 사이드 바
+
+.aside_banner {
+    width: 100%;
+    padding-right: 30px;
+    a {
+        display: block;
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+            border: 0;
+        }
+    }
+}
+
+.aside_rank {
+    padding: 24px 30px;
+    a {
+        color: #141414;
+    }
+    .rank_title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: -0.04em;
+        font-family: none;
+        .arrow {
+            font-size: 10px;
+            display: inline-flex;
+            padding-left: 2px;
+        }
+    }
+    ol {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin-bottom: 15px;
+        counter-reset: ranking;
+        a {
+            color: #666;
+            display: flex;
+            padding: 4px 0px;
+            line-height: 18px;
+            white-space: nowrap;
+            span {
+                color: #787878;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: -0.05em;
+                height: 17px;
+                flex: 1 1 auto;
+                overflow: hidden;
+                font-family: none;
+                text-overflow: ellipsis;
+            }
+            &::before {
+                counter-increment: ranking;
+                content: counter(ranking);
+                min-width: 29px;
+                color: #DC3232;
+                font-size: 14px;
+                font-weight: 700;
+                font-style: italic;
+                line-height: 18px;
+                letter-spacing: -0.02em;
+                font-family: none;
+            }
+        }
+    }
+}
+
+

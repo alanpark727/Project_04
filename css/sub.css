@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Ubuntu&display=swap");
+@font-face {
+  font-family: "RIDIBatang";
+  src: url(../fonts/RIDIBatang.otf) format("opentype");
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", ridi-roboto, "Noto Sans KR", sans-serif;
+}
+
+p, i, li, span, div {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Helvetica Neue", ridi-roboto, "Noto Sans KR", sans-serif;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+#subWrap {
+  color: #666;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: -0.03em;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+}
+
+.contents_wrap {
+  width: 1170px;
+  padding: 0;
+  margin: 0 auto;
+  border-top: none;
+}
+
+.contents {
+  display: flex;
+  width: 100%;
+}
+.contents #mainContents {
+  width: 100%;
+  display: table-cell;
+  vertical-align: top;
+}
+.contents #mainContents section {
+  width: 100%;
+  padding-bottom: 95px;
+}
+.contents #sideBar .aside_contents {
+  width: 234px;
+  border-left: 1px solid #e6e6e6;
+  height: 100%;
+}
+
+h3 {
+  font-size: 20px;
+  color: #59667a;
+  letter-spacing: -0.03em;
+  line-height: 24px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+article {
+  padding: 0 30px 70px 30px;
+}
+
+.book_info {
+  padding: 40px 30px;
+}
+.book_info .info_box {
+  width: 635px;
+  float: right;
+}
+.book_info .cover_box {
+  width: 220px;
+  float: left;
+}
+.book_info .clear_both {
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
+  border: 0;
+  visibility: hidden;
+  line-height: 0;
+  font-size: 0;
+}
+.book_info .book_detail {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 360px auto;
+  padding: 20px 26px 13px;
+  border: 4px solid #f2f4f5;
+  cursor: default;
+}
+.book_info .book_detail ul > li {
+  display: table;
+  padding-bottom: 7px;
+  font-size: 12px;
+  color: #666;
+}
+.book_info .book_detail ul > li span {
+  display: table-cell;
+  width: 63px;
+  padding-right: 9px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #525a61;
+}
+.book_info .book_detail ul > li > ul {
+  display: table-cell;
+}
+.book_info .book_detail ul > li > ul li {
+  position: relative;
+  line-height: 16px;
+  display: block;
+}
+.book_info .book_detail ul > li > ul .detail_pub_info {
+  width: 100%;
+  padding-bottom: 2px;
+}
+.book_info .book_detail ul > li > ul .detail_pub_info:last-child {
+  padding-bottom: 0px;
+}
+.book_info .book_detail ul > li > ul .detail_file_info {
+  display: inline-block;
+  padding-right: 9px;
+}
+.book_info .book_detail ul > li > ul .detail_file_info:nth-child(1):after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  right: 4px;
+  top: 50%;
+  margin-top: -8px;
+  background: #d1d5d9;
+}
+.book_info .book_detail ul > li > ul .detail_file_info:nth-child(2):after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  right: 4px;
+  top: 50%;
+  margin-top: -8px;
+  background: #d1d5d9;
+}
+.book_info .book_detail ul > li > ul .detail_file_info:last-child {
+  padding-right: 0px;
+}
+.book_info .book_detail ul > li > ul .detail_isbn, .book_info .book_detail ul > li > ul .detail_ecn {
+  width: 100%;
+  padding-bottom: 0;
+}
+.book_info .book_detail ul > li > ul .detail_comp_device {
+  display: inline-block;
+  position: relative;
+  margin-right: 9px;
+  line-height: 16px;
+}
+
+.book_intro {
+  padding: 0 30px 70px 30px;
+}
+.book_intro .intro_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+.book_intro .intro_title h3 {
+  letter-spacing: -0.03em;
+}
+.book_intro .intro_title h3 .book_title {
+  display: block;
+  font-size: 17px;
+  color: #59667a;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.book_intro .intro_title h3 .intro_book {
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+.book_intro .intro_content .intro_para {
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.book_intro .intro_content .intro_para .indent_hidden {
+  position: absolute;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+.book_intro .intro_content .intro_para img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #b3b3b3;
+}
+.book_intro .intro_content div.foldable {
+  cursor: pointer;
+}
+.book_intro .intro_content div.folded {
+  width: 100%;
+  height: 186px;
+  overflow: hidden;
+}
+
+.spread_content.acitve {
+  display: block;
+}
+
+.spread_content {
+  float: right;
+  background: 0 0;
+  font-size: 13px;
+  color: #1e9eff;
+  border: none;
+  cursor: pointer;
+}
+.spread_content .fa-solid {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.pub_write .write_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.author_profile {
+  padding-bottom: 40px;
+}
+.author_profile .profile_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+.author_profile .profile_nav {
+  font-size: 12px;
+  position: relative;
+  height: 33px;
+  overflow: hidden;
+}
+.author_profile .profile_nav ul {
+  box-sizing: content-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid #d1d5d9;
+  height: 12px;
+  padding: 10px 0;
+  min-width: 100%;
+  white-space: nowrap;
+  cursor: default;
+}
+.author_profile .profile_nav ul li {
+  display: inline-block;
+  height: 12px;
+  padding: 0px 17px 0px 20px;
+  border-left: 1px solid #d1d5d9;
+}
+.author_profile .profile_nav ul li span {
+  color: #808991;
+  margin-right: 7px;
+}
+.author_profile .profile_nav ul li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.author_intro {
+  padding-bottom: 40px;
+}
+.author_intro .author_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.book_chapter .chapter_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.book_review .review_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.together_buy {
+  padding-bottom: 70px;
+  max-height: 600px;
+  opacity: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.together_buy .buy_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.together_search {
+  padding-bottom: 70px;
+  max-height: 600px;
+  opacity: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.together_search .search_title {
+  margin-bottom: 15px;
+  padding: 10px 0 8px 0;
+  border-bottom: 2px solid #7d8e9e;
+}
+
+.aside_banner {
+  width: 100%;
+  padding-right: 30px;
+}
+.aside_banner a {
+  display: block;
+  width: 100%;
+}
+.aside_banner a img {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.aside_rank {
+  padding: 24px 30px;
+}
+.aside_rank a {
+  color: #141414;
+}
+.aside_rank .rank_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  letter-spacing: -0.04em;
+  font-family: none;
+}
+.aside_rank .rank_title .arrow {
+  font-size: 10px;
+  display: inline-flex;
+  padding-left: 2px;
+}
+.aside_rank ol {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-bottom: 15px;
+  counter-reset: ranking;
+}
+.aside_rank ol a {
+  color: #666;
+  display: flex;
+  padding: 4px 0px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+.aside_rank ol a span {
+  color: #787878;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.05em;
+  height: 17px;
+  flex: 1 1 auto;
+  overflow: hidden;
+  font-family: none;
+  text-overflow: ellipsis;
+}
+.aside_rank ol a::before {
+  counter-increment: ranking;
+  content: counter(ranking);
+  min-width: 29px;
+  color: #DC3232;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  font-family: none;
+}
