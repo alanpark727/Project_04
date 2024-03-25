@@ -84,6 +84,15 @@ article {
   width: 220px;
   float: left;
 }
+.book_info .cover_box .book_cover {
+  width: 200px;
+  max-height: 313px;
+  position: relative;
+  display: inline-block;
+}
+.book_info .cover_box .book_cover img {
+  width: 100%;
+}
 .book_info .clear_both {
   display: block;
   clear: both;
@@ -216,6 +225,12 @@ article {
   max-width: 100%;
   border: 1px solid #b3b3b3;
 }
+.book_intro .intro_content .intro_para .intro_text {
+  margin-top: 50px;
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
+}
 .book_intro .intro_content div.foldable {
   cursor: pointer;
 }
@@ -247,6 +262,11 @@ article {
   margin-bottom: 15px;
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
+}
+.pub_write .write_text {
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
 }
 
 .author_profile {
@@ -298,11 +318,21 @@ article {
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
 }
+.author_intro .author_text {
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
+}
 
 .book_chapter .chapter_title {
   margin-bottom: 15px;
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
+}
+.book_chapter .chapter_text {
+  line-height: 1.8em;
+  font-size: 13px;
+  color: #333;
 }
 
 .book_review .review_title {
@@ -327,6 +357,10 @@ article {
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
 }
+.together_buy .buy_book .buy_cover {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .together_search {
   padding-bottom: 70px;
@@ -343,6 +377,10 @@ article {
   margin-bottom: 15px;
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
+}
+.together_search .search_book .search_cover {
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .aside_banner {
