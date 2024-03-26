@@ -9,6 +9,7 @@ $(document).ready(function(){
   })
     .done(function(main) {
         console.log(main);
+        $('.main_title').append(main.documents[0].title);
         $('.api_authors').append(main.documents[0].authors[0]);
         $('.api_translators').append(main.documents[0].translators[0]);
         $('.api_publisher').append(main.documents[0].publisher+'(RHK)');
@@ -170,9 +171,9 @@ $(document).ready(function(){
             })
                 .done(function(buy) {
                     console.log(buy);
-                    $(".buy_cover").eq(j).css("background-image","url(" + buy.documents[0].thumbnail + ")");
-                    $(".buy_cover").eq(j).find('h6').append(buy.documents[0].title);
-                    $(".buy_cover").eq(j).find('p').append(buy.documents[0].authors);
+                    $(".buy_book").eq(j).find('.buy_cover').css("background-image","url(" + buy.documents[0].thumbnail + ")");
+                    $(".buy_txt").eq(j).find('h6').append(buy.documents[0].title);
+                    $(".buy_txt").eq(j).find('p').append(buy.documents[0].authors);
                 });
                 
         };
@@ -192,9 +193,9 @@ $(document).ready(function(){
             })
                 .done(function(search) {
                     console.log(search);
-                    $(".search_cover").eq(j).css("background-image","url(" + search.documents[0].thumbnail + ")");
-                    $(".search_cover").eq(j).find('h6').append(search.documents[0].title);
-                    $(".search_cover").eq(j).find('p').append(search.documents[0].authors);
+                    $(".search_book").eq(j).find('.search_cover').css("background-image","url(" + search.documents[0].thumbnail + ")");
+                    $(".search_txt").eq(j).find('h6').append(search.documents[0].title);
+                    $(".search_txt").eq(j).find('p').append(search.documents[0].authors);
                 });
                 
         };
