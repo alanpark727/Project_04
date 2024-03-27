@@ -81,6 +81,7 @@ h2 {
   word-break: keep-all;
   word-wrap: break-word;
   margin-top: 8px;
+  cursor: default;
 }
 
 .book_info {
@@ -97,16 +98,13 @@ h2 {
 .book_info .info_box .info_txt > ul li {
   font-size: 12px;
   color: #333;
-}
-.book_info .info_box .info_txt > ul li::after {
-  content: ">";
-  margin: 0px 5px;
-}
-.book_info .info_box .info_txt > ul li:last-child::after {
-  content: "";
+  margin: 0px 3px;
 }
 .book_info .info_box .info_txt > ul li :hover {
   color: #1e9eff;
+}
+.book_info .info_box .info_txt > ul .between {
+  margin-top: 3px;
 }
 .book_info .info_box .info_txt .star {
   margin: 20px 0px;
@@ -268,6 +266,7 @@ h2 {
 }
 .book_info .info_box .price_info {
   margin: 15px 0px;
+  cursor: default;
 }
 .book_info .info_box .price_info table {
   width: 100%;
@@ -644,7 +643,10 @@ h2 {
   font-weight: 700;
   color: #808991;
 }
-.author_profile .profile_nav ul li .active {
+.author_profile .profile_nav ul li a:hover {
+  color: #333;
+}
+.author_profile .profile_nav ul li a.active {
   color: #333;
   padding-bottom: 6px;
   border-bottom: 1px solid #333;
@@ -652,9 +654,17 @@ h2 {
 .author_profile .profile_contents {
   position: relative;
 }
+.author_profile .profile_contents .author_content.display {
+  display: block;
+}
+.author_profile .profile_contents .translator_content.display {
+  display: block;
+}
 .author_profile .profile_contents .author_content {
   padding-top: 30px;
   padding: 20px 0 0 0;
+  display: none;
+  overflow: hidden;
 }
 .author_profile .profile_contents .author_content #higashino {
   width: 100%;
@@ -662,18 +672,614 @@ h2 {
 .author_profile .profile_contents .author_content #higashino .author_name {
   padding: 0 10px 17px 0;
 }
-.author_profile .profile_contents .author_content #higashino .author_name h4 {
+.author_profile .profile_contents .author_content #higashino .author_name .name_txt h4 {
   font-size: 20px;
   font-weight: 700;
   color: #333;
   line-height: 1.3em;
   display: inline-block;
 }
-.author_profile .profile_contents .author_content #higashino .author_name span {
+.author_profile .profile_contents .author_content #higashino .author_name .name_txt > span {
   font-size: 14px;
   font-weight: 400;
   color: #999;
   line-height: 1.3em;
+}
+.author_profile .profile_contents .author_content #higashino .author_name .name_txt:hover h4 {
+  color: #1f8ce6;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content #higashino .author_name .name_txt:hover span {
+  color: #1f8ce6;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content #higashino .news_btn {
+  display: block;
+  width: 168px;
+  padding: 8px 8px 7px 8px;
+  font-size: 12px;
+  line-height: 1em;
+  text-align: center;
+  color: #0080f6;
+  border-color: #0080f6;
+  border: 1px solid #1f8ce6;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.author_profile .profile_contents .author_content #higashino .news_btn:hover {
+  background-color: #ebf6ff;
+}
+.author_profile .profile_contents .author_content #higashino table {
+  padding-top: 8px;
+  cursor: default;
+}
+.author_profile .profile_contents .author_content #higashino table tr th {
+  padding-right: 7px;
+  width: 3em;
+  font-size: 13px;
+  color: #808991;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+.author_profile .profile_contents .author_content #higashino table tr td {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.8em;
+}
+.author_profile .profile_contents .author_content #higashino .content_edit {
+  padding: 14px 1px 20px 0;
+  text-align: right;
+}
+.author_profile .profile_contents .author_content #higashino .content_edit span {
+  padding-right: 10px;
+  color: #9ea7ad;
+  font-size: 13px;
+  cursor: default;
+}
+.author_profile .profile_contents .author_content #higashino .content_edit a {
+  color: #808991;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1em;
+  vertical-align: baseline;
+  transition: background-color 0.2s, color 0.2s;
+  background: #fff;
+  border: 1px solid #d1d5d9;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  font-size: 11px;
+  padding: 4px 10px;
+}
+.author_profile .profile_contents .author_content #higashino .content_edit a:hover {
+  background-color: #eee;
+}
+.author_profile .profile_contents .author_content .featured_book {
+  border-top: 1px solid #eee;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title {
+  margin-top: 26px;
+  display: table;
+  width: 100%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title h5 {
+  display: table-cell;
+  padding-left: 16px;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul {
+  display: table-cell;
+  text-align: right;
+  vertical-align: top;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul li {
+  display: inline-block;
+  height: 1em;
+  border-left: 1px solid #ccc;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul li:first-child {
+  border-left: none;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul li a.active {
+  color: #333;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul li a {
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #999;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_title ul li a:hover {
+  color: #333;
+}
+.author_profile .profile_contents .author_content .featured_book .popular {
+  display: block;
+}
+.author_profile .profile_contents .author_content .featured_book .liked {
+  display: none;
+}
+.author_profile .profile_contents .author_content .featured_book .latest {
+  display: none;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover {
+  padding: 10px 0 20px 0;
+  overflow: hidden;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list {
+  width: 20%;
+  float: left;
+  margin-top: 20px;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail {
+  height: 135px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  width: 90px;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail div {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #59667a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.55em;
+  margin-left: -14px;
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num .num {
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+  margin-right: -3px;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num .percent {
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text {
+  width: 90px;
+  text-align: left;
+  display: block;
+  margin: 8px auto 0 auto;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .title {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.4em;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  max-height: 2.7em;
+  overflow: hidden;
+  white-space: normal;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box {
+  margin-top: 3px;
+  cursor: pointer;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate {
+  margin-top: 4px;
+  color: #999;
+  font-size: 11px;
+  line-height: 1em;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon {
+  position: relative;
+  margin-top: -1px;
+  margin-right: 1px;
+  width: 50px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: -11%;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background: url(../img/sub_img/star_base.svg) center center no-repeat;
+  background-size: 100% 100%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star_rate_fill {
+  display: block;
+  position: relative;
+  height: 10px;
+  overflow-x: hidden;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star_rate_fill:after {
+  background: url(../img/sub_img/star_fill.svg) center center no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 10px;
+  content: "";
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star20 {
+  width: 20%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star66 {
+  width: 66%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star78 {
+  width: 78%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star82 {
+  width: 82%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star84 {
+  width: 84%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star92 {
+  width: 92%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star94 {
+  width: 94%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star96 {
+  width: 96%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star100 {
+  width: 100%;
+}
+.author_profile .profile_contents .author_content .featured_book .featured_all {
+  float: right;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.8em;
+  color: #808991;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background: #fff;
+  border: 1px solid #d1d5d9;
+  box-shadow: 0 2px 4px 0 rgba(209, 213, 217, 0.3);
+}
+.author_profile .profile_contents .author_content .featured_book .featured_all:hover {
+  background-color: #eee;
+}
+.author_profile .profile_contents .translator_content {
+  padding-top: 30px;
+  padding: 20px 0 0 0;
+  display: none;
+  overflow: hidden;
+}
+.author_profile .profile_contents .translator_content #goeun {
+  width: 100%;
+}
+.author_profile .profile_contents .translator_content #goeun .translator_name {
+  padding: 0 10px 17px 0;
+}
+.author_profile .profile_contents .translator_content #goeun .translator_name .name_txt h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.3em;
+  display: inline-block;
+}
+.author_profile .profile_contents .translator_content #goeun .translator_name .name_txt:hover h4 {
+  color: #1f8ce6;
+  cursor: pointer;
+}
+.author_profile .profile_contents .translator_content #goeun .news_btn {
+  display: block;
+  width: 168px;
+  padding: 8px 8px 7px 8px;
+  font-size: 12px;
+  line-height: 1em;
+  text-align: center;
+  color: #0080f6;
+  border-color: #0080f6;
+  border: 1px solid #1f8ce6;
+  box-shadow: 0 1px 1px 0 rgba(31, 140, 230, 0.3);
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.author_profile .profile_contents .translator_content #goeun .news_btn:hover {
+  background-color: #ebf6ff;
+}
+.author_profile .profile_contents .translator_content #goeun table {
+  padding-top: 8px;
+  cursor: default;
+}
+.author_profile .profile_contents .translator_content #goeun table tr th {
+  padding-right: 7px;
+  width: 3em;
+  font-size: 13px;
+  color: #808991;
+  line-height: 1.8em;
+  font-weight: 400;
+}
+.author_profile .profile_contents .translator_content #goeun table tr td {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.8em;
+}
+.author_profile .profile_contents .translator_content #goeun .content_edit {
+  padding: 14px 1px 20px 0;
+  text-align: right;
+}
+.author_profile .profile_contents .translator_content #goeun .content_edit span {
+  padding-right: 10px;
+  color: #9ea7ad;
+  font-size: 13px;
+  cursor: default;
+}
+.author_profile .profile_contents .translator_content #goeun .content_edit a {
+  color: #808991;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1em;
+  vertical-align: baseline;
+  transition: background-color 0.2s, color 0.2s;
+  background: #fff;
+  border: 1px solid #d1d5d9;
+  box-shadow: 0 1px 1px 0 rgba(209, 213, 217, 0.3);
+  font-size: 11px;
+  padding: 4px 10px;
+}
+.author_profile .profile_contents .translator_content #goeun .content_edit a:hover {
+  background-color: #eee;
+}
+.author_profile .profile_contents .translator_content .featured_book {
+  border-top: 1px solid #eee;
+  cursor: default;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title {
+  margin-top: 26px;
+  display: table;
+  width: 100%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title h5 {
+  display: table-cell;
+  padding-left: 16px;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul {
+  display: table-cell;
+  text-align: right;
+  vertical-align: top;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul li {
+  display: inline-block;
+  height: 1em;
+  border-left: 1px solid #ccc;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul li:first-child {
+  border-left: none;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul li a.active {
+  color: #333;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul li a {
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #999;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_title ul li a:hover {
+  color: #333;
+}
+.author_profile .profile_contents .translator_content .featured_book .popular {
+  display: block;
+}
+.author_profile .profile_contents .translator_content .featured_book .liked {
+  display: none;
+}
+.author_profile .profile_contents .translator_content .featured_book .latest {
+  display: none;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover {
+  padding: 10px 0 20px 0;
+  overflow: hidden;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list {
+  width: 20%;
+  float: left;
+  margin-top: 20px;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail {
+  height: 135px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  width: 90px;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail div {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #59667a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.55em;
+  margin-left: -14px;
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num .num {
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+  margin-right: -3px;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_thumbnail .discount_badge .discount_num .percent {
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text {
+  width: 90px;
+  text-align: left;
+  display: block;
+  margin: 8px auto 0 auto;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .title {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.4em;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  max-height: 2.7em;
+  overflow: hidden;
+  white-space: normal;
+  cursor: pointer;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box {
+  margin-top: 3px;
+  cursor: pointer;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate {
+  margin-top: 4px;
+  color: #999;
+  font-size: 11px;
+  line-height: 1em;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon {
+  position: relative;
+  margin-top: -1px;
+  margin-right: 1px;
+  width: 50px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: -11%;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background: url(../img/sub_img/star_base.svg) center center no-repeat;
+  background-size: 100% 100%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star_rate_fill {
+  display: block;
+  position: relative;
+  height: 10px;
+  overflow-x: hidden;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star_rate_fill:after {
+  background: url(../img/sub_img/star_fill.svg) center center no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 10px;
+  content: "";
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star20 {
+  width: 20%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star66 {
+  width: 66%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star78 {
+  width: 78%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star82 {
+  width: 82%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star84 {
+  width: 84%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star88 {
+  width: 88%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star90 {
+  width: 90%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star92 {
+  width: 92%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star94 {
+  width: 94%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star96 {
+  width: 96%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_cover .featured_list .featured_text .star_box .star_rate .star_rate_icon .star100 {
+  width: 100%;
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_all {
+  float: right;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.8em;
+  color: #808991;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  background: #fff;
+  border: 1px solid #d1d5d9;
+  box-shadow: 0 2px 4px 0 rgba(209, 213, 217, 0.3);
+}
+.author_profile .profile_contents .translator_content .featured_book .featured_all:hover {
+  background-color: #eee;
 }
 
 .author_intro {
@@ -706,6 +1312,103 @@ h2 {
   padding: 10px 0 8px 0;
   border-bottom: 2px solid #7d8e9e;
 }
+.book_review .review_input {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.book_review .review_input .review_left {
+  display: table-cell;
+  width: 120px;
+  padding: 32px 0 20px 0;
+  text-align: center;
+  cursor: default;
+}
+.book_review .review_input .review_left .left_title {
+  font-size: 12px;
+  color: #808991;
+  font-weight: 600;
+}
+.book_review .review_input .review_left .left_score {
+  margin-top: 25px;
+  display: inline-block;
+  font-size: 35px;
+  color: #212529;
+  font-weight: 700;
+}
+.book_review .review_input .review_left .left_star {
+  margin-top: 11px;
+  font-size: 16px;
+  color: #666;
+  line-height: 1em;
+}
+.book_review .review_input .review_left .left_star .left_star_box {
+  position: relative;
+  margin-top: -1px;
+  margin-right: 1px;
+  width: 75px;
+  height: 15px;
+  vertical-align: -11%;
+  display: inline-block;
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+  background: url("../img/sub_img/star_base.svg") center center no-repeat;
+  background-size: 100% 100%;
+}
+.book_review .review_input .review_left .left_star .left_star_box .left_star_fill {
+  width: 66%;
+  display: block;
+  position: relative;
+  overflow-x: hidden;
+  height: 15px;
+}
+.book_review .review_input .review_left .left_star .left_star_box .left_star_fill:after {
+  background: url("../img/sub_img/star_fill.svg") center center no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 15px;
+  content: "";
+  text-indent: -444px;
+  font-size: 0;
+  overflow: hidden;
+}
+.book_review .review_input .review_left .left_graph {
+  padding: 8px 0 10px 0;
+}
+.book_review .review_input .review_left .left_graph li {
+  margin-top: 8px;
+  color: #808991;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.08em;
+}
+.book_review .review_input .review_left .left_graph li .score_bg {
+  display: inline-block;
+  width: 72px;
+  height: 8px;
+  background: #e8edf3;
+  margin-left: 4px;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.book_review .review_input .review_left .left_graph li .score_bg .score_bar {
+  display: block;
+  height: 8px;
+  background: linear-gradient(to bottom, #9daab5, #718392);
+}
+.book_review .review_input .review_left .left_graph li .score_bg .bar0 {
+  width: 0%;
+}
+.book_review .review_input .review_left .left_graph li .score_bg .bar33 {
+  width: 33%;
+}
+.book_review .review_input .review_left .left_graph li .score_bg .bar67 {
+  width: 67%;
+}
 
 .together_buy {
   padding-bottom: 70px;
@@ -726,14 +1429,127 @@ h2 {
 .together_buy .buy_list .buy_book {
   width: 20%;
   float: left;
+  margin-top: 20px;
 }
 .together_buy .buy_list .buy_book .buy_cover {
-  height: 180px;
-  flex-shrink: 0;
-  flex-grow: 1;
-  padding: 0 20px;
+  width: 90px;
+  height: 135px;
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.together_buy .buy_list .buy_book .buy_cover div {
+  width: 90px;
+  height: 135px;
+  display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+}
+.together_buy .buy_list .buy_book .buy_cover .discount_badge {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #59667a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.together_buy .buy_list .buy_book .buy_cover .discount_badge .discount_num {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.55em;
+  margin-left: -14px;
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+}
+.together_buy .buy_list .buy_book .buy_cover .discount_badge .discount_num .num {
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+  margin-right: -3px;
+}
+.together_buy .buy_list .buy_book .buy_cover .discount_badge .discount_num .percent {
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+}
+.together_buy .buy_list .buy_book .buy_cover .badge_rental {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #3ea590;
+  border: 1px solid #15967d;
+  border-radius: 40px;
+}
+.together_buy .buy_list .buy_book .buy_cover .badge_rental .rental_txt {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.5em;
+  margin-left: -20px;
+  text-align: center;
+  color: #fff;
+  line-height: 1em;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.together_buy .buy_list .buy_book .buy_txt {
+  width: 90px;
+  display: block;
+  text-align: left;
+  margin: 8px auto 0 auto;
+}
+.together_buy .buy_list .buy_book .buy_txt h6 {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.4em;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  max-height: 2.7em;
+  white-space: normal;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  cursor: pointer;
+}
+.together_buy .buy_list .buy_book .buy_txt p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 3.1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .together_search {
@@ -755,14 +1571,127 @@ h2 {
 .together_search .search_list .search_book {
   width: 20%;
   float: left;
+  margin-top: 20px;
 }
 .together_search .search_list .search_book .search_cover {
-  height: 180px;
-  flex-shrink: 0;
-  flex-grow: 1;
-  padding: 0 20px;
+  width: 90px;
+  height: 135px;
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.together_search .search_list .search_book .search_cover div {
+  width: 90px;
+  height: 135px;
+  display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+}
+.together_search .search_list .search_book .search_cover .discount_badge {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #59667a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  cursor: pointer;
+}
+.together_search .search_list .search_book .search_cover .discount_badge .discount_num {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.55em;
+  margin-left: -14px;
+  color: #fff;
+  letter-spacing: -0.05em;
+  line-height: 1em;
+}
+.together_search .search_list .search_book .search_cover .discount_badge .discount_num .num {
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+  margin-right: -3px;
+}
+.together_search .search_list .search_book .search_cover .discount_badge .discount_num .percent {
+  font-size: 10px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.03em;
+}
+.together_search .search_list .search_book .search_cover .badge_rental {
+  display: block;
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  z-index: 9;
+  line-height: 0;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  background: #3ea590;
+  border: 1px solid #15967d;
+  border-radius: 40px;
+}
+.together_search .search_list .search_book .search_cover .badge_rental .rental_txt {
+  display: block;
+  width: 40px;
+  height: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.5em;
+  margin-left: -20px;
+  text-align: center;
+  color: #fff;
+  line-height: 1em;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.together_search .search_list .search_book .search_txt {
+  width: 90px;
+  display: block;
+  text-align: left;
+  margin: 8px auto 0 auto;
+}
+.together_search .search_list .search_book .search_txt h6 {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.4em;
+  font-weight: 700;
+  color: #333;
+  text-overflow: ellipsis;
+  max-height: 2.7em;
+  white-space: normal;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+  cursor: pointer;
+}
+.together_search .search_list .search_book .search_txt p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 3.1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.2em;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .aside_banner {

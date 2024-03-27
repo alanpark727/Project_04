@@ -29,14 +29,12 @@ $(document).ready(function(){
           async: false,
           headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
       })
-          .done(function(many) {
-              let str2 = many.documents[0].title;
+          .done(function(popular) {
+              let str2 = popular.documents[0].title;
               // console.log(many);
               
-              $(".manyBook").eq(j).find(".manyCover").css("background-image","url(" + many.documents[0].thumbnail + ")");
-              $(".manyBook").eq(j).find(".manyTitle").append(str2);
-              $(".manyBook").eq(j).find(".manyAuthor").append(many.documents[0].authors);
-              $(".manyBook").eq(j).find(".manyIdx").append(j+1);
+              $(".author_content .popular .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + popular.documents[0].thumbnail + ")");
+              $(".author_content .popular .featured_list").eq(j).find(".featured_text>.title").append(str2);
           });
           
   };
@@ -54,14 +52,12 @@ $(document).ready(function(){
           async: false,
           headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
       })
-          .done(function(many) {
-              let str2 = many.documents[0].title;
+          .done(function(latest) {
+              let str2 = latest.documents[0].title;
               // console.log(many);
               
-              $(".manyBook").eq(j).find(".manyCover").css("background-image","url(" + many.documents[0].thumbnail + ")");
-              $(".manyBook").eq(j).find(".manyTitle").append(str2);
-              $(".manyBook").eq(j).find(".manyAuthor").append(many.documents[0].authors);
-              $(".manyBook").eq(j).find(".manyIdx").append(j+1);
+              $(".author_content .latest .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + latest.documents[0].thumbnail + ")");
+              $(".author_content .latest .featured_list").eq(j).find(".featured_text>.title").append(str2);
           });
           
   };
@@ -79,12 +75,11 @@ $(document).ready(function(){
           async: false,
           headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
       })
-          .done(function(best) {
+          .done(function(liked) {
+            let str2 = liked.documents[0].title;
               // console.log(best);
-              $(".bestBook").eq(j).find(".bestCover").css("background-image","url(" + best.documents[0].thumbnail + ")");
-              $(".bestBook").eq(j).find(".bestTitle").append(best.documents[0].title);
-              $(".bestBook").eq(j).find(".bestAuthor").append(best.documents[0].authors);
-              $(".bestBook").eq(j).find(".bestIdx").append(j+1);
+              $(".author_content .liked .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + liked.documents[0].thumbnail + ")");
+              $(".author_content .liked .featured_list").eq(j).find(".featured_text>.title").append(str2);
           });
           
   };
@@ -103,11 +98,12 @@ $(document).ready(function(){
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
-            .done(function(newB) {
-                // console.log(newB);
-                $(".newBook").eq(j).find(".newCover").css("background-image","url(" + newB.documents[0].thumbnail + ")");
-                $(".newBook").eq(j).find(".newTitle").append(newB.documents[0].title);
-                $(".newBook").eq(j).find(".newAuthor").append(newB.documents[0].authors);
+            .done(function(popular) {
+                let str2 = popular.documents[0].title;
+                // console.log(many);
+                
+                $(".translator_content .popular .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + popular.documents[0].thumbnail + ")");
+                $(".translator_content .popular .featured_list").eq(j).find(".featured_text>.title").append(str2);
             });
             
     };
@@ -125,11 +121,12 @@ $(document).ready(function(){
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
-            .done(function(awards) {
-                // console.log(awards);
-                $(".awardsBook").eq(j).find(".awardsCover").css("background-image","url(" + awards.documents[0].thumbnail + ")");
-                $(".awardsBook").eq(j).find(".awardsTitle").append(awards.documents[0].title);
-                $(".awardsBook").eq(j).find(".awardsAuthor").append(awards.documents[0].authors);
+            .done(function(latest) {
+                let str2 = latest.documents[0].title;
+                // console.log(many);
+                
+                $(".translator_content .latest .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + latest.documents[0].thumbnail + ")");
+                $(".translator_content .latest .featured_list").eq(j).find(".featured_text>.title").append(str2);
             });
             
     };
@@ -137,7 +134,7 @@ $(document).ready(function(){
     // 대표저서(평점순)
     
     let search7;
-    search7 = ['비블리아 고서당 사건수첩 1권','처음부터 내내 좋아했어','문학소녀','64(육사)','비블리아 고서당 사건수첩 2권'];
+    search7 = ['비블리아 고서당 사건수첩 1권','처음부터 내내 좋아했어','문학소녀와 죽고싶은','64(육사)','비블리아 고서당 사건수첩 2권'];
 
     for (let j = 0; j < search7.length; j++) {
         $.ajax({
@@ -147,11 +144,11 @@ $(document).ready(function(){
             async: false,
             headers: { Authorization: "KakaoAK 7bc74fa2888df6bd2314530f05eec1ec"}
         })
-            .done(function(top10) {
-                // console.log(top10);
-                $(".top10Book").eq(j).find(".top10Cover").css("background-image","url(" + top10.documents[0].thumbnail + ")");
-                $(".top10Book").eq(j).find(".top10Title").append(top10.documents[0].title);
-                $(".top10Book").eq(j).find(".top10Author").append(top10.documents[0].authors);
+            .done(function(liked) {
+                let str2 = liked.documents[0].title;
+                // console.log(best);
+                $(".translator_content .liked .featured_list").eq(j).find(".featured_thumbnail>div").css("background-image","url(" + liked.documents[0].thumbnail + ")");
+                $(".translator_content .liked .featured_list").eq(j).find(".featured_text>.title").append(str2);
             });
             
     };
@@ -171,7 +168,7 @@ $(document).ready(function(){
             })
                 .done(function(buy) {
                     console.log(buy);
-                    $(".buy_book").eq(j).find('.buy_cover').css("background-image","url(" + buy.documents[0].thumbnail + ")");
+                    $(".buy_cover").eq(j).find('div').css("background-image","url(" + buy.documents[0].thumbnail + ")");
                     $(".buy_txt").eq(j).find('h6').append(buy.documents[0].title);
                     $(".buy_txt").eq(j).find('p').append(buy.documents[0].authors);
                 });
@@ -193,7 +190,7 @@ $(document).ready(function(){
             })
                 .done(function(search) {
                     console.log(search);
-                    $(".search_book").eq(j).find('.search_cover').css("background-image","url(" + search.documents[0].thumbnail + ")");
+                    $(".search_cover").eq(j).find('div').css("background-image","url(" + search.documents[0].thumbnail + ")");
                     $(".search_txt").eq(j).find('h6').append(search.documents[0].title);
                     $(".search_txt").eq(j).find('p').append(search.documents[0].authors);
                 });

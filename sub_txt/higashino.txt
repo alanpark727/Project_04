@@ -1,8 +1,10 @@
 <div class="author_name">
+<span class="name_txt">
     <h4>히가시노 게이고</h4>
     <span>Higashino Keigo</span>
+</span>
 </div>
-<a href="" class="fa-solid fa-plus"> 작가 신간알림·소식</a>
+<a href="#" class="fa-solid fa-plus news_btn"> 작가 신간알림 · 소식</a>
 <table>
     <tbody>
         <tr>
@@ -45,5 +47,5 @@
 </table>
 <div class="content_edit">
     <span>2018.12.12.업데이트</span>
-    <a href="" class="fa-solid fa-pencil"> 작가 프로필 수정 요청</a>
+    <a href="#" class="fa-solid fa-pencil"> 작가 프로필 수정 요청</a>
 </div>

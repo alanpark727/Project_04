@@ -1,7 +1,9 @@
 <div class="translator_name">
+<span class="name_txt">
     <h4>최고은</h4>
+</span>
 </div>
-    <a href="" class="fa-solid fa-plus"> 작가 신간알림·소식</a>
+    <a href="" class="fa-solid fa-plus news_btn"> 작가 신간알림 · 소식</a>
 <table>
     <tbody>
         <tr>
