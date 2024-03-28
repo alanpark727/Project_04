@@ -1,39 +1,33 @@
 $(document).ready(function(){
-  let currentIndex = 0;
-  let slides = $(".slideItem");
 
-  function showSlide(index) {
-
-    slides.css('flex-grow','0').css('flex-basis','0px');
-
-    slides.eq(index).css('flex-grow','1').css('flex-basis','0px');
-
-    slides.eq(index).children().addClass("active");
-
-    slides.eq(index-1).children().removeClass("active");
-    
-    slides.eq(index+1).children().removeClass("active");
-
-    slides.eq(index+1).css('flex-grow','0').css('flex-basis','46px');
-    slides.eq(index+2).css('flex-grow','0').css('flex-basis','46px');
-
-    currentIndex = index;
-    
-    
-  }
+  $('.slideItem').not(':first').css({'width':'46px'});
+  $('.slideTxt').eq(0).show();
 
   function nextSlide() {
-    let nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  
+    $('.slideItem:first').stop().animate({'width':0},'slow','linear');
+    $('.slideItem').eq(1).stop().animate({'width':1020},'slow','linear',function(){
+      $('.slideItem:first').appendTo('.slideWrap');
+      $('.slideItem:last').css({'width':'46px'});
+    });
+    $('.slideTxt').eq(0).fadeOut('slow');
+    $('.slideTxt').eq(1).fadeIn('slow');
   }
 
   function prevSlide() {
-    let prevIndex = (currentIndex - 1) % slides.length;
-    showSlide(prevIndex);
+    $('.slideItem:last').prependTo('.slideWrap').css({'width':0});
+    $('.slideItem:first').stop().animate({'width':1020}, 'slow','linear');
+    $('.slideItem').eq(1).stop().animate({'width':46},'slow','linear');
+    $('.slideTxt').eq(1).fadeOut('slow');
+    $('.slideTxt').eq(0).fadeIn('slow');
   }
 
-  // setInterval(nextSlide, 5000);
+  let setTime = setInterval(nextSlide, 5000);
+
+  $('.mainSlide').hover(function(){
+    clearInterval(setTime);
+  }, function(){
+    setTimeout(setTime = setInterval(nextSlide, 5000), 3000);
+  });
 
   $("#next_1").on("click", function(){
     nextSlide();

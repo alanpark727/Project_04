@@ -84,6 +84,9 @@ a {
   justify-content: center;
   align-items: center;
 }
+.upperLeft li a.active {
+  color: #333;
+}
 
 .upperRight {
   display: flex;

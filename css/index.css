@@ -31,22 +31,20 @@ a {
   position: relative;
 }
 .mainBanner .mainSlide {
-  max-width: 1116px;
+  max-width: 100%;
   position: relative;
-  margin: 0 -3px;
+  margin: 0 -2px;
   height: 400px;
-  touch-action: pan-y;
-}
-.mainBanner .mainSlide .slideWrap {
-  display: flex;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
 }
+.mainBanner .mainSlide .slideWrap {
+  width: 2000%;
+  height: 100%;
+}
 .mainBanner .mainSlide .slideWrap .slideItem {
-  width: 0;
+  width: 1020px;
   height: 400px;
-  transition: flex-grow 0.5s cubic-bezier(0.95, 0.1, 0.2, 1);
+  float: left;
 }
 .mainBanner .mainSlide .slideWrap .slideItem .content {
   position: relative;
@@ -77,10 +75,6 @@ a {
   border-right: none;
 }
 
-.slideWrap a .active .slideTxt {
-  opacity: 1;
-}
-
 .content .slideTxt {
   width: 1024px;
   height: 100%;
@@ -92,7 +86,7 @@ a {
   padding: 40px;
   padding-top: 0;
   padding-right: 46px;
-  opacity: 0;
+  opacity: 1;
 }
 .content .slideTxt .slideTitle {
   color: #fff;
