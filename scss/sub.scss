@@ -61,6 +61,7 @@ h2 {
     cursor: default;
 }
 
+// 책 정보
 .book_info {
     padding: 40px 30px;
     .info_box {
@@ -365,6 +366,7 @@ h2 {
             }
         }
     }
+    // 책 커버
     .cover_box {
         width: 200px;
         height: 313px;
@@ -487,7 +489,7 @@ h2 {
     }
 }
 
-
+// 작품소개
 
 .book_intro {
     padding: 0 30px 70px 30px;
@@ -582,6 +584,8 @@ h2 {
     }
 }
 
+// 출판사 서평
+
 .pub_write {
     .write_title {
         margin-bottom: 15px;
@@ -601,6 +605,8 @@ h2 {
         cursor: pointer;
     }
 }
+
+// 저자 프로필
 
 .author_profile {
     padding-bottom: 40px;
@@ -1298,6 +1304,8 @@ h2 {
     }
 }
 
+// 저자 소개
+
 .author_intro {
     padding-bottom: 40px;
     .author_title {
@@ -1319,6 +1327,8 @@ h2 {
     }
 }
 
+// 목차
+
 .book_chapter {
     .chapter_title {
         margin-bottom: 15px;
@@ -1331,6 +1341,8 @@ h2 {
         color: #333;
     }
 }
+
+// 리뷰
 
 .book_review {
     position: relative;
@@ -1821,6 +1833,8 @@ h2 {
     }
 }
 
+// 이 책과 함께 구매한 책
+
 .together_buy {
     padding-bottom: 70px;
     max-height: 600px;
@@ -1965,6 +1979,8 @@ h2 {
     }
 
 }
+
+// 이 책들과 함꼐 둘러본 책
 
 .together_search {
     padding-bottom: 70px;
@@ -2187,4 +2203,42 @@ h2 {
     }
 }
 
+// 책 표지 팝업
 
+#popup_cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    display: none;
+    .popup_box {
+        max-width: 986px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        img {
+            width: 90%;
+        }
+        .close_btn {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            top: -4%;
+            right: 9%;
+            color: #d1d5d9;
+            cursor: zoom-out;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
