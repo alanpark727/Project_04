@@ -3,44 +3,41 @@ $(document).ready(function(){
 
     // 텍스트 Mount
 
-    $.get("../sub_txt/book_detail.txt", function (data) {
+    $.get("./sub_txt/book_detail.txt", function (data) {
         $(".book_info .book_detail").html(data);
     });
 
-    $.get("../sub_txt/intro_text.txt", function (data) {
+    $.get("./sub_txt/intro_text.txt", function (data) {
         $(".intro_content .intro_text").html(data);
     });
 
-    $.get("../sub_txt/write_text.txt", function (data) {
+    $.get("./sub_txt/write_text.txt", function (data) {
         $(".pub_write .write_text").html(data);
     });
 
-    $.get("../sub_txt/higashino.txt", function (data) {
+    $.get("./sub_txt/higashino.txt", function (data) {
         $("#higashino").html(data);
     });
 
-    $.get("../sub_txt/goeun.txt", function (data) {
+    $.get("./sub_txt/goeun.txt", function (data) {
         $("#goeun").html(data);
     });
 
-    $.get("../sub_txt/author_text.txt", function (data) {
+    $.get("./sub_txt/author_text.txt", function (data) {
         $(".author_intro .author_text").html(data);
     });
 
-    $.get("../sub_txt/chapter_text.txt", function (data) {
+    $.get("./sub_txt/chapter_text.txt", function (data) {
         $(".book_chapter .chapter_text").html(data);
     });
 
-    $.get("../sub_txt/bot_qna.txt", function (data) {
+    $.get("./sub_txt/bot_qna.txt", function (data) {
         $(".bot_qna .qna_contents").html(data);
     });
 
 
     // 작품 소개 펼치기
 
-    $('.intro_para').click(function(){
-        $('.intro_para').toggleClass('folded');
-    });
     $('.intro_btn').click(function(){
         $('.intro_para').removeClass('folded');
         $('.intro_btn').hide();
@@ -54,9 +51,6 @@ $(document).ready(function(){
 
     // 출판사 서평 펼치기
 
-    $('.write_text').click(function(){
-        $('.write_text').toggleClass('folded');
-    });
     $('.pub_btn').click(function(){
         $('.write_text').removeClass('folded');
         $('.pub_btn').hide();
@@ -103,9 +97,6 @@ $(document).ready(function(){
 
     // 저자 소개 서평 펼치기
 
-    $('.author_text').click(function(){
-        $('.author_text').toggleClass('folded');
-    });
     $('.aut_btn').click(function(){
         $('.author_text').removeClass('folded');
         $('.aut_btn').hide();

@@ -472,6 +472,10 @@ section {
                     font-size: 14px;
                     margin-top: 6px;
                     line-height: 17px;
+                    &:hover {
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
                 }
                 .review {
                     font-family: "Noto Sans KR";
@@ -692,6 +696,10 @@ section {
                     font-size: 14px;
                     margin-top: 6px;
                     line-height: 17px;
+                    &:hover {
+                        opacity: 0.5;
+                        cursor: pointer;
+                    }
                 }
                 .review {
                     font-family: "Noto Sans KR";
@@ -880,6 +888,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -984,6 +996,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1059,6 +1075,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1127,6 +1147,7 @@ section {
                 border-radius: 4px;
                 padding-right: 5px;
                 margin-right: 0.333%;
+                cursor: pointer;
                 &:nth-child(1){
                     background-color: #DC6119;
                 }
@@ -1274,6 +1295,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1373,6 +1398,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1473,6 +1502,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1573,6 +1606,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";
@@ -1622,6 +1659,7 @@ section {
 
 .ridiHumanity {
     position: relative;
+    padding-bottom: 100px;
     .humanHeader {
         display: flex;
         justify-content: space-between;
@@ -1673,6 +1711,10 @@ section {
                         margin-top: 6px;
                         letter-spacing: -0.01em;
                         line-height: 17px;
+                        &:hover {
+                            opacity: 0.5;
+                            cursor: pointer;
+                        }
                     }
                     .review {
                         font-family: "Noto Sans KR";

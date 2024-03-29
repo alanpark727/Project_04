@@ -503,6 +503,10 @@ section h3 {
   margin-top: 6px;
   line-height: 17px;
 }
+.ridiMany .manyWrap .manyBook .manyInfo .manyAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiMany .manyWrap .manyBook .manyInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -722,6 +726,10 @@ section h3 {
   margin-top: 6px;
   line-height: 17px;
 }
+.ridiBest .bestWrap .bestBook .bestInfo .bestAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiBest .bestWrap .bestBook .bestInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -911,6 +919,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiNew #new_wrap .newWrap .newBook .newInfo .newAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiNew #new_wrap .newWrap .newBook .newInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1014,6 +1026,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .awardsAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiAwards #awards_wrap .awardsWrap .awardsBook .awardsInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1089,6 +1105,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .top10Author:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiTop10 #top10_wrap .top10Wrap .top10Book .top10Info .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1154,6 +1174,7 @@ section h3 {
   border-radius: 4px;
   padding-right: 5px;
   margin-right: 0.333%;
+  cursor: pointer;
 }
 .ridiEvent #event_wrap .eventWrap .eventBook:nth-child(1) {
   background-color: #DC6119;
@@ -1304,6 +1325,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .novelAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiNovel #novel_wrap .novelWrap .novelBook .novelInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1402,6 +1427,10 @@ section h3 {
   margin-top: 6px;
   letter-spacing: -0.01em;
   line-height: 17px;
+}
+.ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .psyAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 .ridiPsychology #psy_wrap .psyWrap .psyBook .psyInfo .review {
   font-family: "Noto Sans KR";
@@ -1502,6 +1531,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .scienceAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiScience #science_wrap .scienceWrap .scienceBook .scienceInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1601,6 +1634,10 @@ section h3 {
   letter-spacing: -0.01em;
   line-height: 17px;
 }
+.ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .mysteryAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .ridiMystery #mystery_wrap .mysteryWrap .mysteryBook .mysteryInfo .review {
   font-family: "Noto Sans KR";
   font-size: 13px;
@@ -1643,6 +1680,7 @@ section h3 {
 
 .ridiHumanity {
   position: relative;
+  padding-bottom: 100px;
 }
 .ridiHumanity .humanHeader {
   display: flex;
@@ -1699,6 +1737,10 @@ section h3 {
   margin-top: 6px;
   letter-spacing: -0.01em;
   line-height: 17px;
+}
+.ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .humanAuthor:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 .ridiHumanity #human_wrap .humanWrap .humanBook .humanInfo .review {
   font-family: "Noto Sans KR";
