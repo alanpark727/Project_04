@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     // 텍스트 Mount
 
-    $.get("/sub_txt/book_detail.txt", function (data) {
+    $.get("/project_04/sub_txt/book_detail.txt", function (data) {
         $(".book_info .book_detail").html(data);
     });
 
