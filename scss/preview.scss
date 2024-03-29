@@ -2,5 +2,378 @@
 
 @import "reset";
 
+div {
+    color: #000;
+    font-size: 16px;
+    line-height: 1em;
+    font-family: 'Apple SD Gothic Neo', Helvetica, arial, '나눔고딕', 'Nanum Gothic', '돋움', Dotum, Tahoma, Geneva, sans-serif;
+    letter-spacing: -.03em;
+}
 
+#preview {
+    position: relative;
+    .preview_wrap {
+        max-width: 960px;
+        margin: 20px auto 0 auto;
+        position: relative;
+        .preview_content {
+            display: table;
+            width: 100%;
+            background: #fff;
+            table-layout: fixed;
+            box-shadow: 0 2px 8px 0 rgba(0,0,0,.2);
+            .preview_body {
+                width: 700px;
+                display: table-cell;
+                vertical-align: top;
+                .body_top_wrap {
+                    padding: 7px 20px;
+                    border-bottom: 1px solid #ddd;
+                    .body_top {
+                        width: 100%;
+                        height: 30px;
+                        display: table;
+                        table-layout: fixed;
+                        .top_title {
+                            display: table-cell;
+                            vertical-align: middle;
+                            h1 {
+                                position: relative;
+                                padding-left: 17px;
+                                .return_link {
+                                    text-align: left;
+                                    font-size: 16px;
+                                    color: #333;
+                                    width: 100%;
+                                    font-weight: 700;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: normal;
+                                    height: 1em;
+                                    line-height: 1.1em;
+                                    background: 0 0;
+                                    border: none;
+                                    span {
+                                        display: inline-block;
+                                        text-indent: -444px;
+                                        overflow-block: hidden;
+                                        position: absolute;
+                                        background: url('../img/preview/prev.svg') center center no-repeat;
+                                        background-size: 100% 100%;
+                                        left: 0;
+                                        top: 50%;
+                                        margin-top: -4px;
+                                        width: 13px;
+                                        height: 13px;
+                                    }
+                                }
+                            }
+                        }
+                        .top_button {
+                            width: 87px;
+                            display: table-cell;
+                            vertical-align: middle;
+                            .smaller {
+                                border-right: none;
+                                display: block;
+                                float: left;
+                                width: 42px;
+                                height: 30px;
+                                overflow: hidden;
+                                border: 1px solid #d8d8d8;
+                                background: #fff;
+                                border-radius: 4px 0 0 4px;
+                                span {
+                                    display: inline-block;
+                                    text-indent: -444px;
+                                    overflow: hidden;
+                                    background: url('../img/preview/smaller.svg') center center no-repeat;
+                                    background-size: 100% 100%;
+                                    width: 20px;
+                                    height: 29px;
+                                }
+                            }
+                            .bigger {
+                                border-radius: 0 4px 4px 0;
+                                display: block;
+                                float: left;
+                                width: 42px;
+                                height: 30px;
+                                overflow: hidden;
+                                border: 1px solid #d8d8d8;
+                                background: #fff;
+                                span {
+                                    display: inline-block;
+                                    text-indent: -444px;
+                                    overflow: hidden;
+                                    background: url('../img/preview/bigger.svg') center center no-repeat;
+                                    background-size: 100% 100%;
+                                    width: 24px;
+                                    height: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .body_viewer_wrapper {
+                    position: relative;
+                    .viewer_wrapper {
+                        position: relative;
+                        .viewer {
+                            height: 856px;
+                            padding: 26px 62px 62px 62px;
+                            #contents {
+                                overflow: hidden;
+                                column-width: 576px;
+                                column-gap: 0px;
+                                height: 768px;
+                                z-index: 0;
+                                position: relative;
+                                text-align: justify;
+                                li {
+                                    font-size: 18.4px;
+                                    page-break-inside: avoid;
+                                    page-break-after: always;
+                                    line-height: 1.67;
+                                    letter-spacing: 0;
+                                    div {
+                                        .img_center {
+                                            text-align: center;
+                                            img {
+                                                max-width: 576px;
+                                                max-height: 768px;
+                                                vertical-align: top;
+                                                object-fit: scale-down;
+                                                display: inline-block !important;
+                                                margin: 0 auto;
+                                                padding: 0;
+                                                width: auto;
+                                                height: auto;
+                                            }
+                                        }
+                                    }
+                                    .pd_lr, div {
+                                        padding-left: 10%;
+                                        padding-right: 10%;
+                                        p.ps_1 {
+                                            font-family: 'RIDIBatang';
+                                            line-height: 2;
+                                            text-align: justify;
+                                            text-align-last: left;
+                                            text-indent: 1em;
+                                            font-size: 18.4px;
+                                        }
+                                        .cs_1 {
+                                            font-size: 9.2px;
+                                            color: #9d7ad1;
+                                            line-height: 0;
+                                            vertical-align: super;
+                                            position: relative;
+                                            top: 0em;
+                                        }
+                                        .wing_name {
+                                            font-family: 'RIDIBatang';
+                                            line-height: 2;
+                                            color: #8c704e;
+                                            font-size: 21.85px;
+                                            .wing_sup {
+                                                font-size: 14.95px;
+                                                vertical-align: .3em;
+                                                line-height: 0;
+                                                position: relative;
+                                                top: 0em;
+                                            }
+                                        }
+                                        .wing_body {
+                                            font-family: 'RIDIBatang';
+                                            line-height: 2;
+                                            text-align: justify;
+                                            color: #31006f;
+                                            font-size: 16.1px;
+                                        }
+                                        .wing_body2 {
+                                            font-family: '돋움체';
+                                            font-weight: 700;
+                                            line-height: 2;
+                                            color: #8c704e;
+                                            font-size: 12.65px;
+                                        }
+                                        .ps_0 {
+                                            font-size: 18.4px;
+                                            font-family: 'Cafe24ClassicType-Regular';
+                                            line-height: 2;
+                                            text-align: right;
+                                        }
+                                        .cs_0 {
+                                            color: #9d7ad1;
+                                            line-height: 1.67;
+                                        }
+                                        .ps_2 {
+                                            font-size: 14.95px;
+                                            font-family: 'RIDIBatang';
+                                            line-height: 2;
+                                            text-align: justify;
+                                            text-align-last: left;
+                                            margin-left: 2em;
+                                            text-indent: -1.9em;
+                                        }
+                                        .cs_3 {
+                                            font-size: 6.9px;
+                                            color: #9d7ad1;
+                                            margin-right: 2.6em;
+                                        }
+                                        .cs_3_2 {
+                                            font-size: 6.9px;
+                                            color: #9d7ad1;
+                                            margin-right: 1.1em;
+                                        }
+                                        .cs_5 {
+                                            font-size: 12.65px;
+                                        }
+                                    }
+                                    .preview_end {
+                                        .preview_last_wrap {
+                                            width: 100%;
+                                            height: 100%;
+                                            .preview_last_page {
+                                                padding: 70px 0;
+                                                text-align: center;
+                                                h2 {
+                                                    font-size: 26px !important;
+                                                    line-height: 1.8em !important;
+                                                    color: #1f8ee6;
+                                                    font-weight: 600;
+                                                    span {
+                                                        font-size: 29.9px;
+                                                        text-indent: -444px;
+                                                        overflow: hidden;
+                                                        background: url('../img/preview/smile.svg') center center no-repeat;
+                                                        background-size: 100% 100%;
+                                                        display: block;
+                                                        margin: 0 auto;
+                                                        width: 52px;
+                                                        height: 56px;
+                                                    }
+                                                }
+                                                p {
+                                                    margin-top: 12px;
+                                                    font-size: 16px !important;
+                                                    color: #000;
+                                                    line-height: 1.6em !important;
+                                                    br {
+                                                        font-size: 18.4px;
+                                                    }
+                                                    .end_btn {
+                                                        padding: 22px 0;
+                                                        margin-top: 22px;
+                                                        color: #fff;
+                                                        line-height: 16px !important;
+                                                        display: inline-block;
+                                                        width: 188px;
+                                                        text-align: center;
+                                                        border-radius: 4px;
+                                                        font-size: 16px !important;
+                                                        font-weight: 700;
+                                                        background: #1f8ee6;
+                                                        border: 1px solid #1f8ee6;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .page_btn {
+                            position: absolute;
+                            height: 100%;
+                            top: 0;
+                            cursor: pointer;
+                            width: 35%;
+                            padding: 0 16px;
+                            font-size: 20px;
+                            color: #ddd;
+                        }
+                        .prev {
+                            left: 0;
+                            text-align: left;
+                            span {
+                                display: inline-block;
+                                text-indent: -444px;
+                                overflow: hidden;
+                                background: url('../img/preview/prev.svg') center center no-repeat;
+                                background-size: 100% 100%;
+                                left: 16px;
+                                width: 12px;
+                                height: 16px;
+                                vertical-align: middle;
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -.5em;
+                            }
+                        }
+                        .next {
+                            right: 0;
+                            text-align: right;
+                            display: block;
+                            span {
+                                display: inline-block;
+                                text-indent: -444px;
+                                overflow: hidden;
+                                background: url('../img/preview/next.svg') center center no-repeat;
+                                background-size: 100% 100%;
+                                right: 16px;
+                                width: 12px;
+                                height: 16px;
+                                vertical-align: middle;
+                                position: absolute;
+                                top: 50%;
+                                margin-top: -.5em;
+                            }
+                        }
+                    }
+                    .seek_bar {
+                        padding: 0 62px;
+                        position: absolute;
+                        bottom: 26px;
+                        width: 100%;
+                        .page_num {
+                            color: #8595a2;
+                            font-weight: 700;
+                            font-size: 12px;
+                            padding-bottom: 7px;
+                            transition: color 450ms;
+                            cursor: default;
+                            .page_text {
+                                display: none;
+                                padding-right: 3px;
+                            }
+                        }
+                        #page_slider {
+                            display: block;
+                            height: 2px;
+                            border: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            .preview_menu {
+                display: table-cell;
+                vertical-align: top;
+                background: #eee;
+                border-left: 1px solid #e8e8e8;
+                .menu_title {
+                    padding: 7px 15px;
+                    position: relative;
+                    border-bottom: 1px solid #ccc;
+                }
+                .menu_list {
+                    height: 856px;
+                    overflow: hidden;
 
+                }
+            }
+        }
+    }
+}

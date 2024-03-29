@@ -1,0 +1,5 @@
+                                            <p class="ps_1"><br></p>
+                                            <p class="ps_2"><span class="cs_3">●</span>약 36평.
+                                            </p>
+                                            <p class="ps_2"><span class="cs_3_2">●●</span>거실<span class="cs_5">(Living room)</span>, 식당<span class="cs_5">(Dining room)</span>, 부엌<span class="cs_5">(Kitchen room)</span>의 약자로, 방 네 개에 주방과 거실 구조를 의미한다. </p>
+                                            <p class="ps_1"><br></p>

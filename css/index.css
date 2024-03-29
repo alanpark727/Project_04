@@ -76,7 +76,7 @@ a {
 }
 
 .content .slideTxt {
-  width: 1024px;
+  width: 1020px;
   height: 100%;
   position: relative;
   display: flex;
@@ -337,7 +337,7 @@ a {
   transform: translateY(-50%);
 }
 .slideBtn #next_1 {
-  right: 5px;
+  right: 8px;
   transform: translateY(-50%);
 }
 

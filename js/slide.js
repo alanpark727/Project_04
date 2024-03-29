@@ -4,8 +4,8 @@ $(document).ready(function(){
   $('.slideTxt').eq(0).show();
 
   function nextSlide() {
-    $('.slideItem:first').stop().animate({'width':0},'slow','linear');
-    $('.slideItem').eq(1).stop().animate({'width':1020},'slow','linear',function(){
+    $('.slideItem:first').stop().animate({'width':0},1000,'swing');
+    $('.slideItem').eq(1).stop().animate({'width':1020},1000,'swing',function(){
       $('.slideItem:first').appendTo('.slideWrap');
       $('.slideItem:last').css({'width':'46px'});
     });
@@ -15,18 +15,18 @@ $(document).ready(function(){
 
   function prevSlide() {
     $('.slideItem:last').prependTo('.slideWrap').css({'width':0});
-    $('.slideItem:first').stop().animate({'width':1020}, 'slow','linear');
-    $('.slideItem').eq(1).stop().animate({'width':46},'slow','linear');
+    $('.slideItem:first').stop().animate({'width':1020},800,'linear');
+    $('.slideItem').eq(1).stop().animate({'width':46},800,'linear');
     $('.slideTxt').eq(1).fadeOut('slow');
     $('.slideTxt').eq(0).fadeIn('slow');
   }
 
-  let setTime = setInterval(nextSlide, 5000);
+  let setTime = setInterval(nextSlide, 4500);
 
   $('.mainSlide').hover(function(){
     clearInterval(setTime);
   }, function(){
-    setTimeout(setTime = setInterval(nextSlide, 5000), 3000);
+    setTimeout(setTime = setInterval(nextSlide, 4500), 3000);
   });
 
   $("#next_1").on("click", function(){

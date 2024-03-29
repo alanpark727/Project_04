@@ -114,7 +114,7 @@ $(document).ready(function(){
     $('.star_area>label').click(function(){
         alert('로그인 상태에서 가능합니다. 로그인 페이지로 이동합니다.');
     })
-    $('.write_btn > button').click(function(){
+    $('.write_btn > a').click(function(){
         $('.write_review_alert').slideDown();
     });
 
@@ -126,8 +126,8 @@ $(document).ready(function(){
     $('.star_area>label').hover(function(){
         let j = $(this).index();
         $(this).eq(i).addClass('active');
-        $(this).eq(i).siblings().removeClass('active');
-        console.log(j)
+        $(this).eq(i).prevAll().addClass('active');
+        $(this).eq(i).nextAll().removeClass('active');
         $('.star_tip').eq(j/2).addClass('active');
         $('.star_tip').eq(j/2).siblings().removeClass('active');
 

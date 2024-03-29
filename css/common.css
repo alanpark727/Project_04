@@ -132,7 +132,6 @@ header {
 .headMenu {
   display: flex;
   height: 72px;
-  justify-content: space-between;
   align-items: center;
   padding: 16px 18px 16px 30px;
 }
@@ -141,6 +140,7 @@ header {
   height: 40px;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 .headLeft a {
   display: flex;
@@ -182,7 +182,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 200px;
+  width: 216px;
   padding: 0 10px;
 }
 .headRight ul li {
