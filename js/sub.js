@@ -165,7 +165,7 @@ $(document).ready(function(){
 
     // 책 팝업
 
-    $('.book_cover').click(function(){
+    $('.book_cover,#previewBtn').click(function(){
         $('#popup_cover').fadeIn('fast');
     });
     $('.popup_box>.close_btn').click(function(){
